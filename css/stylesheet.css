@@ -296,7 +296,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .journey_of_excellence_quote p {
@@ -330,25 +330,27 @@ margin-bottom: 15px;
 }
 
 @media (max-width: 576px) {
-    .service_excellence_lg{
+    .service_excellence_lg {
         display: none;
     }
-    .service_excellence_sm{
+
+    .service_excellence_sm {
         display: block;
     }
 }
 
 @media (min-width: 576px) {
-    .service_excellence_lg{
+    .service_excellence_lg {
         display: block;
     }
-    .service_excellence_sm{
+
+    .service_excellence_sm {
         display: none;
     }
 }
 
- /* SECTION 2 */
-.accreditations{
+/* SECTION 2 */
+.accreditations {
     width: 100%;
     height: max-content;
     padding-top: 2rem;
@@ -360,26 +362,42 @@ margin-bottom: 15px;
     overflow: hidden;
     white-space: nowrap;
     background-color: #ffffff;
-    padding: 40px 0;
+    padding: 20px 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .marquee-content {
-    display: inline-block;
-    animation: marquee 10s linear infinite;
+    display: inline-flex;
+    animation: marquee 15s linear infinite;
 }
 
 .marquee-content img {
-    margin: 0 80px;
-    height: 50px; /* Adjust height as needed */
+    margin: 0 20px;
+    height: 50px;
+    /* Adjust height as needed */
     vertical-align: middle;
 }
 
+/* Keyframes for seamless loop */
 @keyframes marquee {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Make it responsive */
+@media (max-width: 600px) {
+    .marquee-content img {
+        margin: 0 10px;
+        height: 30px;
+        /* Adjust for smaller screens */
+    }
 }
 
 
