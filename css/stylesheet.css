@@ -1,0 +1,427 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* DEFAULT BUTTONS */
+.button_1 {
+    outline: none;
+    border: none;
+    border-top-right-radius: 32rem;
+    padding: 1rem 4rem;
+    background-color: #1BA249;
+    color: #fff;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* header part css */
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: max-content;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+.header_slide_1 {
+    width: 100%;
+    background-color: #000;
+    height: max-content;
+    color: #fff;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.header_slide_1 p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.header_slide_1 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+@media (max-width: 576px) {
+    .header_slide_1 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+.header_slide_2 {
+    width: 100%;
+    height: max-content;
+    background-color: #fff;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+
+.navbar {
+    width: 100%;
+}
+
+.header_col1 {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.header_col1 img {
+    width: 100%;
+}
+
+.header_col2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header_col2 a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.header_col3 {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.header_col3 a {
+    color: #000;
+    font-size: 200%;
+}
+
+.mobile_menu {
+    width: 100%;
+    height: max-content;
+    display: none;
+}
+
+.mobile_menu a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700;
+}
+
+.mobile_menu li {
+    list-style-type: none;
+    padding-bottom: 10px;
+}
+
+.header_col4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.header_col4 p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.header_col4 a {
+    text-decoration: none;
+    color: #000;
+}
+
+.header_col4 h3 {
+    color: #1BA249;
+    border: 4px solid #1BA249;
+    border-radius: 100%;
+    padding: 10px;
+}
+
+@media (max-width: 992px) {}
+
+@media (max-width: 992px) {
+    .header_col2 a {
+        font-size: 90%;
+    }
+
+    .header_col4 {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .header_top_strip {
+        display: none;
+    }
+
+    .header_col2 {
+        display: none;
+    }
+
+    .header_col1 img {
+        width: 50%;
+    }
+}
+
+@media (min-width: 769px) {
+    .header_col3 {
+        display: none;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .header_col1 img {
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    .header_slide_2 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+
+
+/* HERO SECTION CSS */
+.hero {
+    margin-top: 5rem;
+    width: 100%;
+    height: max-content;
+    background-image: url(../img/hero_banner.png);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.hero_content_container {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.hero_content_container h2 {
+    font-weight: 700;
+    font-size: 400%;
+    width: 80%;
+}
+
+.hero_content_container p {
+    font-weight: 500;
+    font-size: 100%;
+    width: 50%;
+}
+
+@media (max-width: 992px) {
+    .hero_content_container h2 {
+        font-weight: 700;
+        font-size: 300%;
+        width: 100%;
+    }
+
+    .hero_content_container p {
+        font-weight: 500;
+        font-size: 100%;
+        width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero_content_container h2 {
+        font-weight: 700;
+        font-size: 200%;
+        width: 100%;
+    }
+
+    .hero_content_container p {
+        font-weight: 500;
+        font-size: 100%;
+        width: 100%;
+    }
+}
+
+
+
+/* SECTION 1 */
+.journey_of_excellence {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.journey_of_excellence h3 {
+    font-weight: 600;
+    font-size: 300%;
+    text-align: center;
+}
+
+.journey_of_excellence_col1 img {
+    width: 100%;
+}
+
+
+.journey_of_excellence_quote {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+margin-bottom: 15px;
+}
+
+.journey_of_excellence_quote p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.journey_of_excellence_quote a {
+    text-decoration: none;
+    color: #000;
+}
+
+.journey_of_excellence_quote img {
+    padding-right: 10px;
+}
+
+
+@media (max-width: 992px) {
+    .journey_of_excellence h3 {
+        font-weight: 600;
+        font-size: 200%;
+        text-align: center;
+        padding: 5% 3%;
+    }
+}
+
+@media (min-width: 992px) {
+    .journey_of_excellence h3 {
+        padding: 5% 25%;
+    }
+}
+
+@media (max-width: 576px) {
+    .service_excellence_lg{
+        display: none;
+    }
+    .service_excellence_sm{
+        display: block;
+    }
+}
+
+@media (min-width: 576px) {
+    .service_excellence_lg{
+        display: block;
+    }
+    .service_excellence_sm{
+        display: none;
+    }
+}
+
+ /* SECTION 2 */
+.accreditations{
+    width: 100%;
+    height: max-content;
+    padding-top: 2rem;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #ffffff;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+}
+
+.marquee-content img {
+    margin: 0 80px;
+    height: 50px; /* Adjust height as needed */
+    vertical-align: middle;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+
+
+.accreditations h3 {
+    font-weight: 600;
+    font-size: 200%;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .accreditations h3 {
+        font-weight: 600;
+        font-size: 150%;
+        text-align: center;
+        padding: 5% 3%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 576px) {}
+
+@media (max-width: 768px) {}
