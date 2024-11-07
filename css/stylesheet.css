@@ -22,6 +22,14 @@ body {
     font-weight: 600;
 }
 
+.button_2{
+    outline: none;
+    border: none;
+    padding: 10px;
+    background-color: #1BA249;
+    border-radius: 5px;
+}
+
 
 
 
@@ -682,6 +690,132 @@ body {
 
 
 
+/* css of locations - home page  */
+.home_locations{
+    width: 100%;
+    height: max-content;
+
+    background-image: url(../img/locations_bg.png);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+.home_locations h3{
+    font-weight: 600;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+
+.home_locations h2{
+    width: 50%;
+    font-weight: 700;
+    font-size: 300%;
+    margin-top: 15rem;
+}
+
+
+.home_locations p{
+    width: 80%;
+    text-align: justify;
+}
+
+.home_locations_address_strip{
+    width: 60%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.home_locations_address_card{
+    background-image: url(../img/addressCardBg.png);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+    text-align: center;
+    width: max-content;
+    max-width: 100%;
+    border-radius: 5px;
+    border: 1px solid #00000036;
+    padding: 5px;
+    /* margin-right: 10px; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home_locations_address_card p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 70%;
+}
+
+.home_locations_address_card a{
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 70%;
+
+}
+
+@media (max-width: 1200px) {
+    .home_locations_address_strip{
+        width: 85%;
+    }
+}
+
+@media (max-width:800px) {
+    .home_locations_address_strip{
+        width: 100%;
+    }
+    .home_locations h2{
+        width: 90%;
+        margin-top: 5rem;
+    }
+    .home_locations p{
+        width: 100%;
+    }
+}
+
+@media (max-width:700px) {
+    .home_locations_address_strip{
+        flex-direction: column;
+    }
+
+    .home_locations_address_card{
+        width: 80%;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -704,7 +838,11 @@ body {
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
+}
+
+.footer_col{
+    margin-top: 20px !important;
 }
 
 .footer a {
@@ -721,6 +859,10 @@ body {
     font-weight: 300;
 }
 
+.footer i {
+    color: #E0E21D;
+}
+
 .footer_input_container {
     width: max-content;
     max-width: 100%;
@@ -733,14 +875,6 @@ body {
     outline: none;
     border: none;
     padding: 5px;
-}
-
-.footer_input_container button {
-    outline: none;
-    border: none;
-    padding: 10px;
-    background-color: #1BA249;
-    border-radius: 5px;
 }
 
 .footer h5 {
@@ -761,7 +895,6 @@ body {
     padding-right: 10px;
 }
 
-.footer_quick_links 
 
 
 .footer_address {
@@ -775,6 +908,18 @@ body {
     padding-right: 10px;
 }
 
+.footer_base1 p{
+    font-size: 80%;
+    margin-top: 30px !important;
+
+}
+
+.footer_base2 p{
+    margin-top: 30px !important;
+    font-size: 80%;
+    float: right;
+}
+
 @media (max-width: 576px) {
     .footer_input_container input {
         width: 100%;
@@ -782,6 +927,10 @@ body {
 
     .footer_input_container button {
         width: 100%;
+    }
+    .footer_base2 p{
+        float: none;
+        text-align: center;
     }
 }
 
