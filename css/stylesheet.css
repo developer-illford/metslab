@@ -222,7 +222,7 @@ body {
     margin-top: 5rem;
     width: 100%;
     height: max-content;
-    background-image: url(../img/hero_banner.png);
+    background-image: url(../img/hero_banner.webp);
     background-size: cover;
     /* Ensures the image covers the entire div */
     background-position: center;
@@ -695,7 +695,7 @@ body {
     width: 100%;
     height: max-content;
 
-    background-image: url(../img/locations_bg.png);
+    background-image: url(../img/locations_bg.webp);
     background-size: cover;
     /* Ensures the image covers the entire div */
     background-position: center;
@@ -739,7 +739,7 @@ body {
 }
 
 .home_locations_address_card{
-    background-image: url(../img/addressCardBg.png);
+    background-image: url(../img/addressCardBg.webp);
     background-size: cover;
     /* Ensures the image covers the entire div */
     background-position: center;
@@ -826,7 +826,7 @@ body {
 .footer {
     width: 100%;
     height: max-content;
-    background-image: url(../img/footer_banner.png);
+    background-image: url(../img/footer_banner.webp);
     background-size: cover;
     /* Ensures the image covers the entire div */
     background-position: center;
