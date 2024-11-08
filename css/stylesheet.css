@@ -39,6 +39,291 @@ body {
 
 
 
+/* ************************************************************************************************** */
+.floating_btn_call {
+    position: fixed;
+    bottom: 330px;
+    right: 30px;
+    width: 100px;
+    height: 100px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+@keyframes pulsing {
+    to {
+        box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+    }
+}
+
+.contact_icon_call {
+    background-color: #195836;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translatey(0px);
+    animation: pulse 1.5s infinite;
+    box-shadow: 0 0 0 0 #195836;
+    -webkit-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    font-weight: normal;
+    font-family: sans-serif;
+    text-decoration: none !important;
+    transition: all 300ms ease-in-out;
+}
+
+
+.text_icon_call {
+    margin-top: 8px;
+    color: #000000;
+    font-size: 13px;
+}
+/* ************************************************************************************************** */
+/* ************************************************************************************************** */
+.floating_btn_instagram {
+    position: fixed;
+    bottom: 230px;
+    right: 30px;
+    width: 100px;
+    height: 100px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+
+@keyframes pulsing {
+    to {
+        box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+    }
+}
+
+.contact_icon_instagram {
+    background-color: #C5447E;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translatey(0px);
+    animation: pulse 1.5s infinite;
+    box-shadow: 0 0 0 0 #C5447E;
+    -webkit-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    font-weight: normal;
+    font-family: sans-serif;
+    text-decoration: none !important;
+    transition: all 300ms ease-in-out;
+}
+
+
+.text_icon_instagram {
+    margin-top: 8px;
+    color: #000000;
+    font-size: 13px;
+}
+/* ************************************************************************************************** */
+/* ************************************************************************************************** */
+.floating_btn_whatsapp {
+    position: fixed;
+    bottom: 130px;
+    right: 30px;
+    width: 100px;
+    height: 100px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+
+@keyframes pulsing {
+    to {
+        box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+    }
+}
+
+.contact_icon_whatsapp {
+    background-color: #57E179;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translatey(0px);
+    animation: pulse 1.5s infinite;
+    box-shadow: 0 0 0 0 #57E179;
+    -webkit-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    font-weight: normal;
+    font-family: sans-serif;
+    text-decoration: none !important;
+    transition: all 300ms ease-in-out;
+}
+
+
+.text_icon_whatsapp {
+    margin-top: 8px;
+    color: #000000;
+    font-size: 13px;
+}
+/* ************************************************************************************************** */
+/* ************************************************************************************************** */
+.floating_btn_chat {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+
+@keyframes pulsing {
+    to {
+        box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+    }
+}
+
+.contact_icon_chat {
+    background-color: #506ACA;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translatey(0px);
+    animation: pulse 1.5s infinite;
+    box-shadow: 0 0 0 0 #506ACA;
+    -webkit-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    font-weight: normal;
+    font-family: sans-serif;
+    text-decoration: none !important;
+    transition: all 300ms ease-in-out;
+}
+
+
+.text_icon_chat {
+    margin-top: 8px;
+    color: #000000;
+    font-size: 13px;
+}
+
+.contact_icon_close{
+    background-color: #506ACA;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transform: translatey(0px);
+    animation: pulse 1.5s infinite;
+    box-shadow: 0 0 0 0 #506ACA;
+    -webkit-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    font-weight: normal;
+    font-family: sans-serif;
+    text-decoration: none !important;
+    transition: all 300ms ease-in-out;
+}
+
+.fa-xmark{
+    display: none;
+}
+/* ************************************************************************************************** */
+.floating_btn_call,
+.floating_btn_instagram,
+.floating_btn_whatsapp,
+.contact_icon_close {
+    position: fixed;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.floating_btn_call.show,
+.floating_btn_instagram.show,
+.floating_btn_whatsapp.show,
+.contact_icon_close.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ensure the default hidden state */
+.floating_btn_call,
+.floating_btn_instagram,
+.floating_btn_whatsapp,
+.contact_icon_close {
+    display: flex;
+}
+.contact_icon_chat {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.contact_icon_chat.hide {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -553,10 +838,17 @@ body {
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 20px;
+    transition: 0.5s ease;
+}
+
+.home_test_card:hover {
+    background-color: #E0E21E;
+    border: 2px solid #E0E21E;
 }
 
 .home_test_card img {
     width: 100%;
+
     transition: 1s ease;
 }
 
@@ -570,8 +862,8 @@ body {
     width: 100%;
     text-align: center;
     margin: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
 
 
