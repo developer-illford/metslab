@@ -882,6 +882,11 @@ body {
     border: 2px solid #E0E21E;
 }
 
+
+.home_test_card:hover.home_test_card p {
+    color: #000;
+}
+
 .home_test_card img {
     width: 100%;
 
