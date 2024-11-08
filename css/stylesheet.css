@@ -22,7 +22,7 @@ body {
     font-weight: 600;
 }
 
-.button_2{
+.button_2 {
     outline: none;
     border: none;
     padding: 10px;
@@ -92,6 +92,7 @@ body {
     color: #000000;
     font-size: 13px;
 }
+
 /* ************************************************************************************************** */
 /* ************************************************************************************************** */
 .floating_btn_instagram {
@@ -144,6 +145,7 @@ body {
     color: #000000;
     font-size: 13px;
 }
+
 /* ************************************************************************************************** */
 /* ************************************************************************************************** */
 .floating_btn_whatsapp {
@@ -196,6 +198,7 @@ body {
     color: #000000;
     font-size: 13px;
 }
+
 /* ************************************************************************************************** */
 /* ************************************************************************************************** */
 .floating_btn_chat {
@@ -249,7 +252,7 @@ body {
     font-size: 13px;
 }
 
-.contact_icon_close{
+.contact_icon_close {
     background-color: #506ACA;
     color: #fff;
     width: 60px;
@@ -274,9 +277,10 @@ body {
     transition: all 300ms ease-in-out;
 }
 
-.fa-xmark{
+.fa-xmark {
     display: none;
 }
+
 /* ************************************************************************************************** */
 .floating_btn_call,
 .floating_btn_instagram,
@@ -304,6 +308,7 @@ body {
 .contact_icon_close {
     display: flex;
 }
+
 .contact_icon_chat {
     opacity: 1;
     transition: opacity 0.3s ease;
@@ -507,18 +512,27 @@ body {
 .hero {
     margin-top: 5rem;
     width: 100%;
-    height: max-content;
-    background-image: url(../img/hero_banner.webp);
-    background-size: cover;
-    /* Ensures the image covers the entire div */
-    background-position: center;
-    /* Centers the image */
-    background-repeat: no-repeat;
-    /* Prevents the image from repeating */
+    height: 80vh;
     overflow: hidden;
+    position: relative;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    /* Puts the video behind the content */
 }
 
 .hero_content_container {
+    background-color: #ffffff69;
+    position: relative;
+    z-index: 1;
+    height: 100%;
     padding-top: 10%;
     padding-bottom: 10%;
     padding-right: 10%;
@@ -549,6 +563,19 @@ body {
         font-size: 100%;
         width: 80%;
     }
+
+    .hero {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero_content_container {
+        padding-top: 10%;
+        padding-bottom: 10%;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
 }
 
 @media (max-width: 576px) {
@@ -562,6 +589,13 @@ body {
         font-weight: 500;
         font-size: 100%;
         width: 100%;
+    }
+
+}
+
+@media (max-width: 340px) {
+    .hero_content_container h2 {
+        font-size: 120%;
     }
 }
 
@@ -637,9 +671,11 @@ body {
     .service_excellence_sm {
         display: block;
     }
-    .journey_of_excellence_col2 p{
+
+    .journey_of_excellence_col2 p {
         text-align: justify;
     }
+
     .journey_of_excellence {
         padding-left: 5%;
         padding-right: 5%;
@@ -1060,7 +1096,7 @@ body {
 
 
 /* css of locations - home page  */
-.home_locations{
+.home_locations {
     width: 100%;
     height: max-content;
 
@@ -1079,14 +1115,14 @@ body {
     padding-bottom: 1rem;
 }
 
-.home_locations h3{
+.home_locations h3 {
     font-weight: 600;
     padding-left: 10%;
     padding-right: 10%;
 }
 
 
-.home_locations h2{
+.home_locations h2 {
     width: 50%;
     font-weight: 700;
     font-size: 300%;
@@ -1094,12 +1130,12 @@ body {
 }
 
 
-.home_locations p{
+.home_locations p {
     width: 80%;
     text-align: justify;
 }
 
-.home_locations_address_strip{
+.home_locations_address_strip {
     width: 60%;
     height: max-content;
     display: flex;
@@ -1107,7 +1143,7 @@ body {
     justify-content: space-around;
 }
 
-.home_locations_address_card{
+.home_locations_address_card {
     background-image: url(../img/addressCardBg.webp);
     background-size: cover;
     /* Ensures the image covers the entire div */
@@ -1130,13 +1166,13 @@ body {
     justify-content: center;
 }
 
-.home_locations_address_card p{
+.home_locations_address_card p {
     text-align: center;
     font-weight: bold;
     font-size: 70%;
 }
 
-.home_locations_address_card a{
+.home_locations_address_card a {
     text-align: center;
     color: #000;
     text-decoration: none;
@@ -1146,42 +1182,44 @@ body {
 }
 
 @media (max-width: 1200px) {
-    .home_locations_address_strip{
+    .home_locations_address_strip {
         width: 85%;
     }
 }
 
 @media (max-width:800px) {
-    .home_locations_address_strip{
+    .home_locations_address_strip {
         width: 100%;
     }
-    .home_locations h2{
+
+    .home_locations h2 {
         width: 90%;
         margin-top: 5rem;
     }
-    .home_locations p{
+
+    .home_locations p {
         width: 100%;
     }
 }
 
 @media (max-width:700px) {
-    .home_locations_address_strip{
+    .home_locations_address_strip {
         flex-direction: column;
     }
 
-    .home_locations_address_card{
+    .home_locations_address_card {
         width: 80%;
         margin-bottom: 10px;
     }
 }
 
 @media (max-width:576px) {
-    .home_locations{
+    .home_locations {
         padding-left: 5%;
         padding-right: 5%;
     }
 
-    .home_locations h3{
+    .home_locations h3 {
         padding-left: 0%;
         padding-right: 0%;
     }
@@ -1222,7 +1260,7 @@ body {
     padding-bottom: 1rem;
 }
 
-.footer_col{
+.footer_col {
     margin-top: 20px !important;
 }
 
@@ -1289,13 +1327,13 @@ body {
     padding-right: 10px;
 }
 
-.footer_base1 p{
+.footer_base1 p {
     font-size: 80%;
     margin-top: 30px !important;
 
 }
 
-.footer_base2 p{
+.footer_base2 p {
     margin-top: 30px !important;
     font-size: 80%;
     float: right;
@@ -1309,7 +1347,8 @@ body {
     .footer_input_container button {
         width: 100%;
     }
-    .footer_base2 p{
+
+    .footer_base2 p {
         float: none;
         text-align: center;
     }
