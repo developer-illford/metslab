@@ -327,6 +327,8 @@ body {
 }
 
 
+
+
 @media (max-width: 992px) {
     .journey_of_excellence h3 {
         font-weight: 600;
@@ -350,6 +352,13 @@ body {
     .service_excellence_sm {
         display: block;
     }
+    .journey_of_excellence_col2 p{
+        text-align: justify;
+    }
+    .journey_of_excellence {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 }
 
 @media (min-width: 576px) {
@@ -371,6 +380,10 @@ body {
     padding-right: 10%;
 }
 
+/* ***************************************  */
+/* old marquee css commented below */
+
+/* 
 .marquee-container {
     overflow: hidden;
     white-space: nowrap;
@@ -383,17 +396,17 @@ body {
 
 .marquee-content {
     display: inline-flex;
-    animation: marquee 15s linear infinite;
+    animation: marquee 45s linear infinite;
 }
 
 .marquee-content img {
     margin: 0 20px;
     height: 50px;
-    /* Adjust height as needed */
+
     vertical-align: middle;
 }
 
-/* Keyframes for seamless loop */
+
 @keyframes marquee {
     0% {
         transform: translateX(0);
@@ -404,21 +417,71 @@ body {
     }
 }
 
-/* Make it responsive */
+
 @media (max-width: 600px) {
     .marquee-content img {
         margin: 0 10px;
         height: 30px;
-        /* Adjust for smaller screens */
+
     }
+} */
+
+
+.marquee {
+    height: 80px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 8px 0 4px 0;
 }
 
 
+/* would need to be adjusted depending on time */
+.marquee .marqueeone {
+    animation: marquee 20s linear infinite;
+}
+
+.marquee .marqueetwo {
+    animation: marquee 20s linear 5s infinite;
+}
+
+.marquee .marqueethree {
+    animation: marquee 20s linear 10s infinite;
+}
+
+.marquee .marqueefour {
+    animation: marquee 20s linear 15s infinite;
+}
 
 
+/* even out the elements */
+.marquee div {
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
 
+.marquee:hover div {
+    animation-play-state: paused;
+}
 
+/* add delay at the end of animation so you dont start while another div is going */
+@keyframes marquee {
+    0% {
+        left: 100%;
+    }
 
+    50% {
+        left: -100%;
+    }
+
+    100% {
+        left: -100%
+    }
+}
 
 
 /* CS FOR ACCREDITATIONS PART */
@@ -434,6 +497,13 @@ body {
         font-size: 150%;
         text-align: center;
         padding: 5% 3%;
+    }
+}
+
+@media (max-width: 576px) {
+    .accreditations {
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }
 
@@ -572,6 +642,8 @@ body {
 
     .lab_capabilities_sm {
         display: block;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }
 
@@ -681,6 +753,10 @@ body {
 @media (max-width: 576px) {
     .progress-section {
         flex-direction: column;
+    }
+
+    .progress-bar-container {
+        width: 100%;
     }
 }
 
@@ -804,6 +880,18 @@ body {
     .home_locations_address_card{
         width: 80%;
         margin-bottom: 10px;
+    }
+}
+
+@media (max-width:576px) {
+    .home_locations{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .home_locations h3{
+        padding-left: 0%;
+        padding-right: 0%;
     }
 }
 
@@ -932,6 +1020,11 @@ body {
     .footer_base2 p{
         float: none;
         text-align: center;
+    }
+
+    .footer {
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }
 
