@@ -9,6 +9,7 @@ body {
 
 .row {
     width: 100%;
+    margin: 0 !important;
 }
 
 /* DEFAULT BUTTONS */
@@ -1101,51 +1102,61 @@ body {
 
 
 /* css of locations - home page  */
+
+.home_locations_header {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 40px;
+}
+
+.home_locations_header h2 {
+    width: 100%;
+    font-weight: 700;
+    font-size: 300%;
+    /* margin-top: 15rem; */
+}
+
+
+
+
+
 .home_locations {
     width: 100%;
     height: max-content;
-
-    background-image: url(../img/locations_bg.webp);
-    background-size: cover;
-    /* Ensures the image covers the entire div */
-    background-position: center;
-    /* Centers the image */
-    background-repeat: no-repeat;
-    /* Prevents the image from repeating */
-    overflow: hidden;
-
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 3rem;
-    padding-bottom: 1rem;
+    position: relative;
+    background-color: #FFFFE2;
 }
 
-.home_locations h3 {
-    font-weight: 600;
-    padding-left: 10%;
-    padding-right: 10%;
+.home_locations img {
+    width: 100%;
+    position: relative;
 }
 
-
-.home_locations h2 {
+.home_locations_content_container {
     width: 50%;
+    height: max-content;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    padding: 20px;
+}
+
+.home_locations_content_container h2 {
+    width: 100%;
     font-weight: 700;
     font-size: 300%;
-    margin-top: 15rem;
+    /* margin-top: 15rem; */
 }
 
 
-.home_locations p {
+.home_locations_content_container p {
     width: 80%;
     text-align: justify;
 }
 
-.home_locations_address_strip {
-    width: 60%;
-    height: max-content;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.home_locations_address_card_col {
+    padding: 20px;
 }
 
 .home_locations_address_card {
@@ -1159,10 +1170,11 @@ body {
     overflow: hidden;
     text-align: center;
     width: max-content;
-    max-width: 100%;
+    width: 100%;
     border-radius: 5px;
     border: 1px solid #00000036;
     padding: 5px;
+
     /* margin-right: 10px; */
 
     display: flex;
@@ -1197,12 +1209,12 @@ body {
         width: 100%;
     }
 
-    .home_locations h2 {
+    .home_locations_content_container h2 {
         width: 90%;
         margin-top: 5rem;
     }
 
-    .home_locations p {
+    .home_locations_content_container p {
         width: 100%;
     }
 }
@@ -1211,24 +1223,342 @@ body {
     .home_locations_address_strip {
         flex-direction: column;
     }
-
-    .home_locations_address_card {
-        width: 80%;
-        margin-bottom: 10px;
-    }
 }
 
 @media (max-width:576px) {
     .home_locations {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .home_locations_header {
         padding-left: 5%;
         padding-right: 5%;
     }
 
-    .home_locations h3 {
-        padding-left: 0%;
-        padding-right: 0%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ******************************************************************** */
+.india_popup_hidden {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    right: 35%;
+    bottom: 47%;
+    background-color: #ff000000;
+}
+
+.india_popup_display {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    width: 15rem;
+    height: max-content;
+    border-radius: 5px;
+    position: absolute;
+    right: 37%;
+    bottom: 49%;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px #00000080;
+    padding: 5px;
+}
+
+.india_popup_display p {
+    font-weight: bold;
+}
+
+.india_popup_display a {
+    color: #000;
+    text-decoration: none;
+}
+
+.india_popup_hidden:hover+.india_popup_display {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+/* ******************************************************************** */
+
+.uae_popup_hidden {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 39.5%;
+    bottom: 48.5%;
+    background-color: #ff000000;
+}
+
+.uae_popup_display {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    width: 15rem;
+    height: max-content;
+    border-radius: 5px;
+    position: absolute;
+    right: 42%;
+    bottom: 50%;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px #00000080;
+    padding: 5px;
+}
+
+.uae_popup_display p {
+    font-weight: bold;
+}
+
+.uae_popup_display a {
+    color: #000;
+    text-decoration: none;
+}
+
+.uae_popup_hidden:hover+.uae_popup_display {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+/* ******************************************************************** */
+
+.quatar_popup_hidden {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 40.5%;
+    bottom: 50%;
+    background-color: #ff000000;
+}
+
+.quatar_popup_display {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    width: 15rem;
+    height: max-content;
+    border-radius: 5px;
+    position: absolute;
+    right: 43%;
+    bottom: 50%;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px #00000080;
+    padding: 5px;
+}
+
+.quatar_popup_display p {
+    font-weight: bold;
+}
+
+.quatar_popup_display a {
+    color: #000;
+    text-decoration: none;
+}
+
+.quatar_popup_hidden:hover+.quatar_popup_display {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+/* ******************************************************************** */
+
+.usa_popup_hidden {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 71.5%;
+    bottom: 53%;
+    background-color: #ff000000;
+}
+
+.usa_popup_display {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    width: 15rem;
+    height: max-content;
+    border-radius: 5px;
+    position: absolute;
+    left: 29%;
+    bottom: 52%;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px #00000080;
+    padding: 5px;
+}
+
+.usa_popup_display p {
+    font-weight: bold;
+}
+
+.usa_popup_display a {
+    color: #000;
+    text-decoration: none;
+}
+
+.usa_popup_hidden:hover+.usa_popup_display {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media (max-width: 992px) {
+    .india_popup_hidden {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 35%;
+        bottom: 59%;
+        background-color: #ff000000;
+    }
+
+    .uae_popup_hidden {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 39.5%;
+        bottom: 59%;
+        background-color: #00000000;
+    }
+
+    .quatar_popup_hidden {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 40.5%;
+        bottom: 61%;
+        background-color: #ff000000;
+    }
+
+    .usa_popup_hidden {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 71.5%;
+        bottom: 63%;
+        background-color: #ff000000;
     }
 }
+
+@media (max-width: 768px) {
+    .india_popup_hidden {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 34%;
+        bottom: 65%;
+        background-color: #ff000000;
+    }
+
+    .uae_popup_hidden {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 38%;
+        bottom: 64%;
+        background-color: #ff000000;
+    }
+
+    .quatar_popup_hidden {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 40.5%;
+        bottom: 66%;
+        background-color: #ff000000;
+    }
+
+    .usa_popup_hidden {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 71.5%;
+        bottom: 68%;
+        background-color: #ff000000;
+    }
+}
+
+@media (max-width: 576px) {
+    .india_popup_hidden {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 30%;
+        bottom: 80%;
+        background-color: #ff000000;
+    }
+
+    .uae_popup_hidden {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 37%;
+        bottom: 79.5%;
+        background-color: #ff000000;
+    }
+
+    .quatar_popup_hidden {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 40.5%;
+        bottom: 82%;
+        background-color: #ff000000;
+    }
+
+    .usa_popup_hidden {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 71.5%;
+        bottom: 82%;
+        background-color: #ff000000;
+    }
+
+    .india_popup_display {
+        right: 37%;
+        bottom: 80%;
+    }
+
+    .uae_popup_display {
+        right: 42%;
+        bottom: 85%;
+    }
+
+    .quatar_popup_display {
+        right: 43%;
+        bottom: 85%;
+    }
+
+    .usa_popup_display {
+        left: 29%;
+        bottom: 80%;
+    }
+
+}
+
+
 
 
 
@@ -1364,6 +1694,45 @@ body {
     }
 }
 
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+
+
+.hero_02 {
+    width: 100%;
+    height: max-content;
+}
+
+.hero_02_content {
+    background-color: #00000091;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 16%;
+    padding-bottom: 8%;
+}
+
+.hero_02_content h2 {
+    color: #fff;
+    font-size: 300%;
+}
+
+
+.about_hero{
+    background-image: url(../img/about_background.png);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
 
 
 
@@ -1388,11 +1757,16 @@ body {
 
 
 
-
-
-
-
-
+.services_hero{
+    background-image: url(../img/services_background.png);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
 
 
 @media (max-width: 576px) {}
