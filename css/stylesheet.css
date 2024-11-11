@@ -29,6 +29,67 @@ body {
     padding: 10px;
     background-color: #1BA249;
     border-radius: 5px;
+    color: #fff;
+}
+
+.button_3 {
+    outline: none;
+    border: 1px solid #1BA249;
+    ;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-radius: 500px;
+    color: #1BA249;
+}
+
+
+
+
+
+
+
+
+.hero_02 {
+    width: 100%;
+    height: max-content;
+}
+
+.hero_02_content {
+    background-color: #000000b2;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 16%;
+    padding-bottom: 8%;
+}
+
+.hero_02_content h2 {
+    color: #fff;
+    font-size: 300%;
+}
+
+@media (max-width: 768px) {
+    .hero_02_content {
+        padding-top: 25%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero_02_content {
+        padding-top: 30%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 370px) {
+    .hero_02_content {
+        padding-top: 40%;
+        text-align: center;
+    }
+
+    .hero_02_content h2 {
+        font-size: 200%;
+    }
 }
 
 
@@ -1101,6 +1162,40 @@ body {
 
 
 
+.special_testing {
+    width: 100%;
+    height: max-content;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.special_testing p {
+    font-size: 150%;
+    font-weight: 600;
+}
+
+
+@media (max-width: 992px) {
+    .special_testing {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media (max-width: 576px) {
+    .special_testing {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+
+
+
+
+
 /* css of locations - home page  */
 
 .home_locations_header {
@@ -1704,26 +1799,11 @@ body {
 /* ************************************************************************************************************************** */
 
 
-.hero_02 {
-    width: 100%;
-    height: max-content;
-}
-
-.hero_02_content {
-    background-color: #00000091;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 16%;
-    padding-bottom: 8%;
-}
-
-.hero_02_content h2 {
-    color: #fff;
-    font-size: 300%;
-}
 
 
-.about_hero{
+
+
+.about_hero {
     background-image: url(../img/about_background.png);
     background-size: cover;
     /* Ensures the image covers the entire div */
@@ -1734,6 +1814,133 @@ body {
     overflow: hidden;
 }
 
+.about_sec1 {
+    width: 100%;
+    height: max-content;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 6%;
+    padding-bottom: 6%;
+}
+
+.about_sec1 h3 {
+    font-weight: 600;
+    font-size: 300%;
+    text-align: left;
+}
+
+.about_sec1 p {
+    text-align: justify;
+}
+
+.about_sec1_col1 {
+    padding-bottom: 10px;
+}
+
+
+.about_sec1_col2 img {
+    width: 100%;
+}
+
+
+@media (max-width: 992px) {
+    .about_sec1_col2 {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .about_sec1 {
+        width: 100%;
+        height: max-content;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 6%;
+        padding-bottom: 6%;
+    }
+
+    .about_sec1 h3 {
+        font-size: 200%;
+    }
+}
+
+@media (max-width: 576px) {
+    .about_sec1 h3 {
+        font-size: 150%;
+    }
+}
+
+
+
+
+
+.team {
+    width: 100%;
+    height: max-content;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+
+    background-image: url(../img/team_bg.png);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.team h3 {
+    font-weight: 600;
+    font-size: 300%;
+    text-align: left;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .team {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .team h3 {
+        font-size: 200%;
+    }
+}
+
+@media (max-width: 576px) {
+    .team h3 {
+        font-size: 150%;
+    }
+}
+
+.team_card_col {
+    margin-bottom: 20px;
+}
+
+.team_card {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 0px 10px #00000059;
+}
+
+.team_card img {
+    width: 100%;
+}
+
+.team_card h5 {
+    font-weight: 600;
+}
+
+.team_card p {
+    text-align: justify;
+}
 
 
 
@@ -1752,12 +1959,90 @@ body {
 
 
 
+.about_sec2 {
+    width: 100%;
+    height: max-content;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    background-image: url(../img/metsLabStandsOut_bg.png);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+
+    color: #fff;
+}
+
+.about_sec2 h3 {
+    font-weight: 600;
+    font-size: 300%;
+    text-align: left;
+    padding-bottom: 40px;
+    text-align: left;
+}
+
+.about_sec2 p {
+    font-weight: 200;
+    padding-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .about_sec2 {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 10%;
+    }
+
+    .about_sec2 h3 {
+        font-size: 200%;
+    }
+
+    .about_sec2 h3 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .about_sec2 h3 {
+        font-size: 150%;
+    }
+}
 
 
 
 
 
-.services_hero{
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+
+
+
+.services_hero {
     background-image: url(../img/services_background.png);
     background-size: cover;
     /* Ensures the image covers the entire div */
@@ -1767,6 +2052,205 @@ body {
     /* Prevents the image from repeating */
     overflow: hidden;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+
+
+
+.accreditations_hero {
+    background-image: url(../img/accreditations_hero_background.png);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.accreditations {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.accreditations_col {
+    padding-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.accreditations img {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .accreditations {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+
+
+
+.report_hero {
+    background-image: url(../img/accreditations_hero_background.png);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.report_login {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.report_login_card{
+    width: 100%;
+    height: max-content;
+    box-shadow: 0px 0px 10px #000;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.report_login_card_col2 img{
+    width: 100%;
+}
+
+.report_login_card_col1 input{
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #000;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.report_login_card_col1 label {
+    color: #000;
+    font-size: 120%;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .report_login_card_col2{
+        display: none;
+    }
+
+    .report_login_card{
+        width: 100%;
+        height: max-content;
+        box-shadow: 0px 0px 10px #000;
+        padding: 0px;
+        border-radius: 20px;
+
+        background-image: url(../img/report_login_card_bg.png);
+        background-size: cover;
+        /* Ensures the image covers the entire div */
+        background-position: center;
+        /* Centers the image */
+        background-repeat: no-repeat;
+        /* Prevents the image from repeating */
+        overflow: hidden;
+    }
+
+    .report_login_card_col1{
+        padding: 20px;
+        background-color: #c7c7c79d;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media (max-width: 576px) {}
