@@ -12,6 +12,10 @@ body {
     margin: 0 !important;
 }
 
+.active{
+    color: #1BA249;
+}
+
 /* DEFAULT BUTTONS */
 .button_1 {
     outline: none;
@@ -40,6 +44,15 @@ body {
     background-color: #ffffff;
     border-radius: 500px;
     color: #1BA249;
+}
+
+.button_4 {
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    background-color: #1BA249;
+    border-radius: 200px;
+    color: #fff;
 }
 
 
@@ -2181,7 +2194,7 @@ body {
     padding-bottom: 40px;
 }
 
-.report_login_card{
+.report_login_card {
     width: 100%;
     height: max-content;
     box-shadow: 0px 0px 10px #000;
@@ -2189,11 +2202,11 @@ body {
     border-radius: 20px;
 }
 
-.report_login_card_col2 img{
+.report_login_card_col2 img {
     width: 100%;
 }
 
-.report_login_card_col1 input{
+.report_login_card_col1 input {
     border-radius: 10px;
     outline: none;
     border: 1px solid #000;
@@ -2209,11 +2222,11 @@ body {
 }
 
 @media (max-width: 768px) {
-    .report_login_card_col2{
+    .report_login_card_col2 {
         display: none;
     }
 
-    .report_login_card{
+    .report_login_card {
         width: 100%;
         height: max-content;
         box-shadow: 0px 0px 10px #000;
@@ -2230,7 +2243,7 @@ body {
         overflow: hidden;
     }
 
-    .report_login_card_col1{
+    .report_login_card_col1 {
         padding: 20px;
         background-color: #c7c7c79d;
     }
@@ -2240,6 +2253,124 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+/* ************************************************************************************************************************** */
+
+
+
+.contact_hero {
+    background-image: url(../img/contact_hero_bg.png);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.contact_sec {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.message_card {
+    width: 100%;
+    height: max-content;
+    padding: 30px;
+    background-color: #F3F6F7;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #0000006c;
+}
+
+.message_card h5 {
+    font-weight: bold;
+    font-size: 200%;
+}
+
+.message_card p {
+    color: #1BA249;
+    font-size: 80%;
+}
+
+.message_card input {
+    margin-bottom: 30px;
+    border: 2px solid #00000044;
+    border-radius: 200px;
+    padding: 10px;
+    width: 100%;
+}
+
+.message_card textarea {
+    margin-bottom: 30px;
+    border: 2px solid #00000044;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+.contact_sec h4{
+    font-weight: bold;
+    font-size: 200%;
+}
+
+.contact_sec h6{
+    font-weight: bold;
+    font-size: 150%;
+    padding-top: 30px;
+}
+
+.timings_div{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.timings_div p{
+    margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    .contact_sec {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .message_card {
+        padding: 15px;
+    }
+}
 
 
 
