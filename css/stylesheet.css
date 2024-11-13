@@ -157,7 +157,26 @@ body {
 
 
 
-
+.pulser{
+    position: absolute;
+    right: 35.3%;
+    bottom: 48%;
+    background-color: #00000000;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    animation: pulse 1.5s infinite;
+    box-shadow: 0 0 0 0 #ff0000;
+    -webkit-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+@keyframes pulsing {
+    to {
+        box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+    }
+}
 
 
 
@@ -636,7 +655,7 @@ body {
 .hero {
     margin-top: 5rem;
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     overflow: hidden;
     position: relative;
 }
@@ -653,7 +672,7 @@ body {
 }
 
 .hero_content_container {
-    background-color: #ffffff69;
+    background-color: #00000056;
     position: relative;
     z-index: 1;
     height: 100%;
@@ -667,12 +686,15 @@ body {
     font-weight: 700;
     font-size: 400%;
     width: 80%;
+    color: #ffffff;
 }
 
 .hero_content_container p {
     font-weight: 500;
     font-size: 100%;
     width: 50%;
+    color: #ffffff;
+
 }
 
 @media (max-width: 992px) {
@@ -1441,7 +1463,7 @@ body {
 }
 
 .india_popup_display p {
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .india_popup_display a {
@@ -1483,7 +1505,7 @@ body {
 }
 
 .uae_popup_display p {
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .uae_popup_display a {
@@ -1525,7 +1547,7 @@ body {
 }
 
 .quatar_popup_display p {
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .quatar_popup_display a {
@@ -1567,7 +1589,7 @@ body {
 }
 
 .usa_popup_display p {
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .usa_popup_display a {
@@ -1579,6 +1601,48 @@ body {
     visibility: visible;
     opacity: 1;
 }
+
+
+/* ******************************************************************** */
+
+.uk_popup_hidden {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 50.7%;
+    bottom: 60%;
+    background-color: #ff000000;
+}
+
+.uk_popup_display {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    width: 15rem;
+    height: max-content;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    bottom: 65%;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px #00000080;
+    padding: 5px;
+}
+
+.uk_popup_display p {
+    font-weight: 500;
+}
+
+.uk_popup_display a {
+    color: #000;
+    text-decoration: none;
+}
+
+.uk_popup_hidden:hover+.uk_popup_display {
+    visibility: visible;
+    opacity: 1;
+}
+
 
 @media (max-width: 992px) {
     .india_popup_hidden {
@@ -1614,6 +1678,15 @@ body {
         position: absolute;
         right: 71.5%;
         bottom: 63%;
+        background-color: #ff000000;
+    }
+
+    .uk_popup_hidden {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 50.7%;
+        bottom: 70%;
         background-color: #ff000000;
     }
 }
@@ -1652,6 +1725,15 @@ body {
         position: absolute;
         right: 71.5%;
         bottom: 68%;
+        background-color: #ff000000;
+    }
+
+    .uk_popup_hidden {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 50.7%;
+        bottom: 72%;
         background-color: #ff000000;
     }
 }
@@ -1693,6 +1775,15 @@ body {
         background-color: #ff000000;
     }
 
+    .uk_popup_hidden {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 50.7%;
+        bottom: 83%;
+        background-color: #ff000000;
+    }
+
     .india_popup_display {
         right: 37%;
         bottom: 80%;
@@ -1711,6 +1802,11 @@ body {
     .usa_popup_display {
         left: 29%;
         bottom: 80%;
+    }
+
+    .uk_popup_display {
+        left: 20%;
+        bottom: 70%;
     }
 
 }
@@ -2117,9 +2213,57 @@ body {
 
 
 
+.service_cards_sec {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 40px;
+    padding-bottom: 1rem;
+}
 
+.service_card_col{
+    margin-bottom: 30px;
+    padding-bottom: 5rem;
+}
 
+.service_card{
+    width: 100%;
+    height: max-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.service_card img{
+    width: 100%;
+}
+
+.service_card_content{
+    width: 90%;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 70%;
+    box-shadow: 0px 9px 20px 0px #0000009e;
+}
+
+.service_card_content h5{
+    font-weight: bold;
+}
+
+.service_card_content a{
+    color: #1BA249;
+    text-decoration: none;
+}
+
+@media (max-width: 1250px) {
+    .service_card_col{
+        margin-bottom: 30px;
+        padding-bottom: 8rem;
+    }
+}
 
 
 
