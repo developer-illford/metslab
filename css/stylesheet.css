@@ -2467,6 +2467,13 @@ body {
     padding-bottom: 40px;
 }
 
+.open_positions h3{
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
 .vaccancy_col{
     margin-bottom: 20px;
 }
@@ -2509,6 +2516,13 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #fff;
+}
+
+.hiring_process_h3{
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
 }
 
 .hiring_process_col {
