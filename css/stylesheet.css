@@ -1866,7 +1866,7 @@ body {
 
 
 .about_hero {
-    background-image: url(../img/about_background.png);
+    background-image: url(../img/about_background.webp);
     background-size: cover;
     /* Ensures the image covers the entire div */
     background-position: center;
@@ -1944,7 +1944,7 @@ body {
     padding-top: 2%;
     padding-bottom: 5%;
 
-    background-image: url(../img/team_bg.png);
+    background-image: url(../img/team_bg.webp);
     background-size: cover;
     /* Ensures the image covers the entire div */
     background-position: center;
@@ -2029,7 +2029,7 @@ body {
     padding-top: 5%;
     padding-bottom: 5%;
 
-    background-image: url(../img/metsLabStandsOut_bg.png);
+    background-image: url(../img/metsLabStandsOut_bg.webp);
     background-size: cover;
     /* Ensures the image covers the entire div */
     background-position: center;
@@ -2105,7 +2105,7 @@ body {
 
 
 .services_hero {
-    background-image: url(../img/services_background.png);
+    background-image: url(../img/services_background.webp);
     background-size: cover;
     /* Ensures the image covers the entire div */
     background-position: center;
@@ -2152,7 +2152,7 @@ body {
 
 
 .accreditations_hero {
-    background-image: url(../img/accreditations_hero_background.png);
+    background-image: url(../img/accreditations_hero_background.webp);
     background-size: cover;
     /* Ensures the image covers the entire div */
     background-position: center;
@@ -2226,7 +2226,7 @@ body {
 
 
 .report_hero {
-    background-image: url(../img/accreditations_hero_background.png);
+    background-image: url(../img/accreditations_hero_background.webp);
     background-size: cover;
     /* Ensures the image covers the entire div */
     background-position: center;
@@ -2282,7 +2282,7 @@ body {
         padding: 0px;
         border-radius: 20px;
 
-        background-image: url(../img/report_login_card_bg.png);
+        background-image: url(../img/report_login_card_bg.webp);
         background-size: cover;
         /* Ensures the image covers the entire div */
         background-position: center;
@@ -2332,7 +2332,7 @@ body {
 
 
 .contact_hero {
-    background-image: url(../img/contact_hero_bg.png);
+    background-image: url(../img/contact_hero_bg.webp);
     background-size: cover;
     /* Ensures the image covers the entire div */
     background-position: center;
@@ -2447,7 +2447,7 @@ body {
 
 
 .career_hero {
-    background-image: url(../img/accreditations_hero_background.png);
+    background-image: url(../img/accreditations_hero_background.webp);
     background-size: cover;
     /* Ensures the image covers the entire div */
     background-position: center;
@@ -2503,7 +2503,7 @@ body {
     padding-bottom: 40px;
     margin-top: 20px;
 
-    background-image: url(../img/Vector_1.png);
+    background-image: url(../img/Vector_1.webp);
     background-size: cover;
     /* Ensures the image covers the entire div */
     background-position: center;
@@ -2578,7 +2578,7 @@ body {
         padding-right: 5%;
     }
     .hiring_process {
-        background-image: url(../img/Vector_2.png);
+        background-image: url(../img/Vector_2.webp);
     }
 }
 
@@ -2615,7 +2615,7 @@ body {
 
 
 .water_testing_hero {
-    background-image: url(../img/waste-water-hero-bg.png);
+    background-image: url(../img/waste-water-hero-bg.webp);
     background-size: cover;
     /* Ensures the image covers the entire div */
     background-position: center;
@@ -2715,7 +2715,7 @@ body {
 
 
 .fod_testing_hero {
-    background-image: url(../img/food-feed-an-grains.png);
+    background-image: url(../img/food-feed-an-grains.webp);
     background-size: cover;
     /* Ensures the image covers the entire div */
     background-position: center;
