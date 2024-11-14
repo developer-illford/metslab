@@ -56,6 +56,36 @@ body {
 }
 
 
+/* animations */
+.animate {
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+}
+
+.fadeLeft.animate {
+    transform: translateX(-60px);
+}
+
+.fadeRight.animate {
+    transform: translateX(60px);
+}
+
+.fadeInUp.animate {
+    transform: translateY(60px);
+}
+
+.fadeInDown.animate {
+    transform: translateY(-60px);
+}
+
+.animate.fade-in {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* animations */
+
+
 
 
 
@@ -903,21 +933,21 @@ body {
 }
 
 
-/* would need to be adjusted depending on time */
+/* Adjusted for a slower animation speed */
 .marquee .marqueeone {
-    animation: marquee 20s linear infinite;
+    animation: marquee 30s linear infinite;
 }
 
 .marquee .marqueetwo {
-    animation: marquee 20s linear 5s infinite;
+    animation: marquee 30s linear 7.5s infinite;
 }
 
 .marquee .marqueethree {
-    animation: marquee 20s linear 10s infinite;
+    animation: marquee 30s linear 15s infinite;
 }
 
 .marquee .marqueefour {
-    animation: marquee 20s linear 15s infinite;
+    animation: marquee 30s linear 22.5s infinite;
 }
 
 
@@ -926,7 +956,7 @@ body {
     position: absolute;
     width: 100%;
     left: 100%;
-    height: 50px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
 }
