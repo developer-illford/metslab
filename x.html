@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section class="grid">
+        <figure>
+            <picture>
+                <img src="https://assets.codepen.io/2585/Xmas_Pattern_Mitten.png" alt="" />
+            </picture>
+            <figcaption>Sir Mittins</figcaption>
+        </figure>
+
+        <figure>
+            <picture>
+                <img src="https://assets.codepen.io/2585/Xmas_Pattern_Flower.png" alt="" />
+            </picture>
+            <figcaption>Flower Power</figcaption>
+        </figure>
+
+        <figure>
+            <picture>
+                <img src="https://assets.codepen.io/2585/Xmas_Pattern_Bell.png" alt="" />
+            </picture>
+            <figcaption>Alexandra Bell</figcaption>
+        </figure>
+
+        <figure>
+            <picture>
+                <img src="https://assets.codepen.io/2585/Xmas_Pattern_Light.png" alt="" />
+            </picture>
+            <figcaption>Knight Light</figcaption>
+        </figure>
+
+        <figure>
+            <picture>
+                <img src="https://assets.codepen.io/2585/Xmas_Pattern_Cherry.png" alt="" />
+            </picture>
+            <figcaption>Cheery Geryon</figcaption>
+        </figure>
+
+        <figure>
+            <picture>
+                <img src="https://assets.codepen.io/2585/Xmas_Pattern_Bag.png" alt="" />
+            </picture>
+            <figcaption>Bag-O-Joy</figcaption>
+        </figure>
+    </section>
+
+    <footer>
+        Images courtesy of <a href="https://pablostanley.gumroad.com/">Pablo Stanley</a> - <a
+            href="https://pablostanley.gumroad.com/l/tiny-xmas-parade-drawings">The Tiny Little Christmas Parade</a>
+    </footer>
+
+    <style>
+        @layer demo {
+            @keyframes scale-a-lil {
+                from {
+                    scale: .5;
+                }
+            }
+
+            @media (prefers-reduced-motion: no-preference) {
+                figure img {
+                    animation: scale-a-lil linear both;
+                    animation-timeline: view();
+                    animation-range: 25vh 75vh;
+                }
+            }
+        }
+
+        @layer demo.support {
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+
+            html {
+                block-size: 100%;
+            }
+
+            body {
+                min-block-size: 100%;
+                font-family: system-ui, sans-serif;
+
+                display: grid;
+                place-content: center;
+                place-items: center;
+                padding-block: 75vh;
+            }
+
+            img {
+                max-inline-size: 100%;
+            }
+
+            .grid {
+                display: grid;
+                gap: 5vmin;
+                padding: 5vmin;
+                place-items: center;
+                max-inline-size: 1024px;
+
+                @media (width > 720px) {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+
+            figure {
+                display: grid;
+                place-items: center;
+                gap: 2rem;
+                padding: 2rem;
+                border-radius: 3rem;
+                background: aliceblue;
+                overflow: clip;
+                overflow-clip-margin: content-box;
+
+                >picture {
+                    padding: 2rem;
+                    background: Canvas;
+                }
+
+                & img {
+                    max-block-size: 25vh;
+                }
+            }
+
+            footer {
+                max-inline-size: 30ch;
+                text-align: center;
+                text-wrap: balance;
+            }
+        }
+    </style>
+</body>
+
+</html>

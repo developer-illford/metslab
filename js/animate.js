@@ -36,3 +36,89 @@ document.addEventListener("DOMContentLoaded", function () {
     // Trigger the check on page load
     handleScroll();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// SCROLL SCALING ANIMATION -- ADD THE CLASS .scroll-scale TO APPLY THIS ANIMATION TO ANY ELEMENT
+// SCROLL SCALING ANIMATION -- ADD THE CLASS .scroll-scale TO APPLY THIS ANIMATION TO ANY ELEMENT
+// SCROLL SCALING ANIMATION -- ADD THE CLASS .scroll-scale TO APPLY THIS ANIMATION TO ANY ELEMENT
+
+// HTML
+// Add this class to the element you want to animate: `scroll-scale`.
+
+// CSS
+const styles = `
+.scroll-scale {
+transform-origin: center;
+transition: transform 0.1s ease-out;
+}
+`;
+
+// Inject styles dynamically
+const styleSheet = document.createElement("style");
+styleSheet.type = "text/css";
+styleSheet.innerText = styles;
+document.head.appendChild(styleSheet);
+
+// JavaScript
+function updateScaleOnScroll() {
+    const elements = document.querySelectorAll('.scroll-scale');
+    const windowHeight = window.innerHeight;
+
+    elements.forEach((element) => {
+        const rect = element.getBoundingClientRect();
+        const elementTop = rect.top;
+
+        // Calculate scale factor based on the scroll position
+        let scale = 0.8; // Default scale
+
+        if (elementTop >= 0 && elementTop <= windowHeight) {
+            const progress = (windowHeight - elementTop) / windowHeight;
+            scale = 0.8 + (0.2 * progress);
+        } else if (elementTop > windowHeight) {
+            scale = 0.8; // Reset scale when element is below the viewport
+        } else if (elementTop < 0) {
+            scale = 1; // Keep scale at 1 when element is above the viewport
+        }
+
+        element.style.transform = `scale(${scale})`;
+    });
+}
+
+// Add scroll event listener
+window.addEventListener('scroll', updateScaleOnScroll);
+
+// Initial call to set scale on load
+updateScaleOnScroll();
+

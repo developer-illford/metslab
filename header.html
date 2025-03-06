@@ -1,57 +1,83 @@
 <header class="header">
-    <div class="header_slide_1">
+    <!-- <div class="header_slide_1">
         <p style="float: left;"><i class="fa-regular fa-user"></i>Login / Register</p>
         <p style="float: right;">
             <a href=""><i class="fa-brands fa-facebook"></i></a>
             <a href="">&nbsp;|&nbsp;<i class="fa-brands fa-twitter"></i>&nbsp;|&nbsp;</a>
             <a href=""><i class="fa-brands fa-instagram"></i></a>
         </p>
-    </div>
+    </div> -->
     <div class="header_slide_2">
         <div class="navbar row">
-            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-6 col-6 header_col1">
-                <img onclick="window.location.href='index.html'" src="img/mets_lab_logo.webp" alt="">
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-3 header_col1">
+                <img onclick="window.location.href='index.html'" src="img/mets_lab_logo_small.png" alt="">
             </div>
             <div class="col-xl-8 col-lg-8 col-md-10 col-sm-0 col-0 header_col2">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="accreditations.html">Accreditations</a>
-                <a href="report.html">Report</a>
-                <a href="">Blogs</a>
-                <a href="career.html">Career</a>
-                <a href="contact.html">Contact Us</a>
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-0 col-0 header_col2">
+                        <h2>METS LABORATARIES</h2>
+                    </div>
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-0 col-0 header_col2">
+                        <div class="lg_menu_container">
+                            <a href="index.html">Home</a>
+                            <a href="about.html">About</a>
+                            <a href="services.html">Services</a>
+                            <a href="accreditations.html">Accreditations</a>
+                            <a href="career.html">Career</a>
+                            <a href="">Blogs</a>
+                            <a href="report.html">Report</a>
+                            <a href="contact.html">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
 
             </div>
             <div class="col-xl-2 col-lg-2 col-md-0 col-sm-0 col-0 header_col4">
                 <!-- <h3><i class="fa-solid fa-phone"></i></h3> -->
-                 <img src="img/phone_icon.webp" alt="">
-                <div class="header_col4_quote">
-                    <p>Get QUOTE</p>
-                    <p><a href="tel:+447526505070">+447526505070</a></p>
+                <button class="login_button">Login / Register</button>
+                <div class="header_col4_sub">
+                    <i class="fa-solid fa-phone"></i>
+                    <div class="header_col4_quote">
+                        <!-- <p>Get QUOTE</p> -->
+                        <p><a href="tel:+447526505070"> &nbsp; &nbsp;+447526505070</a></p>
+                    </div>
                 </div>
             </div>
-            <div class="col-xl-0 col-lg-0 col-md-0 col-sm-6 col-6 header_col3">
+            <div class="col-xl-0 col-lg-0 col-md-0 col-sm-6 col-6 mobile_Menu_heading_col">
+                <br>
+                <h6 class="mobile_Menu_heading">METS LABORATARIES</h6>
+                <br>
+            </div>
+            <div class="col-xl-0 col-lg-0 col-md-0 col-sm-3 col-3 header_col3">
                 <a><i onclick="hamburgerToggle()" class="fa-solid fa-bars"></i></a>
             </div>
         </div>
         <div id="mobileMenu" class="mobile_menu">
             <ul>
-                <li class="mobile_item"><a href="index.html">Home</a></li>
-                <li class="mobile_item"><a href="about.html">About</a></li>
-                <li class="mobile_item"><a href="services.html">Services</a></li>
-                <li class="mobile_item"><a href="accreditations.html">Accreditations</a></li>
-                <li class="mobile_item"><a href="report.html">Report</a></li>
-                <li class="mobile_item"><a href="">Blogs</a></li>
-                <li class="mobile_item"><a href="career.html">Career</a></li>
-                <li class="mobile_item"><a href="contact.html">Contact Us</a></li>
-                <br><br>
+                <li class="mobile_item"><a href="index.html">Home &nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-arrow-left"></i></a></li>
+                <li class="mobile_item"><a href="about.html">About &nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-arrow-left"></i></a></li>
+                <li class="mobile_item"><a href="services.html">Services &nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-arrow-left"></i></a></li>
+                <li class="mobile_item"><a href="accreditations.html">Accreditations &nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-arrow-left"></i></a></li>
+                <li class="mobile_item"><a href="career.html">Career &nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-arrow-left"></i></a></li>
+                <li class="mobile_item"><a href="">Blogs &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-arrow-left"></i></a>
+                </li>
+                <li class="mobile_item"><a href="report.html">Report &nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-arrow-left"></i></a></li>
+                <li class="mobile_item"><a href="contact.html">Contact Us &nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-arrow-left"></i></a></li>
+                <li><a href="tel:+447526505070"><i class="fa-solid fa-phone"></i> &nbsp; &nbsp;+447526505070</a></li>
+                <!-- <br><br>
                 <li class="mobile_item"><a href="mailto:lab@metslab.com"><i class="fa-regular fa-envelope"></i>
                         &nbsp;lab@metslab.com</a></li>
                 <li class="mobile_item"><a href="tel:+447526505070"><i class="fa-solid fa-phone"></i>
                         &nbsp;+447526505070</a></li>
                 <li class="mobile_item"><a href=""><i class="fa-solid fa-location-dot"></i> &nbsp;METS LABORATORIES
-                        UK LTDUNIT-1, NARROW BOAT WAY Hurst Business Park, Brierley Hill Dudley DY5 1 UF</a></li>
+                        UK LTDUNIT-1, NARROW BOAT WAY Hurst Business Park, Brierley Hill Dudley DY5 1 UF</a></li> -->
             </ul>
         </div>
     </div>
