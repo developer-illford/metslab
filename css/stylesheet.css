@@ -588,10 +588,12 @@ body {
     top: 0;
     width: 100%;
     height: max-content;
-    background-color: #000;
+    background-color: #00000000;
     display: flex;
     flex-direction: column;
     z-index: 99;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .header_slide_1 {
@@ -628,6 +630,8 @@ body {
     padding-left: 4rem;
     padding-right: 4rem;
     box-shadow: 0px 10px 20px 0px #00000096;
+    border-radius: 20px;
+    margin-top: 10px;
 }
 
 
@@ -652,9 +656,9 @@ body {
 }
 
 .header_col2 a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     transition: 0.2s ease;
 }
 
@@ -667,7 +671,7 @@ body {
 
 
 .lg_menu_container {
-    background-color: #1BA249;
+    background-color: #1ba24800;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     border-top-right-radius: 20px;
@@ -676,6 +680,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+.lg_menu_container a {
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.lg_menu_container .active {
+    background-color: #1ba249;
+    color: #fff;
 }
 
 .header_col3 {
@@ -730,17 +744,25 @@ body {
 }
 
 .login_button {
-    background-color: #00000000;
-    color: #000;
+    background-color: #1ba249;
+    color: #fff;
     padding: 5px 10px;
-    border-radius: 20px;
-    margin-bottom: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: none;
 }
 
 .header_col4_sub {
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+.header_col4_sub i {
+    background-color: #1ba249;
+    padding: 10px;
+    border-radius: 50%;
+    color: #fff;
 }
 
 .header_col4 p {
@@ -814,7 +836,7 @@ body {
 
 /* HERO SECTION CSS */
 .hero {
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     width: 100%;
     height: 90vh;
     overflow: hidden;
@@ -916,14 +938,20 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .journey_of_excellence h3 {
     font-weight: 600;
     font-size: 300%;
     text-align: center;
+    color: #1BA249;
+}
+
+.journey_of_excellence_col1 {
+    display: flex;
+    align-items: center;
 }
 
 .journey_of_excellence_col1 img {
@@ -934,7 +962,7 @@ body {
 .journey_of_excellence_quote {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     margin-bottom: 15px;
 }
 
@@ -952,6 +980,40 @@ body {
     padding-right: 10px;
 }
 
+.journey_of_excellence_col2 {
+    text-align: center;
+}
+
+.journey_of_excellence_col2 p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.journey_of_excellence_related_services_col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.journey_of_excellence_related_services {
+    background-color: #1BA249;
+    color: #fff;
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: #0000008c 0px 0px 10px 0px;
+    position: relative;
+}
+
+.journey_of_excellence_related_services img {
+    width: 20%;
+    position: absolute;
+    top: -40px;
+    right: 10px;
+}
+
 
 
 
@@ -962,6 +1024,10 @@ body {
         font-size: 200%;
         text-align: center;
         padding: 5% 3%;
+    }
+
+    .journey_of_excellence_related_services {
+        width: 100%;
     }
 }
 
@@ -1188,22 +1254,23 @@ body {
 .home_test_card {
     width: 100%;
     height: 100%;
-    background-color: #1BA249;
-    border: 1px solid #1BA249;
+    /* background-color: #1BA249; */
+    /* border: 1px solid #1BA249; */
+    box-shadow: #00000073 0px 1px 10px 2px;
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 0px;
     transition: 0.5s ease;
 }
 
-.home_test_card:hover {
+/* .home_test_card:hover {
     background-color: #E0E21E;
     border: 2px solid #E0E21E;
-}
+} */
 
 
 .home_test_card:hover.home_test_card p {
-    color: #000;
+    color: #1BA249;
 }
 
 .home_test_card img {
@@ -1217,8 +1284,8 @@ body {
 }
 
 .home_test_card p {
-    color: #fff;
-    font-weight: 500;
+    color: #1BA249;
+    font-weight: 600;
     width: 100%;
     text-align: center;
     margin: 0;
@@ -2093,6 +2160,7 @@ body {
 
 .footer_address {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -2168,6 +2236,12 @@ body {
     padding-bottom: 6%;
 }
 
+.about_sec1_row{
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 10px #5555554d;
+    padding: 30px;
+}
+
 .about_sec1 h3 {
     font-weight: 600;
     font-size: 300%;
@@ -2184,7 +2258,7 @@ body {
 
 
 .about_sec1_col2 img {
-    width: 100%;
+    width: 90%;
 }
 
 
@@ -2227,7 +2301,7 @@ body {
     padding-top: 2%;
     padding-bottom: 5%;
 
-    background-image: url(../img/team_bg.webp);
+    background-image: url(../img/green-square-background.png);
     background-size: cover;
     /* Ensures the image covers the entire div */
     background-position: center;
@@ -2264,14 +2338,21 @@ body {
 
 .team_card_col {
     margin-bottom: 20px;
+    display: flex;align-items: center;
+    justify-content: center;
+}
+
+.team_card_col img{
+    width: 70%;
 }
 
 .team_card {
     width: 100%;
-    height: 100%;
+    max-width: 400px;
+    height: max-content;
     background-color: #fff;
     border-radius: 10px;
-    padding: 15px;
+    padding: 30px;
     box-shadow: 0px 0px 10px #00000059;
 }
 
@@ -3465,6 +3546,7 @@ body {
     .service_detailing_img img {
         margin-bottom: 10px;
     }
+
     .service_detailing_img {
         max-height: 500px;
 
