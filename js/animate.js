@@ -122,3 +122,18 @@ window.addEventListener('scroll', updateScaleOnScroll);
 // Initial call to set scale on load
 updateScaleOnScroll();
 
+
+
+
+
+// function to change the color of header on scrolling
+// function to change the color of header on scrolling
+window.addEventListener("scroll", function () {
+    let header = document.querySelector(".header_slide_2");
+    
+    if (window.scrollY > 50) { // Change background when scrolled 50px down
+        header.style.backgroundColor = "#fff"; // Black with transparency
+    } else {
+        header.style.backgroundColor = "#ffffffcc"; // Default white
+    }
+});

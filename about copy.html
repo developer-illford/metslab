@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mets Lab</title>
+
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font Awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/6c53136549.js" crossorigin="anonymous"></script>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* From Uiverse.io by arshshaikh06 */
+        .slide_banner_container {
+            height: 500px;
+            width: 100%;
+            overflow: hidden;
+            box-shadow: 0 10px 20px #dbdbdb;
+            font-family: sans-serif;
+        }
+
+        .palette {
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+
+        .banner_slide_card {
+            height: 100%;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: flex 0.1s linear;
+        }
+
+        .banner_slide_card span {
+            opacity: 0;
+            transition: opacity 0.1s linear;
+        }
+
+        .banner_slide_card:nth-child(1) {
+            background: url(img/apf1.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .banner_slide_card:nth-child(2) {
+            background: url(img/apf2.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .banner_slide_card:nth-child(3) {
+            background: url(img/apf3.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .banner_slide_card:nth-child(4) {
+            background: url(img/apf4.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .banner_slide_card:nth-child(5) {
+            background: url(img/apf5.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .banner_slide_card:hover {
+            flex: 8;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        .banner_slide_card:hover span {
+            opacity: 1;
+        }
+
+        #stats {
+            height: 14%;
+            width: 100%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1.5em;
+            box-sizing: border-box;
+            color: #bebebe;
+        }
+
+        #stats svg {
+            fill: #bebebe;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <!-- From Uiverse.io by arshshaikh06 -->
+    <div class="slide_banner_container">
+        <div class="palette">
+            <div class="banner_slide_card"><span>264653</span></div>
+            <div class="banner_slide_card"><span>2A9D8F</span></div>
+            <div class="banner_slide_card"><span>E9C46A</span></div>
+            <div class="banner_slide_card"><span>F4A261</span></div>
+            <div class="banner_slide_card"><span>E76F51</span></div>
+            <div class="banner_slide_card"><span>264653</span></div>
+            <div class="banner_slide_card"><span>2A9D8F</span></div>
+            <div class="banner_slide_card"><span>E9C46A</span></div>
+            <div class="banner_slide_card"><span>F4A261</span></div>
+            <div class="banner_slide_card"><span>E76F51</span></div>
+            <div class="banner_slide_card"><span>264653</span></div>
+            <div class="banner_slide_card"><span>2A9D8F</span></div>
+            <div class="banner_slide_card"><span>E9C46A</span></div>
+            <div class="banner_slide_card"><span>F4A261</span></div>
+            <div class="banner_slide_card"><span>E76F51</span></div>
+        </div>
+
+    </div>
+    <h2 class="breadcrumbs">
+        About Us
+    </h2>
+    <section class="about_sec1">
+        <div class="row about_sec1_row scroll-scale">
+            <div class=" col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 about_sec1_col1">
+                <h3>
+                    Our Journey of Excellence in Testing Services
+                </h3>
+            </div>
+            <div class=" col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 about_sec1_col1 animate fadeRight">
+
+                <p>
+                    The About Us section provides a comprehensive overview of METS Lab's history, mission, and team.
+                    Founded in 2018 by a group of researchers and test service professionals, the lab was created with a
+                    singular goal: to deliver innovative and high-quality testing services across various industries.
+                    This section will explore the founders' expertise, which spans over 15 years in research,
+                    administration, and manufacturing, emphasizing their commitment to using science to ensure quality
+                    and safety. Additionally, the page will introduce the lab's leadership and team members, each
+                    bringing their unique skills to uphold the company's core values of accuracy, precision, and client
+                    satisfaction.
+                </p>
+                <div class="journey_of_excellence_quote">
+                    <img class="vibrating-element" src="img/phone_icon.webp" alt="">
+                    <div class="header_col4_quote">
+                        <p>Get QUOTE</p>
+                        <p><a href="mailto:info.uk@metslab.com">info.uk@metslab.com</a></p>
+                    </div>
+                </div>
+                <button class="button_1">
+                    Learn More
+                </button>
+            </div>
+            <div class=" col-xl-4 col-lg-4 col-md-0 col-sm-0 col-0 about_sec1_col2 animate fadeLeft">
+                <img src="img/journey-of-Excellence-in-Testing_.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="team">
+        <h3 class="scroll-scale ">
+            Leadership in Excellence, Efficiency and Strategy
+        </h3>
+        <div class="row">
+            <div class=" col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 team_card_col animate fadeInUp">
+                <div class="team_card">
+                    <!-- <img src="img/Mr Sudhanandh.webp" alt=""> -->
+                    <h4>Mr. Sudhanandh</h4>
+                    <h5>
+                        Technical Director
+                    </h5>
+                    <p>
+                        An expert technology-oriented leader Mr. Sudhanandh The Technical Director of METS known for his
+                        acumen and spontaneity. He holds Ph.D., MPhil in Microbiology with 2 decades of experience. He
+                        is currently responsible for all the technical-related activities of METS. He believes “There
+                        are no secrets to success. It is purely the result of preparation and hard work.”
+                    </p>
+                </div>
+            </div>
+            <div class=" col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 team_card_col animate fadeInUp">
+                <div class="team_card">
+                    <!-- <img src="img/Mr Biju Aloor.webp" alt=""> -->
+                    <h4>Mr. Biju Aloor</h4>
+                    <h5>
+                        Commercial Director
+                    </h5>
+                    <p>
+                        An enthusiastic, charismatic & visionary leader Mr. Biju Aloor is The Commercial Director of
+                        METS. He holds MCA with 2 decades of experience. He is currently responsible for all the
+                        marketing & commercial-related activities for a solid foundation upon which the business can
+                        grow in METS.
+                        He believes “Be undeniably good, no marketing efforts can be a substitute for that.
+                    </p>
+                </div>
+            </div>
+            <div class=" col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 team_card_col animate fadeInUp">
+                <div class="team_card">
+                    <!-- <img src="img/Mr Remin.webp" alt=""> -->
+                    <h4>Mr. Remin</h4>
+                    <h5>
+                        Administrative Director
+                    </h5>
+                    <p>
+                        An energetic, dynamic mathematically competent leader Mr. Remin is The Administrative Director
+                        of METS.He holds MBA in Finance with 2 decades of experience. He is currently responsible for
+                        all the administrative and finance-related activities in METS with proficiency, bringing the
+                        entire team together to work under business ethics and values.
+                        He believes “Our greatest weakness lies in giving up. The most certain way to succeed is always
+                        to try just one more time”
+                    </p>
+                </div>
+            </div>
+            <div class=" col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 team_card_col animate fadeInUp">
+                <img src="img/team-icon-round.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="about_sec2">
+        <h3 class="scroll-scale ">
+            Why Mets Lab Stands Out
+        </h3>
+        <div class="row">
+            <div class="scroll-scale col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <p class=" animate fadeInUp">
+                    At Mets Lab, we bring over 15 years of industry expertise, delivering reliable testing and
+                    analytical services to meet the most demanding standards. Our commitment to quality, innovation, and
+                    customer satisfaction sets us apart as a trusted partner for scientific research and development.
+                </p>
+
+            </div>
+            <div class=" col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 standoutCol">
+                <div class="standoutBox">
+                    <h6 class=" animate fadeInUp">
+                        <i class="fa-solid fa-thumbs-up"></i> &nbsp; Expertise and Experience
+                    </h6>
+                    <p class=" animate fadeInUp">
+                        Our seasoned professionals provide a wealth of knowledge, ensuring precise and reliable results
+                        across all testing and analytical services.
+                    </p>
+                </div>
+            </div>
+            <div class=" col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 standoutCol">
+                <div class="standoutBox">
+                    <h6 class=" animate fadeInUp">
+                        <i class="fa-solid fa-lightbulb"></i> &nbsp; Innovative Solutions
+                    </h6>
+                    <p class=" animate fadeInUp">
+                        Our seasoned professionals provide a wealth of knowledge, ensuring precise and reliable results
+                        across all testing and analytical services.
+                    </p>
+                </div>
+
+
+
+            </div>
+            <div class=" col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 standoutCol">
+                <div class="standoutBox">
+                    <h6 class=" animate fadeInUp">
+                        <i class="fa-solid fa-thumbs-up"></i> &nbsp; Quality and Compliance
+                    </h6>
+                    <p class=" animate fadeInUp">
+                        Adherence to international standards ensures the highest level of accuracy, integrity, and
+                        reliability in our testing processes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <section class="achivements">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 achivements_col1">
+                <img src="img/achivements_avatar.webp" alt="">
+                <h4>
+                    Our Achievements at a Glance
+                </h4>
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 achivements_col2">
+                <div class="progress-section">
+                    <div class="progress-bar-container">
+                        <p>Client Satisfaction Rate</p>
+                        <div class="progress-bar" data-percentage="98">
+                            <span class="progress-fill"></span>
+                            <span class="progress-text">98%</span>
+                        </div>
+                    </div>
+                    <div class="progress-bar-container">
+                        <p>Project Completion</p>
+                        <div class="progress-bar" data-percentage="92">
+                            <span class="progress-fill"></span>
+                            <span class="progress-text">92%</span>
+                        </div>
+                    </div>
+                    <div class="progress-bar-container">
+                        <p>Repeat Client Rate</p>
+                        <div class="progress-bar" data-percentage="85">
+                            <span class="progress-fill"></span>
+                            <span class="progress-text">85%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+    <section class="special_testing">
+        <div class="special_testing_container">
+            <p>
+                Need specialized chemical testing? Share your project details with us, and we'll provide a personalized
+                quote to meet your requirements.
+            </p>
+            <button class="scroll-scale button_2 animate fadeLeft">
+                Request a Quote
+            </button>
+        </div>
+    </section>
+
+
+
+
+    <div class="floating_btn_call">
+        <a target="_blank" href="tel:+447789745245" style="text-decoration: none;">
+            <div class="contact_icon_call">
+                <i class="fa-solid fa-phone"></i>
+            </div>
+        </a>
+    </div>
+
+    <div class="floating_btn_instagram">
+        <a target="_blank" href="" style="text-decoration: none;">
+            <div class="contact_icon_instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </a>
+    </div>
+
+    <div class="floating_btn_whatsapp">
+        <a target="_blank" href="tel:+447789745245" style="text-decoration: none;">
+            <div class="contact_icon_whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+        </a>
+    </div>
+
+    <div onclick="showSocialIcons()" class="floating_btn_chat">
+        <a target="_blank" style="text-decoration: none;">
+            <div class="contact_icon_chat">
+                <i class="fa-solid fa-comments"></i>
+            </div>
+            <div class="contact_icon_close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </a>
+    </div>
+
+
+
+
+
+
+    <div id="footer"></div>
+
+
+
+
+    <script src="js/hamburgerToggle.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/progressbar.js"></script>
+    <script src="js/social-popup.js"></script>
+    <script src="js/loadHeaderAndFooter.js"></script>
+    <script src="js/animate.js"></script>
+    <script>
+        let pageIdentifier = 'about'
+    </script>
+</body>
+
+</html>
