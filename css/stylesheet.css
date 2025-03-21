@@ -929,14 +929,14 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .hero_content_container {
         padding-top: 65%;
         padding-bottom: 10%;
         padding-right: 5%;
         padding-left: 5%;
     }
-}
+} */
 
 @media (max-width: 576px) {
     .hero_content_container h2 {
