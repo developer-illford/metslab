@@ -2283,7 +2283,7 @@ body {
     height: max-content;
     padding-left: 10%;
     padding-right: 10%;
-    padding-top: 6%;
+    padding-top: 3%;
     padding-bottom: 6%;
 }
 
@@ -3155,9 +3155,7 @@ body {
     font-weight: bold;
 }
 
-.service_detailing_col {
-    /* margin-bottom: 20px; */
-}
+
 
 .service_detailing_col img {
     border-radius: 10px;
@@ -3651,7 +3649,7 @@ body {
 
 /* From Uiverse.io by arshshaikh06 */
 .slide_banner_container {
-    height: 700px;
+    height: 650px;
     width: 100%;
     overflow: hidden;
     box-shadow: 0 10px 20px #dbdbdb;
@@ -3896,7 +3894,7 @@ body {
 }
 
 .slider__content {
-    margin-top: 15%;
+    margin-top: 13%;
     margin-left: 15%;
     width: 65vw;
     height: 32.5vw;
@@ -3922,7 +3920,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    height: 70%;
+    height: 100%;
     width: 100%;
     will-change: transform;
     -webkit-transition-timing-function: ease-in;
@@ -4192,9 +4190,18 @@ related to custom cursors above
     border-color: rgba(255, 255, 255, 0.5);
 }
 
+@media only screen and (min-width: 1600px) {
+    .slider__text {
+        height: 50%;
+    }
+    .slider__images {
+        height: 50%;
+    }
+}
+
 @media only screen and (max-width: 1250px) {
     .slider__content {
-        margin-top: 25%;
+        margin-top: 20%;
         margin-left: 15%;
     }
 }
@@ -4287,7 +4294,7 @@ related to custom cursors above
     position: absolute;
     bottom: 10px;
     left: 0;
-    z-index: 9999;
+    z-index: 999999;
     background-color: #ffffff6b;
     padding: 20px 40px;
     font-weight: 700;
