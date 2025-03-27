@@ -2283,7 +2283,7 @@ body {
     height: max-content;
     padding-left: 10%;
     padding-right: 10%;
-    padding-top: 3%;
+    padding-top: 2%;
     padding-bottom: 6%;
 }
 
@@ -4295,7 +4295,7 @@ related to custom cursors above
     bottom: 10px;
     left: 0;
     z-index: 999999;
-    background-color: #ffffff6b;
+    background-color: #ffffffe7;
     padding: 20px 40px;
     font-weight: 700;
     color: #000;
