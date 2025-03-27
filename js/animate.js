@@ -129,11 +129,20 @@ updateScaleOnScroll();
 // function to change the color of header on scrolling
 // function to change the color of header on scrolling
 window.addEventListener("scroll", function () {
-    let header = document.querySelector(".header_slide_2");
+    let header_slide_2 = document.querySelector(".header_slide_2");
+    let header = document.querySelector(".header");
     
     if (window.scrollY > 50) { // Change background when scrolled 50px down
-        header.style.backgroundColor = "#fff"; // Black with transparency
+        header_slide_2.style.backgroundColor = "#fff"; // Black with transparency
+        header_slide_2.style.marginTop = "0px"
+        header_slide_2.style.borderRadius = "0px"
+        header.style.paddingLeft = "0px"
+        header.style.paddingRight = "0px"
     } else {
-        header.style.backgroundColor = "#ffffffcc"; // Default white
+        header_slide_2.style.backgroundColor = "#ffffffcc"; // Default white
+        header_slide_2.style.marginTop = "10px"
+        header_slide_2.style.borderRadius = "20px"
+        header.style.paddingLeft = "10px"
+        header.style.paddingRight = "10px"
     }
 });
