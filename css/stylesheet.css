@@ -2596,6 +2596,7 @@ body {
 
 .service_card img {
     width: 100%;
+    border-radius: 30px;
 }
 
 .service_card_content {
