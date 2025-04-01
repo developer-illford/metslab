@@ -3650,7 +3650,7 @@ body {
 
 /* From Uiverse.io by arshshaikh06 */
 .slide_banner_container {
-    height: 650px;
+    height: 80vh;
     width: 100%;
     overflow: hidden;
     box-shadow: 0 10px 20px #dbdbdb;
@@ -4144,7 +4144,7 @@ body {
 }
 
 .slider__nav-dots {
-    margin-top: 88vh;
+    margin-top: 101vh;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -4214,11 +4214,7 @@ related to custom cursors above
         display: none;
     }
 
-    .slider__content {
-        width: 100vw;
-        height: 100vh;
-        max-height: 100vh;
-    }
+
 
     .slider__text-item-info {
         bottom: 50%;
