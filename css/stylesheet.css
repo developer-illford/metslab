@@ -624,7 +624,7 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     transition: padding-left 0.6s ease, padding-right 0.6s ease;
-    
+
 }
 
 .header_slide_1 {
@@ -1286,6 +1286,9 @@ body {
 
 .lab_capability_card {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .home_test_card {
@@ -1293,12 +1296,45 @@ body {
     height: 100%;
     /* background-color: #1BA249; */
     /* border: 1px solid #1BA249; */
-    box-shadow: #00000073 0px 1px 10px 2px;
-    border-radius: 10px;
+    border: 1px solid #1ba249;
+
+    position: relative;
     overflow: hidden;
-    margin-bottom: 0px;
-    transition: 0.5s ease;
+    border-radius: 15px;
+    transition: all 0.5s ease
 }
+
+
+
+.home_test_card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(0deg,
+            transparent,
+            transparent 30%,
+            #1ba248a4);
+    transform: rotate(-45deg);
+    transition: all 1s ease;
+    opacity: 0;
+}
+
+.home_test_card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 1ba249;
+}
+
+.home_test_card:hover::before {
+    opacity: 1;
+    transform: rotate(-45deg) translateY(100%);
+}
+
+
+
+
 
 /* .home_test_card:hover {
     background-color: #E0E21E;
@@ -1329,6 +1365,10 @@ body {
     padding-top: 10px;
     padding-bottom: 5px;
 }
+
+
+
+
 
 
 .lab_capabilities_sm {
@@ -4195,6 +4235,7 @@ related to custom cursors above
     .slider__text {
         height: 50%;
     }
+
     .slider__images {
         height: 50%;
     }
@@ -4287,7 +4328,7 @@ related to custom cursors above
     }
 }
 
-.prxv_breadcrumbs{
+.prxv_breadcrumbs {
     position: absolute;
     bottom: 10px;
     left: 0;
