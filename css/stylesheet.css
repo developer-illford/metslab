@@ -659,8 +659,8 @@ body {
     height: max-content;
     background-color: #ffffffcc;
     /* background: linear-gradient(to bottom, #fff 0%, #ffffffce 33.33333%, #ffffff3b 66.66666%,  #00000000 100%); */
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     box-shadow: 0px 10px 20px 0px #00000096;
     border-radius: 20px;
     margin-top: 10px;
@@ -697,7 +697,7 @@ body {
 
 .header_col2 h2 {
     color: #1BA249;
-    font-weight: 600;
+    font-weight: 800;
     letter-spacing: 1vw;
     text-align: center;
 }
@@ -798,9 +798,11 @@ body {
     color: #fff;
 }
 
+
 .header_col4 p {
     margin: 0;
     font-weight: bold;
+    line-height: 0;
 }
 
 .header_col4 a {
@@ -815,16 +817,19 @@ body {
     padding: 10px;
 }
 
-@media (max-width: 992px) {}
+@media (max-width: 1200px) {
+    .header_col4 {
+        display: none;
+    }
+}
+
 
 @media (max-width: 992px) {
     .header_col2 a {
         font-size: 90%;
     }
 
-    .header_col4 {
-        display: none;
-    }
+
 }
 
 @media (max-width: 768px) {
@@ -1049,6 +1054,10 @@ body {
     position: absolute;
     top: -40px;
     right: 10px;
+}
+
+.header_col4_quote {
+    text-align: center;
 }
 
 
@@ -2266,6 +2275,12 @@ body {
     float: right;
 }
 
+.subscription_box {
+    background-color: #1BA249;
+    padding: 30px 10%;
+    color: #fff;
+}
+
 @media (max-width: 576px) {
     .footer_input_container input {
         width: 100%;
@@ -2284,13 +2299,12 @@ body {
         padding-left: 5%;
         padding-right: 5%;
     }
+    .subscription_box {
+        padding: 30px 3%;
+    }
 }
 
-.subscription_box {
-    background-color: #1BA249;
-    padding: 30px 10%;
-    color: #fff;
-}
+
 
 /* ************************************************************************************************************************** */
 /* ************************************************************************************************************************** */
@@ -2636,13 +2650,14 @@ body {
 
 .service_card img {
     width: 100%;
-    border-radius: 30px;
+    border-radius: 0px;
 }
 
 .service_card_content {
-    width: 90%;
+    width: 100%;
+    height: 200px;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 0px;
     background-color: #fff;
     text-align: center;
     position: absolute;
@@ -4337,4 +4352,192 @@ related to custom cursors above
     padding: 20px 40px;
     font-weight: 700;
     color: #000;
+}
+
+
+
+
+
+.application_popup_container {
+    width: 100vw;
+    height: 100vh;
+    padding: 20vh 10vw;
+    overflow: scroll;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: #eeff0018;
+    display: none;
+}
+
+.application_popup_form {
+    width: 100%;
+    height: max-content;
+    padding: 5%;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background-color: #1ba248fd;
+    color: #fff;
+}
+
+.application_popup_form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+}
+
+.application_popup_form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+}
+
+.application_popup_form h4 {
+    float: right;
+    cursor: pointer;
+}
+
+.application_popup_form button {
+    background-color: #fff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: #1BA249;
+    font-weight: bold;
+}
+
+
+.testing_capabilities_2 {
+    padding: 5% 10%;
+}
+
+.testing_capabilities_2_inner {
+    border: 1px solid #1BA249;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px 0px #000000bf;
+}
+
+.testing_capabilities_2_col_1 {
+    padding: 0rem !important;
+}
+
+.testing_capabilities_2_bg_img {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/chemist-works-in-a-lab.jpg);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #fff;
+}
+
+.testing_capabilities_2_bg_img h3 {
+    font-size: 300%;
+    font-weight: 600;
+}
+
+.testing_capabilities_2_col img {
+    width: 100%;
+}
+
+.testing_capabilities_2_col_2 {
+    padding: 4rem !important;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .testing_capabilities_2_bg_img h3 {
+        font-size: 200%;
+        font-weight: 600;
+    }
+
+    .testing_capabilities_2_col_2 {
+        padding: 1rem !important;
+    }
+
+    .testing_capabilities_2 {
+        padding: 5% 3%;
+    }
+}
+
+
+.timeline {
+    width: 100%;
+    height: max-content;
+    padding: 0 10%;
+}
+
+.timeline h2 {
+    font-weight: 600;
+    font-size: 300%;
+    text-align: center;
+    color: #1BA249;
+    text-shadow: 0px 5px 5px #0000003a;
+}
+
+.timeline p {
+    text-align: center;
+    color: #1BA249;
+    font-size: 200%;
+
+}
+
+.timeline img {
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .timeline_col1 img {
+        display: none;
+    }
+
+    .timeline_col3 img {
+        display: block;
+    }
+}
+
+.timeline_col3 img {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .timeline {
+        padding: 0 2%;
+    }
+
+    .timeline_col2 img {
+        display: none;
+    }
+
+    .timeline_col3 img {
+        display: block;
+    }
+
+    .timeline h2 {
+        font-size: 150%;
+    }
+    
+    .timeline p {
+        font-size: 100%;
+    
+    }
 }
