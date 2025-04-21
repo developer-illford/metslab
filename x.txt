@@ -1,0 +1,515 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Force HTTPS (Uncomment if SSL is enabled)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Force WWW or Non-WWW (Choose one)
+
+# Redirect non-www to www
+# RewriteCond %{HTTP_HOST} ^metslab\.uk [NC]
+# RewriteRule ^(.*)$ https://www.metslab.uk/$1 [L,R=301]
+
+    # Remove index.php from URLs
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s+/(.*)/index\.(php|html) [NC]
+    RewriteRule ^(.*)/index\.(php|html)$ /$1 [R=301,L]
+
+    # Remove trailing slashes (except for directories)
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)/$ /$1 [R=301,L]
+
+    # Remove .php and .html extensions from URLs
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}\.php -f
+    RewriteRule ^(.*)\.php$ /$1 [R=301,L]
+
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}\.html -f
+    RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
+    # Ensure requests without file extensions are rewritten correctly
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^([^\.]+)$ $1.php [L]
+    
+# OR Redirect www to non-www
+RewriteCond %{HTTP_HOST} ^www\.metslab\.uk [NC]
+RewriteRule ^(.*)$ https://metslab.uk/$1 [L,R=301]
+
+# Redirect index.php to root
+RewriteCond %{THE_REQUEST} /index\.php [NC]
+RewriteRule ^index\.php$ / [R=301,L]
+
+# 404 Custom Page
+ErrorDocument 404 /custom-404.html
+
+# Leverage Browser Caching
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType text/javascript "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+ExpiresByType text/html "access plus 1 week"
+ExpiresByType application/pdf "access plus 1 month"
+ExpiresByType application/x-javascript "access plus 1 month"
+</IfModule>
+
+# Enable Gzip Compression
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/xml application/xhtml+xml application/rss+xml application/javascript application/x-javascript
+</IfModule>
+
+# Block Bad Bots
+<IfModule mod_rewrite.c>
+RewriteCond %{HTTP_USER_AGENT} (AhrefsBot|SemrushBot|MJ12bot|DotBot|Baiduspider) [NC]
+RewriteRule .* - [F,L]
+</IfModule>
+
+# Protect .htaccess
+<Files ~ "^\.ht">
+Order allow,deny
+Deny from all
+Satisfy All
+</Files>
+
+# Disable Directory Browsing
+Options -Indexes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+old marquee
+
+
+
+
+        <!-- *****************************************  -->
+        <!-- old marquee html commented below  -->
+        <!-- <div class="marquee-container">
+            <div class="marquee-content">
+                 
+                <img src="img/marquee_logo_1.webp" alt="Accreditation 1">
+                <img src="img/marquee_logo_2.webp" alt="Accreditation 2">
+                <img src="img/marquee_logo_3.webp" alt="Accreditation 3">
+                 
+                <img src="img/marquee_logo_1.webp" alt="Accreditation 1">
+                <img src="img/marquee_logo_2.webp" alt="Accreditation 2">
+                <img src="img/marquee_logo_3.webp" alt="Accreditation 3">
+                 
+                <img src="img/marquee_logo_1.webp" alt="Accreditation 1">
+                <img src="img/marquee_logo_2.webp" alt="Accreditation 2">
+                <img src="img/marquee_logo_3.webp" alt="Accreditation 3">
+                 
+                <img src="img/marquee_logo_1.webp" alt="Accreditation 1">
+                <img src="img/marquee_logo_2.webp" alt="Accreditation 2">
+                <img src="img/marquee_logo_3.webp" alt="Accreditation 3">
+                 
+                <img src="img/marquee_logo_1.webp" alt="Accreditation 1">
+                <img src="img/marquee_logo_2.webp" alt="Accreditation 2">
+                <img src="img/marquee_logo_3.webp" alt="Accreditation 3">
+                 
+                <img src="img/marquee_logo_1.webp" alt="Accreditation 1">
+                <img src="img/marquee_logo_2.webp" alt="Accreditation 2">
+                <img src="img/marquee_logo_3.webp" alt="Accreditation 3">
+                 
+                <img src="img/marquee_logo_1.webp" alt="Accreditation 1">
+                <img src="img/marquee_logo_2.webp" alt="Accreditation 2">
+                <img src="img/marquee_logo_3.webp" alt="Accreditation 3">
+                 
+                <img src="img/marquee_logo_1.webp" alt="Accreditation 1">
+                <img src="img/marquee_logo_2.webp" alt="Accreditation 2">
+                <img src="img/marquee_logo_3.webp" alt="Accreditation 3">
+                 
+                <img src="img/marquee_logo_1.webp" alt="Accreditation 1">
+                <img src="img/marquee_logo_2.webp" alt="Accreditation 2">
+                <img src="img/marquee_logo_3.webp" alt="Accreditation 3">
+                 
+                <img src="img/marquee_logo_1.webp" alt="Accreditation 1">
+                <img src="img/marquee_logo_2.webp" alt="Accreditation 2">
+                <img src="img/marquee_logo_3.webp" alt="Accreditation 3">
+                 
+                <img src="img/marquee_logo_1.webp" alt="Accreditation 1">
+                <img src="img/marquee_logo_2.webp" alt="Accreditation 2">
+                <img src="img/marquee_logo_3.webp" alt="Accreditation 3">
+                 
+                <img src="img/marquee_logo_1.webp" alt="Accreditation 1">
+                <img src="img/marquee_logo_2.webp" alt="Accreditation 2">
+                <img src="img/marquee_logo_3.webp" alt="Accreditation 3">
+            </div>
+        </div> -->
+
+        <!-- <div class="marquee">
+            <div class="marqueeone"><a href="#"></a>
+                <img src="img/marquee_logo_1.webp" alt="Accreditation 1">
+                <img src="img/marquee_logo_2.webp" alt="Accreditation 2">
+                <img src="img/marquee_logo_3.webp" alt="Accreditation 3">
+            </div>
+            <div class="marqueetwo"><a href="#"></a>
+                <img src="img/marquee_logo_1.webp" alt="Accreditation 1">
+                <img src="img/marquee_logo_2.webp" alt="Accreditation 2">
+                <img src="img/marquee_logo_3.webp" alt="Accreditation 3">
+            </div>
+            <div class="marqueethree"><a href="#"></a>
+                <img src="img/marquee_logo_1.webp" alt="Accreditation 1">
+                <img src="img/marquee_logo_2.webp" alt="Accreditation 2">
+                <img src="img/marquee_logo_3.webp" alt="Accreditation 3">
+            </div>
+            <div class="marqueefour"><a href="#"></a>
+                <img src="img/marquee_logo_1.webp" alt="Accreditation 1">
+                <img src="img/marquee_logo_2.webp" alt="Accreditation 2">
+                <img src="img/marquee_logo_3.webp" alt="Accreditation 3">
+            </div>
+        </div> -->
+
+
+
+        <div class="mcontent">
+            <div class="benefits">
+                <div class="basic-marquee basic-marquee-1">
+                    <a class="social-media-link" href="#">
+                        <button class="mbutton">
+                            <img src="img/marquee_logo_1.webp" alt="">
+                        </button>
+                    </a>
+                    <a class="social-media-link" href="#">
+                        <button class="mbutton">
+                            <!-- <img src="img/marquee_logo_2.2.png" alt=""> -->
+                        </button>
+                    </a>
+
+                    <a class="social-media-link" href="#">
+                        <button class="mbutton">
+                            <!-- <img src="img/marquee_logo_1.webp" alt=""> -->
+                        </button>
+                    </a>
+                    <a class="social-media-link" href="#">
+                        <button class="mbutton">
+                            <img src="img/marquee_logo_2.2.png" alt="">
+                        </button>
+                    </a>
+                    <a class="social-media-link" href="#">
+                        <button class="mbutton">
+                            <!-- <img src="img/marquee_logo_3.3.png" alt=""> -->
+                        </button>
+                    </a>
+                    <a class="social-media-link" href="#">
+                        <button class="mbutton">
+
+                            <!-- <img src="img/marquee_logo_1.webp" alt=""> -->
+
+                        </button>
+                    </a>
+                    <a class="social-media-link" href="#">
+                        <button class="mbutton">
+
+                            <img src="img/marquee_logo_3.3.png" alt="">
+
+                        </button>
+                    </a>
+                    <a class="social-media-link" href="#">
+                        <button class="mbutton">
+                            <!-- <img src="img/marquee_logo_3.3.png" alt=""> -->
+                        </button>
+                    </a>
+                    <a class="social-media-link" href="#">
+                        <button class="mbutton">
+
+                            <!-- <img src="img/marquee_logo_1.webp" alt=""> -->
+
+                        </button>
+                    </a>
+                    <a class="social-media-link" href="#">
+                        <button class="mbutton">
+                            <img src="img/marquee_logo_1.webp" alt="">
+                        </button>
+                    </a>
+                    <a class="social-media-link" href="#">
+                        <button class="mbutton">
+                            <!-- <img src="img/marquee_logo_2.2.png" alt=""> -->
+                        </button>
+                    </a>
+
+                    <a class="social-media-link" href="#">
+                        <button class="mbutton">
+                            <!-- <img src="img/marquee_logo_1.webp" alt=""> -->
+                        </button>
+                    </a>
+                    <a class="social-media-link" href="#">
+                        <button class="mbutton">
+                            <img src="img/marquee_logo_2.2.png" alt="">
+                        </button>
+                    </a>
+                    <a class="social-media-link" href="#">
+                        <button class="mbutton">
+                            <!-- <img src="img/marquee_logo_3.3.png" alt=""> -->
+                        </button>
+                    </a>
+                    <a class="social-media-link" href="#">
+                        <button class="mbutton">
+
+                            <!-- <img src="img/marquee_logo_1.webp" alt=""> -->
+
+                        </button>
+                    </a>
+                    <a class="social-media-link" href="#">
+                        <button class="mbutton">
+
+                            <img src="img/marquee_logo_3.3.png" alt="">
+
+                        </button>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <style>
+            /* From Uiverse.io by barisdogansutcu */
+            .mcontent {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 15px;
+                width: 100%;
+                height: 100px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 14px;
+            }
+
+            .mcontent::before {
+                content: "";
+                position: absolute;
+                left: 0%;
+                top: 50%;
+                transform: translateY(-50%);
+                bottom: 0;
+                width: 40px;
+                height: 96px;
+                /* background-image: linear-gradient(90deg, #0000001c, transparent); */
+                z-index: 2;
+                border-radius: 10px 0 0 10px;
+            }
+
+            .mcontent::after {
+                content: "";
+                position: absolute;
+                right: 0%;
+                top: 50%;
+                transform: translateY(-50%);
+                bottom: 0;
+                width: 10px;
+                height: 96px;
+                /* background-image: linear-gradient(-90deg, #0000001c, transparent); */
+                z-index: 9;
+                border-radius: 0 10px 10px 0;
+            }
+
+            .basic-marquee {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                width: 7000px;
+                height: 100%;
+            }
+
+            /* .basic-marquee .button {
+                transition: all 0.3s ease;
+                margin-right: 20vw;
+            }
+    
+            .basic-marquee .button:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            } */
+
+            .basic-marquee-1 {
+                animation: marquee 15s linear infinite;
+            }
+
+            .basic-marquee-2 {
+                animation: marquee 21s linear infinite;
+            }
+
+            .benefits {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 15px;
+                min-width: 900px;
+                height: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                position: absolute;
+                inset: 0;
+            }
+
+            @keyframes marquee {
+                0% {
+                    transform: translateX(-10%);
+                }
+
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+
+            .basic-marquee img {
+                width: 100%;
+            }
+
+            .social-media-link {
+                width: 200px;
+            }
+
+            .basic-marquee button {
+                background-color: transparent;
+                border: none;
+                padding: 0;
+                /* margin: 0; */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 200%;
+                margin-right: 50px !important;
+            }
+
+
+
+            .cls-1 {
+                fill: #1ab7ea;
+            }
+
+            .cls-1,
+            .cls-2 {
+                fill-rule: evenodd;
+            }
+
+            .cls-2 {
+                fill: #fff;
+            }
+
+            .cls-3 {
+                fill: #ee8208;
+                fill-rule: evenodd;
+            }
+
+            .cls-4 {
+                fill: #fff;
+            }
+
+            .cls-5,
+            .cls-6 {
+                fill-rule: evenodd;
+            }
+
+            .cls-5 {
+                fill: #48dd55;
+            }
+
+            .cls-6 {
+                fill: #fff;
+            }
+
+            .cls-7 {
+                fill: #0a66c2;
+            }
+
+            .cls-7,
+            .cls-8 {
+                fill-rule: evenodd;
+            }
+
+            .cls-8 {
+                fill: #fff;
+            }
+
+            .cls-9 {
+                fill: #10b7f4;
+            }
+
+            .cls-9,
+            .cls-10 {
+                fill-rule: evenodd;
+            }
+
+            .cls-10 {
+                fill: #fff;
+            }
+
+            .cls-11 {
+                fill: #1da1f2;
+            }
+
+            .cls-11,
+            .cls-12 {
+                fill-rule: evenodd;
+            }
+
+            .cls-12 {
+                fill: #fff;
+            }
+
+            .cls-13 {
+                fill: #ea4c89;
+            }
+
+            .cls-13,
+            .cls-14 {
+                fill-rule: evenodd;
+            }
+
+            .cls-14 {
+                fill: #fff;
+            }
+
+            .cls-15 {
+                fill: #1769ff;
+            }
+
+            .cls-15,
+            .cls-16 {
+                fill-rule: evenodd;
+            }
+
+            .cls-16 {
+                fill: #fff;
+            }
+
+            .cls-17 {
+                fill: #f26522;
+            }
+
+            .cls-17,
+            .cls-18 {
+                fill-rule: evenodd;
+            }
+
+            .cls-18 {
+                fill: #fff;
+            }
+        </style>

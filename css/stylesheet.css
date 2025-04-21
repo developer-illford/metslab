@@ -684,6 +684,7 @@ body {
 
 .header_col2 {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
 }
@@ -700,6 +701,13 @@ body {
     font-weight: 800;
     letter-spacing: 1vw;
     text-align: center;
+    /* text-decoration: underline; */
+    border-bottom: 2px solid #0e5526;
+}
+
+.nav_subtitle_bold{
+    color: #1BA249;
+    font-weight: bold;
 }
 
 
@@ -761,11 +769,23 @@ body {
 
 .mobile_Menu_heading {
     width: 100%;
-    font-size: 102%;
+    font-size: 180%;
     text-align: center;
     margin: 0;
     color: #1BA249;
-    font-weight: 600;
+    font-weight: 700;
+}
+
+.mobile_Menu_heading_col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mobile_Menu_heading_col span{
+    font-size: 15px;
+    text-align: center;
 }
 
 
@@ -858,6 +878,20 @@ body {
     }
 }
 
+@media (max-width: 630px) {
+    .mobile_Menu_heading {
+        font-size: 120%;
+    }
+
+    .mobile_Menu_heading_col span{
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .mobile_Menu_heading_col img{
+        width: 10%;
+    }
+}
 
 @media (max-width: 450px) {
     .header_col1 img {
@@ -1290,9 +1324,11 @@ body {
 
 .lab_capabilities_lg h3 {
     font-weight: 600;
-    font-size: 200%;
+    font-size: 250%;
     text-align: center;
     padding-bottom: 2rem;
+    color: #1BA249;
+    text-decoration: underline #1BA249 7px;
 }
 
 .lab_capability_card {
@@ -2308,6 +2344,20 @@ body {
 
 
 
+
+.social_links{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.social_links i{
+    font-size: 1.5rem;
+}
+
+
+
 /* ************************************************************************************************************************** */
 /* ************************************************************************************************************************** */
 /* ************************************************************************************************************************** */
@@ -2561,6 +2611,10 @@ body {
     color: #fff;
 }
 
+.standoutBox p{
+    font-size: 90%;
+}
+
 @media (max-width: 768px) {
     .about_sec2 {
         padding-left: 5%;
@@ -2627,12 +2681,12 @@ body {
 .service_cards_sec {
     padding-left: 10%;
     padding-right: 10%;
-    padding-top: 40px;
+    padding-top: 10px;
     padding-bottom: 1rem;
 }
 
 .service_card_col {
-    margin-bottom: 30px;
+    margin-bottom: 80px;
     padding-bottom: 5rem;
 }
 
@@ -2678,7 +2732,7 @@ body {
 
 @media (max-width: 1250px) {
     .service_card_col {
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         padding-bottom: 8rem;
     }
 }
@@ -2788,7 +2842,7 @@ body {
 
 
 .report_hero {
-    background-image: url(../img/accreditations_hero_background.webp);
+    background-image: url(../img/report-meeting.jpg);
     background-size: cover;
     /* Ensures the image covers the entire div */
     background-position: center;
@@ -3009,7 +3063,7 @@ body {
 
 
 .career_hero {
-    background-image: url(../img/accreditations_hero_background.webp);
+    background-image: url(../img/corporate-woman-businesswoman-holding-clipboard.jpg);
     background-size: cover;
     /* Ensures the image covers the entire div */
     background-position: center;
@@ -4461,7 +4515,11 @@ related to custom cursors above
 }
 
 .testing_capabilities_2_col_2 {
-    padding: 4rem !important;
+    padding: 2rem !important;
+}
+
+.testing_capabilities_2_col_2 p{
+    text-align: justify;
 }
 
 
@@ -4542,4 +4600,66 @@ related to custom cursors above
         font-size: 100%;
     
     }
+}
+
+
+
+
+
+
+
+
+.service_search{
+    width: 100%;
+    height: max-content;
+    padding: 10px 10px;
+}
+
+.service_search input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #17863c;
+    outline: none;
+}
+.search_results ul {
+    list-style: none;
+    padding: 0;
+}
+
+.search_results li {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.search_results a {
+    color: #1a0dab;
+    text-decoration: none;
+}
+
+.search_results a:hover {
+    text-decoration: underline;
+}
+
+
+
+.privacy-policy{
+    padding: 5%;
+}
+
+.privacy-policy h2{
+    color: #1BA249;
+    font-weight: bold;
+    font-size: 300%;
+}
+
+.terms-and-conditions{
+    padding: 5%;
+}
+
+.terms-and-conditions h2{
+    color: #1BA249;
+    font-weight: bold;
+    font-size: 300%;
 }

@@ -121,7 +121,7 @@
         }
 
         .certificates>* {
-            flex: calc((100% - 40px) / 3);
+            flex: calc((100% - 40px) / 2);
             /* 40px accounts for two gaps (20px each) */
         }
 
@@ -132,7 +132,11 @@
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
             padding: 10px;
             text-align: center;
+            scrollbar-width: 0px;
+            overflow: hidden;
         }
+
+        .cert-card iframe {}
 
         .cert-card img {
             max-width: 100%;
@@ -155,10 +159,35 @@
             .cert-card {
                 width: 100%;
             }
+
+            .certificates>* {
+                flex: calc((100% - 40px) / 1);
+                /* 40px accounts for two gaps (20px each) */
+            }
         }
 
-        #countries .btn-custom {
-            border-right: 1px solid #ccc;
+        #countries button {
+            border: 3px solid #fff;
+            background-color: #1ba249;
+            color: #fff;
+        }
+
+        #regions .active {
+            border: 3px solid #fff;
+            background-color: #1ba249;
+            color: #fff;
+        }
+
+        .cert_container .row button,
+        #countries button,
+        #regions .active {
+            transition:
+                transform 0.8s ease;
+        }
+
+        .cert_container .row button:active,
+        #countries button:active {
+            transform: scale(0.9);
         }
     </style>
 
@@ -173,26 +202,160 @@
 
     <script>
         const data = {
-            "Middle East": {
-                "Qatar": [
-                    { name: "Download", url: "https://static.wixstatic.com/media/5751e8_bf437a527ea345699d2bb66df5953d76~mv2.jpg/v1/fill/w_560,h_792,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_3423_JPG.jpg" },
-                    { name: "Download", url: "https://static.wixstatic.com/media/5751e8_bf437a527ea345699d2bb66df5953d76~mv2.jpg/v1/fill/w_560,h_792,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_3423_JPG.jpg" },
-                ],
-                "Ajman": [
-                { name: "Download", url: "https://static.wixstatic.com/media/5751e8_bf437a527ea345699d2bb66df5953d76~mv2.jpg/v1/fill/w_560,h_792,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_3423_JPG.jpg" },
-                { name: "Download", url: "https://static.wixstatic.com/media/5751e8_bf437a527ea345699d2bb66df5953d76~mv2.jpg/v1/fill/w_560,h_792,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_3423_JPG.jpg" },
-                ]
-            },
             "Europe": {
                 "UK": [
-                { name: "Download", url: "https://static.wixstatic.com/media/5751e8_bf437a527ea345699d2bb66df5953d76~mv2.jpg/v1/fill/w_560,h_792,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_3423_JPG.jpg" },
-                { name: "Download", url: "https://static.wixstatic.com/media/5751e8_bf437a527ea345699d2bb66df5953d76~mv2.jpg/v1/fill/w_560,h_792,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_3423_JPG.jpg" },
+                    { name: "Download", url: " " },
+                    { name: "Download", url: " " },
+                ]
+            },
+            "Middle East": {
+                "Qatar": [
+
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/12qMU1C-Ue0-omvvDvsnTnRnoHYfZGRK9/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/12qMU1C-Ue0-omvvDvsnTnRnoHYfZGRK9/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1gRptkvT-eyA-z97eK1j_0RmsXSDsB1ZY/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1gRptkvT-eyA-z97eK1j_0RmsXSDsB1ZY/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1Vv-84X4RWEKlMoNBuek4Hwjs92e6bZWx/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1Vv-84X4RWEKlMoNBuek4Hwjs92e6bZWx/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/16hsdKEwQm358gY2HaPcm8AB56q55_o07/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/16hsdKEwQm358gY2HaPcm8AB56q55_o07/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1D4aNC7ceIgPMPpXQKQtsoi9KF7DaHE0U/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1D4aNC7ceIgPMPpXQKQtsoi9KF7DaHE0U/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1YqDcpejgt24uN9am-1Y_cKdpilVOUYFB/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1YqDcpejgt24uN9am-1Y_cKdpilVOUYFB/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1EYtzfwNYjlA9YFa3hKAShJJM3oJJFh_9/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1EYtzfwNYjlA9YFa3hKAShJJM3oJJFh_9/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1Lc6je9u6005NpU3-2Ve4arz_TEjJntlP/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1Lc6je9u6005NpU3-2Ve4arz_TEjJntlP/preview"
+                    },
+                ],
+                "Ajman": [
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/13KA-s3s2Jw0yIXDO12TKuyZZ_nBHZfeQ/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/13KA-s3s2Jw0yIXDO12TKuyZZ_nBHZfeQ/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1hUJuwHxQTD1wAUlZFopMYnAFPhIjmzha/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1hUJuwHxQTD1wAUlZFopMYnAFPhIjmzha/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1sht3zfvxJVX0yy0tK6-CMkoaoyom8TB6/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1sht3zfvxJVX0yy0tK6-CMkoaoyom8TB6/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/12XYIKcQndYcHITga7yLzx9dL2MoRM_da/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/12XYIKcQndYcHITga7yLzx9dL2MoRM_da/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1e9JgIK_8s5GpyDAoAbM5hodhMAVNnpSB/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1e9JgIK_8s5GpyDAoAbM5hodhMAVNnpSB/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1f_hytZC8KkDkKEgpwfeA1p0ebmEix9KQ/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1f_hytZC8KkDkKEgpwfeA1p0ebmEix9KQ/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1k81Ekhmmw5qUwoDtTAKRwFXDeSrv_1iF/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1k81Ekhmmw5qUwoDtTAKRwFXDeSrv_1iF/preview"
+                    },
+                ],
+                "Abu Dhabi": [
+
+                {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1mK8SlCtoIc0RiLvSi4FLkqIPv_g2OjkU/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1mK8SlCtoIc0RiLvSi4FLkqIPv_g2OjkU/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1pghmBl-HrNsKUW1_lO84DpjMcraf6ORE/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1pghmBl-HrNsKUW1_lO84DpjMcraf6ORE/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1MrF8TaqiTtroHeUFJbME-mu2iuVEhzQ_/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1MrF8TaqiTtroHeUFJbME-mu2iuVEhzQ_/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1VDKxUXxwVdDPm6_rGLC-BQt_cDuYNsKN/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1VDKxUXxwVdDPm6_rGLC-BQt_cDuYNsKN/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/19XW_PdG7AD7O-oWZ8Vwjcs8Lsl4McBCc/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/19XW_PdG7AD7O-oWZ8Vwjcs8Lsl4McBCc/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1SiGM16afjIC8HiAA7I5YclrsnGoMmzPi/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1SiGM16afjIC8HiAA7I5YclrsnGoMmzPi/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1dFA1kjKU__PaBiOIILeZzOr1KcTlMV5t/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1dFA1kjKU__PaBiOIILeZzOr1KcTlMV5t/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1duDrsbi8QsVvc-FQ6H37jYLimFehDZ0M/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1duDrsbi8QsVvc-FQ6H37jYLimFehDZ0M/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/18I20Cd3mZ34xGGD9AT0L0RbVuj6YEIm4/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/18I20Cd3mZ34xGGD9AT0L0RbVuj6YEIm4/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1KsctKrUnQpUaTJLMlM1nZDVkT0w6KCYh/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1KsctKrUnQpUaTJLMlM1nZDVkT0w6KCYh/preview"
+                    },
                 ]
             },
             "Asia": {
                 "India": [
-                { name: "Download", url: "https://static.wixstatic.com/media/5751e8_bf437a527ea345699d2bb66df5953d76~mv2.jpg/v1/fill/w_560,h_792,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_3423_JPG.jpg" },
-                { name: "Download", url: "https://static.wixstatic.com/media/5751e8_bf437a527ea345699d2bb66df5953d76~mv2.jpg/v1/fill/w_560,h_792,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_3423_JPG.jpg" },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1NbrrhjVTBG1KeK0fX__QkDIa55BFS0uA/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1NbrrhjVTBG1KeK0fX__QkDIa55BFS0uA/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1U--Nsvx8VEh-khFGyhe7BCqemyMaVY9P/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1U--Nsvx8VEh-khFGyhe7BCqemyMaVY9P/preview"
+                    }
+
                 ]
             }
         };
@@ -248,13 +411,17 @@
             certs.forEach(cert => {
                 const card = document.createElement("div");
                 card.className = "cert-card";
+
                 card.innerHTML = `
-        <img src="${cert.url}" alt="${cert.name}">
-        <a href="${cert.url}" target="_blank">${cert.name}</a>
-      `;
+            <iframe src="${cert.preview}" width="100%" height="600px" frameborder="0" scrolling="no" style="overflow: hidden;"></iframe>
+            <a href="${cert.url}" target="_blank">${cert.name}</a>
+        `;
+
                 certificatesContainer.appendChild(card);
             });
         }
+
+
 
         // Initial load
         renderRegions();
@@ -292,7 +459,7 @@
 
 
 
-        <!-- <section class="accreditations">
+    <!-- <section class="accreditations">
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 accreditations_col">
                     <img class=" animate fadeInUp" src="img/accreditation_1.webp" alt="">
@@ -315,71 +482,71 @@
 
 
 
-        <section class="special_testing">
-            <div class="special_testing_container">
-                <p>
-                    Need specialized chemical testing? Share your project details with us, and we'll provide a
-                    personalized
-                    quote to meet your requirements.
-                </p>
-                <button class="scroll-scale button_2 animate fadeLeft">
-                    Request a Quote
-                </button>
+    <section class="special_testing">
+        <div class="special_testing_container">
+            <p>
+                Need specialized chemical testing? Share your project details with us, and we'll provide a
+                personalized
+                quote to meet your requirements.
+            </p>
+            <button class="scroll-scale button_2 animate fadeLeft">
+                Request a Quote
+            </button>
+        </div>
+    </section>
+
+
+
+
+    <div class="floating_btn_call">
+        <a target="_blank" href="tel:+447789745245" style="text-decoration: none;">
+            <div class="contact_icon_call">
+                <i class="fa-solid fa-phone"></i>
             </div>
-        </section>
+        </a>
+    </div>
+
+    <div class="floating_btn_instagram">
+        <a target="_blank" href="" style="text-decoration: none;">
+            <div class="contact_icon_instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </a>
+    </div>
+
+    <div class="floating_btn_whatsapp">
+        <a target="_blank" href="tel:+447789745245" style="text-decoration: none;">
+            <div class="contact_icon_whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+        </a>
+    </div>
+
+    <div onclick="showSocialIcons()" class="floating_btn_chat">
+        <a target="_blank" style="text-decoration: none;">
+            <div class="contact_icon_chat">
+                <i class="fa-solid fa-comments"></i>
+            </div>
+            <div class="contact_icon_close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </a>
+    </div>
 
 
 
-
-        <div class="floating_btn_call">
-            <a target="_blank" href="tel:+447789745245" style="text-decoration: none;">
-                <div class="contact_icon_call">
-                    <i class="fa-solid fa-phone"></i>
-                </div>
-            </a>
-        </div>
-
-        <div class="floating_btn_instagram">
-            <a target="_blank" href="" style="text-decoration: none;">
-                <div class="contact_icon_instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </div>
-            </a>
-        </div>
-
-        <div class="floating_btn_whatsapp">
-            <a target="_blank" href="tel:+447789745245" style="text-decoration: none;">
-                <div class="contact_icon_whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </div>
-            </a>
-        </div>
-
-        <div onclick="showSocialIcons()" class="floating_btn_chat">
-            <a target="_blank" style="text-decoration: none;">
-                <div class="contact_icon_chat">
-                    <i class="fa-solid fa-comments"></i>
-                </div>
-                <div class="contact_icon_close">
-                    <i class="fa-solid fa-xmark"></i>
-                </div>
-            </a>
-        </div>
+    <div id="footer"></div>
 
 
-
-        <div id="footer"></div>
-
-
-        <script src="js/hamburgerToggle.js"></script>
-        <script src="js/slider.js"></script>
-        <script src="js/progressbar.js"></script>
-        <script src="js/social-popup.js"></script>
-        <script src="js/loadHeaderAndFooter.js"></script>
-        <script src="js/animate.js"></script>
-        <script>
-            let pageIdentifier = 'accreditations'
-        </script>
-    </body>
+    <script src="js/hamburgerToggle.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/progressbar.js"></script>
+    <script src="js/social-popup.js"></script>
+    <script src="js/loadHeaderAndFooter.js"></script>
+    <script src="js/animate.js"></script>
+    <script>
+        let pageIdentifier = 'accreditations'
+    </script>
+</body>
 
 </html>
