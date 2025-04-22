@@ -278,8 +278,8 @@
             <h4 onclick="closeApplicationForm()">X</h4>
             <h3>Apply Now</h3>
             <form action="submit-application.php" method="post" enctype="multipart/form-data">
-                <input type="hidden" name="csrf_token"
-                    value="<?php session_start(); echo $_SESSION['csrf_token'] = bin2hex(random_bytes(32)); ?>">
+                <!-- <input type="hidden" name="csrf_token"
+                    value="<?php session_start(); echo $_SESSION['csrf_token'] = bin2hex(random_bytes(32)); ?>"> -->
 
                 <input type="text" name="name" id="name" placeholder="Full Name" required><br>
                 <input type="tel" name="phone" id="phone" placeholder="Contact Number" required><br>

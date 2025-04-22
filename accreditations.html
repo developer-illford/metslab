@@ -49,385 +49,578 @@
     </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <style>
         .cert_container {
             max-width: 1300px;
             margin: auto;
-            /* border: 5px solid #3c276e; */
             padding: 20px;
+            text-align: center !important;
         }
 
-        .cert_container .table-header {
+        .regionTabContainer {
+            width: 100%;
+            padding: 10px;
+            /* border: 2px solid #000; */
+            background-color: #99999963;
+            border-radius: 50px;
             display: flex;
-            flex-direction: column;
-            border: 1px solid #1ba249;
-            text-align: center;
+            align-items: center;
+            position: relative;
             margin-bottom: 20px;
         }
 
-        .table-header .row {
-            display: flex;
-            /* border-bottom: 1px solid #ccc; */
-        }
-
-        .table-header.row:last-child {
-            border-bottom: none;
-        }
-
-        .cert_container .row button {
-            flex: 1;
-            padding: 15px;
+        .regionTabContainer button {
+            width: calc(100% / 3 - 10px);
             border: none;
-            background: #fff;
-            font-weight: 600;
-            font-size: 16px;
+            background-color: transparent;
             cursor: pointer;
-            transition: background 0.2s;
-            border-bottom: 5px solid #1ba249;
+            z-index: 1;
         }
 
-        .cert_container .row button:hover {
-            background: #1ba2487a;
-        }
-
-        .cert_container .row button.active {
-            border-bottom: 0px;
-            background: #f1f1f1;
-            color: rgb(0, 0, 0);
-        }
-
-        .certificates {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            gap: 20px;
-        }
-
-        .certificates>* {
-            flex: calc((100% - 40px) / 2);
-            /* 40px accounts for two gaps (20px each) */
-        }
-
-        .cert-card {
-            width: 48%;
-            background: white;
-            border: 1px solid #1ba249;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 10px;
-            text-align: center;
-            scrollbar-width: 0px;
-            overflow: hidden;
-        }
-
-        .cert-card iframe {}
-
-        .cert-card img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .cert-card a {
-            display: inline-block;
-            margin-top: 10px;
-            color: #ffffff;
+        .regionTabIndicator {
+            position: absolute;
+            bottom: 0;
+            /* left: 0; */
+            width: calc(100% / 3 - 10px);
+            height: 100%;
             background-color: #1ba249;
+            border-radius: 50px;
+            transition: transform 0.3s ease;
+            transform: translateX(100%);
+            z-index: 0;
+        }
+
+        /* **************************** */
+        .MiddleEastTabContainer {
+            width: 100%;
+            height: max-content;
+            display: none;
+        }
+
+        .MiddleEastTabSwitcher {
+            width: 100%;
+            padding: 10px;
+            /* border: 2px solid #000; */
+            background-color: #1ba2483a;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .MiddleEastTabSwitcher button {
+            width: calc(100% / 3 - 10px);
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .MiddleEastTabIndicator {
+            position: absolute;
+            bottom: 0;
+            /* left: 0; */
+            width: calc(100% / 3 - 10px);
+            height: 100%;
+            background-color: #1ba249;
+            border-radius: 50px;
+            transition: transform 0.3s ease;
+            transform: translateX(100%);
+            z-index: 0;
+        }
+
+        /* **************************** */
+        /* **************************** */
+
+        .EuropeTabContainer {
+            width: 100%;
+            height: max-content;
+            display: none;
+        }
+
+        .EuropeTabSwitcher {
+            width: 100%;
+            padding: 10px;
+            /* border: 2px solid #000; */
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-color: #1ba249;
+        }
+
+        .EuropeTabSwitcher button {
+            width: calc(100%);
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        /* **************************** */
+        /* **************************** */
+        .AsiaTabContainer {
+            width: 100%;
+            height: max-content;
+            display: none;
+        }
+
+        .AsiaTabSwitcher {
+            width: 100%;
+            padding: 10px;
+            /* border: 2px solid #000; */
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-color: #1ba249;
+        }
+
+        .AsiaTabSwitcher button {
+            width: calc(100%);
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+
+
+        /* **************************** */
+
+
+
+
+        .ukCertifications {
+            width: 100%;
+            height: max-content;
+            display: none;
+        }
+
+        .indiaCertifications {
+            width: 100%;
+            display: none;
+            height: max-content;
+        }
+
+        .qatarCertifications {
+            width: 100%;
+            display: none;
+            height: max-content;
+        }
+
+        .ajmanCertifications {
+            width: 100%;
+            display: none;
+            height: max-content;
+        }
+
+        .abuDhabiCertifications {
+            width: 100%;
+            display: none;
+            height: max-content;
+        }
+
+        .cert_container a {
+            background-color: #1ba249;
+            color: #fff !important;
+            text-decoration: none;
             padding: 10px 20px;
             border-radius: 5px;
-            text-decoration: none;
+            margin-top: 20px;
+            cursor: pointer;
         }
 
-
-
-        @media (max-width: 768px) {
-            .cert-card {
-                width: 100%;
-            }
-
-            .certificates>* {
-                flex: calc((100% - 40px) / 1);
-                /* 40px accounts for two gaps (20px each) */
-            }
-        }
-
-        #countries button {
-            border: 3px solid #fff;
-            background-color: #1ba249;
-            color: #fff;
-        }
-
-        #regions .active {
-            border: 3px solid #fff;
-            background-color: #1ba249;
-            color: #fff;
-        }
-
-        .cert_container .row button,
-        #countries button,
-        #regions .active {
-            transition:
-                transform 0.8s ease;
-        }
-
-        .cert_container .row button:active,
-        #countries button:active {
-            transform: scale(0.9);
-        }
     </style>
 
     <div class="cert_container">
-        <div class="table-header">
-            <div class="row" id="regions"></div>
-            <div class="row" id="countries"></div>
+        <div class="regionTabContainer">
+            <div id="regionTabIndicator" class="regionTabIndicator"></div>
+            <button onclick="regionswich(0)">Europe</button>
+            <button onclick="regionswich(1)">Middle East</button>
+            <button onclick="regionswich(2)">Asia</button>
         </div>
+        <div id="MiddleEastTabContainer" class="MiddleEastTabContainer">
+            <div class="MiddleEastTabSwitcher">
+                <div id="MiddleEastTabIndicator" class="MiddleEastTabIndicator"></div>
+                <button onclick="MiddleEastswich(0)">Qatar</button>
+                <button onclick="MiddleEastswich(1)">Ajman</button>
+                <button onclick="MiddleEastswich(2)">Abu Dhabi</button>
+            </div>
+            <br>
+            <div class="qatarCertifications" id="qatarCertifications">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/12qMU1C-Ue0-omvvDvsnTnRnoHYfZGRK9/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/12qMU1C-Ue0-omvvDvsnTnRnoHYfZGRK9/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
 
-        <div class="certificates" id="certificates"></div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/1gRptkvT-eyA-z97eK1j_0RmsXSDsB1ZY/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/1gRptkvT-eyA-z97eK1j_0RmsXSDsB1ZY/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/1Vv-84X4RWEKlMoNBuek4Hwjs92e6bZWx/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/1Vv-84X4RWEKlMoNBuek4Hwjs92e6bZWx/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/16hsdKEwQm358gY2HaPcm8AB56q55_o07/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/16hsdKEwQm358gY2HaPcm8AB56q55_o07/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/1D4aNC7ceIgPMPpXQKQtsoi9KF7DaHE0U/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/1D4aNC7ceIgPMPpXQKQtsoi9KF7DaHE0U/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/1YqDcpejgt24uN9am-1Y_cKdpilVOUYFB/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/1YqDcpejgt24uN9am-1Y_cKdpilVOUYFB/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/1EYtzfwNYjlA9YFa3hKAShJJM3oJJFh_9/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/1EYtzfwNYjlA9YFa3hKAShJJM3oJJFh_9/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/1Lc6je9u6005NpU3-2Ve4arz_TEjJntlP/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/1Lc6je9u6005NpU3-2Ve4arz_TEjJntlP/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="ajmanCertifications" id="ajmanCertifications">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/13KA-s3s2Jw0yIXDO12TKuyZZ_nBHZfeQ/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/13KA-s3s2Jw0yIXDO12TKuyZZ_nBHZfeQ/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/1hUJuwHxQTD1wAUlZFopMYnAFPhIjmzha/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/1hUJuwHxQTD1wAUlZFopMYnAFPhIjmzha/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/1sht3zfvxJVX0yy0tK6-CMkoaoyom8TB6/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/1sht3zfvxJVX0yy0tK6-CMkoaoyom8TB6/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/12XYIKcQndYcHITga7yLzx9dL2MoRM_da/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/12XYIKcQndYcHITga7yLzx9dL2MoRM_da/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/1e9JgIK_8s5GpyDAoAbM5hodhMAVNnpSB/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/1e9JgIK_8s5GpyDAoAbM5hodhMAVNnpSB/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/1f_hytZC8KkDkKEgpwfeA1p0ebmEix9KQ/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/1f_hytZC8KkDkKEgpwfeA1p0ebmEix9KQ/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/1k81Ekhmmw5qUwoDtTAKRwFXDeSrv_1iF/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/1k81Ekhmmw5qUwoDtTAKRwFXDeSrv_1iF/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+                </div>
+
+            </div>
+            <div class="abuDhabiCertifications" id="abuDhabiCertifications">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/1mK8SlCtoIc0RiLvSi4FLkqIPv_g2OjkU/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/1mK8SlCtoIc0RiLvSi4FLkqIPv_g2OjkU/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/1pghmBl-HrNsKUW1_lO84DpjMcraf6ORE/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/1pghmBl-HrNsKUW1_lO84DpjMcraf6ORE/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/1MrF8TaqiTtroHeUFJbME-mu2iuVEhzQ_/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/1MrF8TaqiTtroHeUFJbME-mu2iuVEhzQ_/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/1VDKxUXxwVdDPm6_rGLC-BQt_cDuYNsKN/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/1VDKxUXxwVdDPm6_rGLC-BQt_cDuYNsKN/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/19XW_PdG7AD7O-oWZ8Vwjcs8Lsl4McBCc/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/19XW_PdG7AD7O-oWZ8Vwjcs8Lsl4McBCc/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/1SiGM16afjIC8HiAA7I5YclrsnGoMmzPi/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/1SiGM16afjIC8HiAA7I5YclrsnGoMmzPi/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/1dFA1kjKU__PaBiOIILeZzOr1KcTlMV5t/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/1dFA1kjKU__PaBiOIILeZzOr1KcTlMV5t/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/1duDrsbi8QsVvc-FQ6H37jYLimFehDZ0M/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/1duDrsbi8QsVvc-FQ6H37jYLimFehDZ0M/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/18I20Cd3mZ34xGGD9AT0L0RbVuj6YEIm4/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/18I20Cd3mZ34xGGD9AT0L0RbVuj6YEIm4/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/1KsctKrUnQpUaTJLMlM1nZDVkT0w6KCYh/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/1KsctKrUnQpUaTJLMlM1nZDVkT0w6KCYh/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="EuropeTabContainer" class="EuropeTabContainer">
+            <div class="EuropeTabSwitcher">
+                <button>UK</button>
+            </div>
+            <br>
+            <div class="ukCertifications" id="ukCertifications">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        No certificated Uploaded
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        No certificated Uploaded
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="AsiaTabContainer" class="AsiaTabContainer">
+            <div class="AsiaTabSwitcher">
+                <button>India</button>
+            </div>
+            <br>
+            <div class="indiaCertifications" id="indiaCertifications">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/1NbrrhjVTBG1KeK0fX__QkDIa55BFS0uA/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/1NbrrhjVTBG1KeK0fX__QkDIa55BFS0uA/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <iframe src="https://drive.google.com/file/d/1U--Nsvx8VEh-khFGyhe7BCqemyMaVY9P/preview"
+                            width="100%" height="700px" allow="autoplay" frameborder="0"></iframe>
+                        <br><br>
+                        <a
+                            href="https://drive.google.com/file/d/1U--Nsvx8VEh-khFGyhe7BCqemyMaVY9P/view?usp=drive_link">Download</a>
+                        <br><br>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
 
     <script>
-        const data = {
-            "Europe": {
-                "UK": [
-                    { name: "Download", url: " " },
-                    { name: "Download", url: " " },
-                ]
-            },
-            "Middle East": {
-                "Qatar": [
+        const regionIndicator = document.getElementById('regionTabIndicator');
 
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/12qMU1C-Ue0-omvvDvsnTnRnoHYfZGRK9/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/12qMU1C-Ue0-omvvDvsnTnRnoHYfZGRK9/preview"
-                    },
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/1gRptkvT-eyA-z97eK1j_0RmsXSDsB1ZY/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/1gRptkvT-eyA-z97eK1j_0RmsXSDsB1ZY/preview"
-                    },
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/1Vv-84X4RWEKlMoNBuek4Hwjs92e6bZWx/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/1Vv-84X4RWEKlMoNBuek4Hwjs92e6bZWx/preview"
-                    },
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/16hsdKEwQm358gY2HaPcm8AB56q55_o07/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/16hsdKEwQm358gY2HaPcm8AB56q55_o07/preview"
-                    },
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/1D4aNC7ceIgPMPpXQKQtsoi9KF7DaHE0U/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/1D4aNC7ceIgPMPpXQKQtsoi9KF7DaHE0U/preview"
-                    },
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/1YqDcpejgt24uN9am-1Y_cKdpilVOUYFB/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/1YqDcpejgt24uN9am-1Y_cKdpilVOUYFB/preview"
-                    },
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/1EYtzfwNYjlA9YFa3hKAShJJM3oJJFh_9/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/1EYtzfwNYjlA9YFa3hKAShJJM3oJJFh_9/preview"
-                    },
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/1Lc6je9u6005NpU3-2Ve4arz_TEjJntlP/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/1Lc6je9u6005NpU3-2Ve4arz_TEjJntlP/preview"
-                    },
-                ],
-                "Ajman": [
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/13KA-s3s2Jw0yIXDO12TKuyZZ_nBHZfeQ/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/13KA-s3s2Jw0yIXDO12TKuyZZ_nBHZfeQ/preview"
-                    },
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/1hUJuwHxQTD1wAUlZFopMYnAFPhIjmzha/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/1hUJuwHxQTD1wAUlZFopMYnAFPhIjmzha/preview"
-                    },
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/1sht3zfvxJVX0yy0tK6-CMkoaoyom8TB6/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/1sht3zfvxJVX0yy0tK6-CMkoaoyom8TB6/preview"
-                    },
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/12XYIKcQndYcHITga7yLzx9dL2MoRM_da/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/12XYIKcQndYcHITga7yLzx9dL2MoRM_da/preview"
-                    },
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/1e9JgIK_8s5GpyDAoAbM5hodhMAVNnpSB/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/1e9JgIK_8s5GpyDAoAbM5hodhMAVNnpSB/preview"
-                    },
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/1f_hytZC8KkDkKEgpwfeA1p0ebmEix9KQ/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/1f_hytZC8KkDkKEgpwfeA1p0ebmEix9KQ/preview"
-                    },
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/1k81Ekhmmw5qUwoDtTAKRwFXDeSrv_1iF/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/1k81Ekhmmw5qUwoDtTAKRwFXDeSrv_1iF/preview"
-                    },
-                ],
-                "Abu Dhabi": [
+        const MiddleEastTabIndicator = document.getElementById('MiddleEastTabIndicator');
+        const EuropeTabIndicator = document.getElementById('EuropeTabIndicator');
+        const AsiaTabIndicator = document.getElementById('AsiaTabIndicator');
 
-                {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/1mK8SlCtoIc0RiLvSi4FLkqIPv_g2OjkU/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/1mK8SlCtoIc0RiLvSi4FLkqIPv_g2OjkU/preview"
-                    },
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/1pghmBl-HrNsKUW1_lO84DpjMcraf6ORE/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/1pghmBl-HrNsKUW1_lO84DpjMcraf6ORE/preview"
-                    },
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/1MrF8TaqiTtroHeUFJbME-mu2iuVEhzQ_/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/1MrF8TaqiTtroHeUFJbME-mu2iuVEhzQ_/preview"
-                    },
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/1VDKxUXxwVdDPm6_rGLC-BQt_cDuYNsKN/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/1VDKxUXxwVdDPm6_rGLC-BQt_cDuYNsKN/preview"
-                    },
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/19XW_PdG7AD7O-oWZ8Vwjcs8Lsl4McBCc/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/19XW_PdG7AD7O-oWZ8Vwjcs8Lsl4McBCc/preview"
-                    },
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/1SiGM16afjIC8HiAA7I5YclrsnGoMmzPi/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/1SiGM16afjIC8HiAA7I5YclrsnGoMmzPi/preview"
-                    },
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/1dFA1kjKU__PaBiOIILeZzOr1KcTlMV5t/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/1dFA1kjKU__PaBiOIILeZzOr1KcTlMV5t/preview"
-                    },
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/1duDrsbi8QsVvc-FQ6H37jYLimFehDZ0M/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/1duDrsbi8QsVvc-FQ6H37jYLimFehDZ0M/preview"
-                    },
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/18I20Cd3mZ34xGGD9AT0L0RbVuj6YEIm4/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/18I20Cd3mZ34xGGD9AT0L0RbVuj6YEIm4/preview"
-                    },
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/1KsctKrUnQpUaTJLMlM1nZDVkT0w6KCYh/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/1KsctKrUnQpUaTJLMlM1nZDVkT0w6KCYh/preview"
-                    },
-                ]
-            },
-            "Asia": {
-                "India": [
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/1NbrrhjVTBG1KeK0fX__QkDIa55BFS0uA/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/1NbrrhjVTBG1KeK0fX__QkDIa55BFS0uA/preview"
-                    },
-                    {
-                        name: "Download",
-                        url: "https://drive.google.com/file/d/1U--Nsvx8VEh-khFGyhe7BCqemyMaVY9P/view?usp=drive_link",
-                        preview: "https://drive.google.com/file/d/1U--Nsvx8VEh-khFGyhe7BCqemyMaVY9P/preview"
-                    }
+        const MiddleEastTabContainer = document.getElementById('MiddleEastTabContainer');
+        const EuropeTabContainer = document.getElementById('EuropeTabContainer');
+        const AsiaTabContainer = document.getElementById('AsiaTabContainer');
 
-                ]
+        const qatarCertifications = document.getElementById('qatarCertifications');
+        const ajmanCertifications = document.getElementById('ajmanCertifications');
+        const abuDhabiCertifications = document.getElementById('abuDhabiCertifications');
+        const ukCertifications = document.getElementById('ukCertifications');
+        const indiaCertifications = document.getElementById('indiaCertifications');
+
+
+
+
+
+        function regionswich(regionIndex) {
+            regionIndicator.style.transform = `translateX(${regionIndex * 100}%)`;
+
+            if (regionIndex == 0) {
+                EuropeTabContainer.style.display = 'block';
+                MiddleEastTabContainer.style.display = 'none';
+                AsiaTabContainer.style.display = 'none';
+                qatarCertifications.style.display = 'none';
+                ajmanCertifications.style.display = 'none';
+                abuDhabiCertifications.style.display = 'none';
+                ukCertifications.style.display = 'block';
+                indiaCertifications.style.display = 'none';
             }
-        };
+            else if (regionIndex == 1) {
+                EuropeTabContainer.style.display = 'none';
+                MiddleEastTabContainer.style.display = 'block';
+                AsiaTabContainer.style.display = 'none';
+                qatarCertifications.style.display = 'none';
+                ajmanCertifications.style.display = 'block';
+                abuDhabiCertifications.style.display = 'none';
+                ukCertifications.style.display = 'none';
+                indiaCertifications.style.display = 'none';
+                MiddleEastswich(1);  //to reset the region to ajman by default
+                regionswich(1)
+            }
+            else if (regionIndex == 2) {
+                EuropeTabContainer.style.display = 'none';
+                MiddleEastTabContainer.style.display = 'none';
+                AsiaTabContainer.style.display = 'block';
+                qatarCertifications.style.display = 'none';
+                ajmanCertifications.style.display = 'none';
+                abuDhabiCertifications.style.display = 'none';
+                ukCertifications.style.display = 'none';
+                indiaCertifications.style.display = 'block';
 
-        const regionsContainer = document.getElementById("regions");
-        const countriesContainer = document.getElementById("countries");
-        const certificatesContainer = document.getElementById("certificates");
+            }
 
-        let activeRegion = "Middle East";
-        let activeCountry = Object.keys(data[activeRegion])[0];
-
-        function renderRegions() {
-            regionsContainer.innerHTML = "";
-            Object.keys(data).forEach((region) => {
-                const regionBtn = document.createElement("button");
-                regionBtn.textContent = region;
-                regionBtn.classList.toggle("active", region === activeRegion);
-
-                regionBtn.addEventListener("click", () => {
-                    activeRegion = region;
-                    activeCountry = Object.keys(data[region])[0];
-                    renderRegions();
-                    renderCountries();
-                    renderCertificates();
-                });
-
-                regionsContainer.appendChild(regionBtn);
-            });
         }
 
-        function renderCountries() {
-            countriesContainer.innerHTML = "";
-            Object.keys(data[activeRegion]).forEach((country) => {
-                const countryBtn = document.createElement("button");
-                countryBtn.textContent = country;
+        function MiddleEastswich(MiddleEastIndex) {
+            MiddleEastTabIndicator.style.transform = `translateX(${MiddleEastIndex * 100}%)`;
 
-                // Always active when in current region
-                countryBtn.classList.add("active");
-
-                // On click, only change the certificates, not styles
-                countryBtn.addEventListener("click", () => {
-                    activeCountry = country;
-                    renderCertificates();
-                });
-
-                countriesContainer.appendChild(countryBtn);
-            });
-        }
-
-        function renderCertificates() {
-            certificatesContainer.innerHTML = "";
-            const certs = data[activeRegion][activeCountry];
-            certs.forEach(cert => {
-                const card = document.createElement("div");
-                card.className = "cert-card";
-
-                card.innerHTML = `
-            <iframe src="${cert.preview}" width="100%" height="600px" frameborder="0" scrolling="no" style="overflow: hidden;"></iframe>
-            <a href="${cert.url}" target="_blank">${cert.name}</a>
-        `;
-
-                certificatesContainer.appendChild(card);
-            });
+            if (MiddleEastIndex == 0) {
+                qatarCertifications.style.display = 'block';
+                ajmanCertifications.style.display = 'none';
+                abuDhabiCertifications.style.display = 'none';
+                ukCertifications.style.display = 'none';
+                indiaCertifications.style.display = 'none';
+            }
+            else if (MiddleEastIndex == 1) {
+                qatarCertifications.style.display = 'none';
+                ajmanCertifications.style.display = 'block';
+                abuDhabiCertifications.style.display = 'none';
+                ukCertifications.style.display = 'none';
+                indiaCertifications.style.display = 'none';
+            }
+            else if (MiddleEastIndex == 2) {
+                qatarCertifications.style.display = 'none';
+                ajmanCertifications.style.display = 'none';
+                abuDhabiCertifications.style.display = 'block';
+                ukCertifications.style.display = 'none';
+                indiaCertifications.style.display = 'none';
+            }
         }
 
 
 
-        // Initial load
-        renderRegions();
-        renderCountries();
-        renderCertificates();
+        // initial load 
+        regionswich(1);
+        MiddleEastswich(1);
     </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

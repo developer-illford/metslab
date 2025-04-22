@@ -56,14 +56,26 @@
                     <p>
                         Your email address will not be published*
                     </p>
-                    <form action="">
-                        <input type="text" placeholder="Your Name" name="name" id="name"><br>
+                    <form action="submit-contact.php" method="post">
+                        <input type="text" placeholder="Your Name" name="name" id="name" required><br>
                         <input type="text" placeholder="Your Company Name" name="companyname" id="companyname"><br>
-                        <input type="email" placeholder="Email" name="email" id="email"><br>
-                        <textarea name="message" id="message" placeholder="Your Message" rows="5"></textarea><br>
-                        <button type="submit" class="button_4">Send Message &nbsp; <i
+                        <input type="email" placeholder="Email" name="email" id="email" required><br>
+                        <textarea name="message" id="message" placeholder="Your Message" rows="5"
+                            required></textarea><br>
+
+                        <!-- Honeypot field (hidden from users) -->
+                        <input type="text" name="particulars" style="display:none">
+
+                        <!-- Google reCAPTCHA v2 -->
+                        <div class="g-recaptcha" data-sitekey="6LcuTAcrAAAAAAj6s0KGXqjtiNomEBgaHZAqRBwZ"></div><br>
+
+                        <button type="submit" class="button_4">Send Message &nbsp;<i
                                 class="fa-solid fa-paper-plane"></i></button>
                     </form>
+
+                    <!-- Load reCAPTCHA -->
+                    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
                 </div>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
@@ -115,7 +127,7 @@
                 Need specialized chemical testing? Share your project details with us, and we'll provide a personalized
                 quote to meet your requirements.
             </p>
-            <button  onclick="window.location.href='contact.html'" class="scroll-scale button_2 animate fadeLeft">
+            <button onclick="window.location.href='contact.html'" class="scroll-scale button_2 animate fadeLeft">
                 Request a Quote
             </button>
         </div>

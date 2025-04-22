@@ -11,9 +11,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Strict-Transport-Security: max-age=31536000; includeSubDomains");
 
     // CSRF Protection
-    if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
-        die("CSRF token validation failed.");
-    }
+    // if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
+    //     die("CSRF token validation failed.");
+    // }
 
     // Honeypot to Block Bots
     if (!empty($_POST['honeypot'])) {
@@ -77,12 +77,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fileBase64 = chunk_split(base64_encode($fileData));
 
     // Email Details
-    $recipient = "manas.illforddigital@gmail.com";
+    $recipient = "ukoperations@metslab.com";
     $subject = "New Job Application - $name";
 
     // Email Headers (MIME Format for Attachment)
     $boundary = md5(time());
-    $headers = "From: noreply@company.com\r\n";
+    $headers = "From: noreply@metslab.com\r\n";
     $headers .= "Reply-To: $email\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: multipart/mixed; boundary=\"$boundary\"\r\n";
@@ -95,6 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_body .= "<p><strong>Name:</strong> $name</p>";
     $email_body .= "<p><strong>Phone:</strong> $phone</p>";
     $email_body .= "<p><strong>Email:</strong> $email</p>";
+    $email_body .= "<p><strong>Date of Birth:</strong> $dob</p>";
     $email_body .= "<p><strong>Experience:</strong> $experience</p>";
     $email_body .= "</body></html>\r\n";
 

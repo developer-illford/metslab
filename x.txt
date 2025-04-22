@@ -513,3 +513,446 @@ old marquee
                 fill: #fff;
             }
         </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    <style>
+        .cert_container {
+            max-width: 1300px;
+            margin: auto;
+            /* border: 5px solid #3c276e; */
+            padding: 20px;
+        }
+
+        .cert_container .table-header {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #1ba249;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .table-header .row {
+            display: flex;
+            /* border-bottom: 1px solid #ccc; */
+        }
+
+        .table-header.row:last-child {
+            border-bottom: none;
+        }
+
+        .cert_container .row button {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            background: #fff;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+            /* border-bottom: 5px solid #1ba249; */
+        }
+
+        .cert_container .row button:hover {
+            background: #1ba2487a;
+        }
+
+        /* .cert_container .row button.active {
+            border-bottom: 0px;
+            background: #f1f1f1;
+            color: rgb(0, 0, 0);
+        } */
+
+        .certificates {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        .certificates>* {
+            flex: calc((100% - 40px) / 2);
+            /* 40px accounts for two gaps (20px each) */
+        }
+
+        .cert-card {
+            width: 48%;
+            background: white;
+            border: 1px solid #1ba249;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            text-align: center;
+            scrollbar-width: 0px;
+            overflow: hidden;
+        }
+
+        .cert-card iframe {}
+
+        .cert-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .cert-card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #ffffff;
+            background-color: #1ba249;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+
+
+        @media (max-width: 768px) {
+            .cert-card {
+                width: 100%;
+            }
+
+            .certificates>* {
+                flex: calc((100% - 40px) / 1);
+                /* 40px accounts for two gaps (20px each) */
+            }
+        }
+
+        #countries button {
+            border: 3px solid #fff;
+            /* background-color: #1ba249; */
+            color: #000;
+        }
+
+        /* #regions .active {
+            border: 3px solid #fff;
+            background-color: #1ba249;
+            color: #fff;
+        }
+
+        .cert_container .row button,
+        #countries button,
+        #regions .active {
+            transition:
+                transform 0.8s ease;
+        }
+
+        .cert_container .row button:active,
+        #countries button:active {
+            transform: scale(0.9);
+        } */
+
+        .regions{
+            position: relative;
+        }
+
+        .tab_indicator {
+            position: absolute;
+            bottom: 0px;
+            width: calc(100% / 3 - 10px);
+            height: 5px;
+            background: #1ba249;
+            border-radius: 50px;
+            z-index: 1;
+            transition: transform 0.3s ease;
+        }
+
+
+    </style>
+
+    <div class="cert_container">
+        <div class="table-header">
+            <div class="row regions" id="regions"></div>
+            <div class="row" id="countries"></div>
+        </div>
+
+        <div class="certificates" id="certificates"></div>
+    </div>
+
+    <script>
+        const data = {
+            "Europe": {
+                "UK": [
+                    { name: "Download", url: " " },
+                    { name: "Download", url: " " },
+                ]
+            },
+            "Middle East": {
+                "Qatar": [
+
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/12qMU1C-Ue0-omvvDvsnTnRnoHYfZGRK9/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/12qMU1C-Ue0-omvvDvsnTnRnoHYfZGRK9/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1gRptkvT-eyA-z97eK1j_0RmsXSDsB1ZY/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1gRptkvT-eyA-z97eK1j_0RmsXSDsB1ZY/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1Vv-84X4RWEKlMoNBuek4Hwjs92e6bZWx/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1Vv-84X4RWEKlMoNBuek4Hwjs92e6bZWx/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/16hsdKEwQm358gY2HaPcm8AB56q55_o07/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/16hsdKEwQm358gY2HaPcm8AB56q55_o07/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1D4aNC7ceIgPMPpXQKQtsoi9KF7DaHE0U/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1D4aNC7ceIgPMPpXQKQtsoi9KF7DaHE0U/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1YqDcpejgt24uN9am-1Y_cKdpilVOUYFB/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1YqDcpejgt24uN9am-1Y_cKdpilVOUYFB/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1EYtzfwNYjlA9YFa3hKAShJJM3oJJFh_9/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1EYtzfwNYjlA9YFa3hKAShJJM3oJJFh_9/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1Lc6je9u6005NpU3-2Ve4arz_TEjJntlP/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1Lc6je9u6005NpU3-2Ve4arz_TEjJntlP/preview"
+                    },
+                ],
+                "Ajman": [
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/13KA-s3s2Jw0yIXDO12TKuyZZ_nBHZfeQ/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/13KA-s3s2Jw0yIXDO12TKuyZZ_nBHZfeQ/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1hUJuwHxQTD1wAUlZFopMYnAFPhIjmzha/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1hUJuwHxQTD1wAUlZFopMYnAFPhIjmzha/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1sht3zfvxJVX0yy0tK6-CMkoaoyom8TB6/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1sht3zfvxJVX0yy0tK6-CMkoaoyom8TB6/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/12XYIKcQndYcHITga7yLzx9dL2MoRM_da/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/12XYIKcQndYcHITga7yLzx9dL2MoRM_da/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1e9JgIK_8s5GpyDAoAbM5hodhMAVNnpSB/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1e9JgIK_8s5GpyDAoAbM5hodhMAVNnpSB/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1f_hytZC8KkDkKEgpwfeA1p0ebmEix9KQ/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1f_hytZC8KkDkKEgpwfeA1p0ebmEix9KQ/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1k81Ekhmmw5qUwoDtTAKRwFXDeSrv_1iF/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1k81Ekhmmw5qUwoDtTAKRwFXDeSrv_1iF/preview"
+                    },
+                ],
+                "Abu Dhabi": [
+
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1mK8SlCtoIc0RiLvSi4FLkqIPv_g2OjkU/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1mK8SlCtoIc0RiLvSi4FLkqIPv_g2OjkU/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1pghmBl-HrNsKUW1_lO84DpjMcraf6ORE/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1pghmBl-HrNsKUW1_lO84DpjMcraf6ORE/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1MrF8TaqiTtroHeUFJbME-mu2iuVEhzQ_/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1MrF8TaqiTtroHeUFJbME-mu2iuVEhzQ_/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1VDKxUXxwVdDPm6_rGLC-BQt_cDuYNsKN/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1VDKxUXxwVdDPm6_rGLC-BQt_cDuYNsKN/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/19XW_PdG7AD7O-oWZ8Vwjcs8Lsl4McBCc/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/19XW_PdG7AD7O-oWZ8Vwjcs8Lsl4McBCc/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1SiGM16afjIC8HiAA7I5YclrsnGoMmzPi/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1SiGM16afjIC8HiAA7I5YclrsnGoMmzPi/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1dFA1kjKU__PaBiOIILeZzOr1KcTlMV5t/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1dFA1kjKU__PaBiOIILeZzOr1KcTlMV5t/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1duDrsbi8QsVvc-FQ6H37jYLimFehDZ0M/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1duDrsbi8QsVvc-FQ6H37jYLimFehDZ0M/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/18I20Cd3mZ34xGGD9AT0L0RbVuj6YEIm4/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/18I20Cd3mZ34xGGD9AT0L0RbVuj6YEIm4/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1KsctKrUnQpUaTJLMlM1nZDVkT0w6KCYh/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1KsctKrUnQpUaTJLMlM1nZDVkT0w6KCYh/preview"
+                    },
+                ]
+            },
+            "Asia": {
+                "India": [
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1NbrrhjVTBG1KeK0fX__QkDIa55BFS0uA/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1NbrrhjVTBG1KeK0fX__QkDIa55BFS0uA/preview"
+                    },
+                    {
+                        name: "Download",
+                        url: "https://drive.google.com/file/d/1U--Nsvx8VEh-khFGyhe7BCqemyMaVY9P/view?usp=drive_link",
+                        preview: "https://drive.google.com/file/d/1U--Nsvx8VEh-khFGyhe7BCqemyMaVY9P/preview"
+                    }
+
+                ]
+            }
+        };
+
+        const regionsContainer = document.getElementById("regions");
+        const countriesContainer = document.getElementById("countries");
+        const certificatesContainer = document.getElementById("certificates");
+
+        let activeRegion = "Middle East";
+        let activeCountry = Object.keys(data[activeRegion])[0];
+
+        function renderRegions() {
+            regionsContainer.innerHTML = "";
+            regionsContainer.appendChild(Object.assign(document.createElement("div"), { className: "tab_indicator" }));
+            Object.keys(data).forEach((region) => {
+                const regionBtn = document.createElement("button");
+                regionBtn.textContent = region;
+                regionBtn.classList.toggle("active", region === activeRegion);
+
+                regionBtn.addEventListener("click", () => {
+                    activeRegion = region;
+                    activeCountry = Object.keys(data[region])[0];
+                    renderRegions();
+                    renderCountries();
+                    renderCertificates();
+                });
+
+                regionsContainer.appendChild(regionBtn);
+            });
+        }
+
+        function renderCountries() {
+            countriesContainer.innerHTML = "";
+            Object.keys(data[activeRegion]).forEach((country) => {
+                const countryBtn = document.createElement("button");
+                countryBtn.textContent = country;
+
+                // Always active when in current region
+                countryBtn.classList.add("active");
+
+                // On click, only change the certificates, not styles
+                countryBtn.addEventListener("click", () => {
+                    activeCountry = country;
+                    renderCertificates();
+                });
+
+                countriesContainer.appendChild(countryBtn);
+            });
+        }
+
+        function renderCertificates() {
+            certificatesContainer.innerHTML = "";
+            const certs = data[activeRegion][activeCountry];
+            certs.forEach(cert => {
+                const card = document.createElement("div");
+                card.className = "cert-card";
+
+                card.innerHTML = `
+            <iframe src="${cert.preview}" width="100%" height="600px" frameborder="0" scrolling="no" style="overflow: hidden;"></iframe>
+            <a href="${cert.url}" target="_blank">${cert.name}</a>
+        `;
+
+                certificatesContainer.appendChild(card);
+            });
+        }
+
+
+
+        // Initial load
+        renderRegions();
+        renderCountries();
+        renderCertificates();
+    </script>
+
+

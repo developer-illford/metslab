@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animated Tabs</title>
+  <style>
+
+
+    .tabs-container {
+      position: relative;
+      display: flex;
+      background: #333;
+      border-radius: 50px;
+      padding: 5px;
+      width: 600px;
+      justify-content: space-between;
+    }
+
+    .tab {
+      flex: 1;
+      padding: 15px 0;
+      text-align: center;
+      border-radius: 50px;
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
+    }
+
+    .tab-indicator {
+      position: absolute;
+      top: 5px;
+      bottom: 5px;
+      width: calc(100% / 3 - 10px);
+      background: white;
+      border-radius: 50px;
+      z-index: 1;
+      transition: transform 0.3s ease;
+    }
+
+    .tab-content {
+      margin-top: 30px;
+      width: 600px;
+      height: 300px;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #ff416c, #ff4b2b, #ffc371);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+
+    /* Optional gradient like your screenshot */
+    .tab-content.tab-1 {
+      background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    }
+
+    .tab-content.tab-2 {
+      background: linear-gradient(135deg, #cc2b5e, #753a88);
+    }
+
+    .tab-content.tab-3 {
+      background: linear-gradient(135deg, #ff416c, #ff4b2b, #ffc371);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tabs-container">
+    <div class="tab-indicator" id="tab-indicator"></div>
+    <div class="tab" onclick="switchTab(0)">europe</div>
+    <div class="tab" onclick="switchTab(1)">middle east </div>
+    <div class="tab" onclick="switchTab(2)">asia</div>
+  </div>
+
+  <div class="tab-content tab-1" id="tab-content">
+    Tab 1
+  </div>
+
+  <script>
+    const indicator = document.getElementById('tab-indicator');
+    const content = document.getElementById('tab-content');
+
+    function switchTab(index) {
+      indicator.style.transform = `translateX(${index * 100}%)`;
+
+      content.className = 'tab-content tab-' + (index + 1);
+      content.textContent = 'Tab ' + (index + 1);
+    }
+  </script>
+
+</body>
+</html>
