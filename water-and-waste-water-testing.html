@@ -45,7 +45,17 @@
         }
 
         .section-title {
-            font-size: 1.4em;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            background-color: #1ba249;
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .section-title_h3 {
+            font-size: 1.2em;
             font-weight: bold;
             margin-top: 0px;
             margin-bottom: 10px;
@@ -57,7 +67,7 @@
 
         .main-title {
             font-weight: bold;
-            font-size: 150%;
+            font-size: 100%;
         }
 
         p {
@@ -68,8 +78,20 @@
             width: 100%;
             max-width: 100%;
             height: max-content;
-            overflow: scroll;
+            padding: 0;
+            border-radius: 10px;
+            overflow: auto;
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* IE 10+ */
         }
+
+        .table-container::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari, Opera */
+        }
+
 
         table {
             width: 100%;
@@ -78,13 +100,21 @@
 
         th,
         td {
-            border: 1px solid black;
+            border: 2px solid #1ba249;
             padding: 8px;
             text-align: left;
+            text-align: left !important;
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: #1ba249;
+            color: #fff;
+            font-size: 1.2em;
+        }
+
+        .td_subs {
+            font-size: 1em;
+            font-weight: 700;
         }
 
         .ul_step1 {
@@ -101,15 +131,15 @@
 
     <section class="hero_03 water_testing_hero">
         <div class="hero_03_content">
-            <h2>
+            <h1>
                 Water Quality Assessment & Compliance Testing Services
-            </h2>
+            </h1>
         </div>
     </section>
 
     <section class="service_detailing">
         <div class="row serv_row">
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 service_detailing_col ">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 service_detailing_col">
                 <div class="service_detailing_img">
                     <img src="img/leaf-dew-drop.webp" alt="">
                 </div>
@@ -136,8 +166,8 @@
 
         <div class="row serv_row">
             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 service_detailing_col">
-                <strong class="section-title">Water Testing:
-                </strong>
+                <h2 class="section-title">Water Testing:
+                </h2>
                 <p>Water testing includes trace analysis capabilities. Regulatory measures for safe drinking water are
                     crucial for public health, ensuring access to clean water and improving water quality. Government
                     agencies set standards, monitor sources and enforce regulations as WHO, water quality regulations of
@@ -160,7 +190,7 @@
 
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 service_detailing_col">
                 <br>
-                <div class="section-title">Drinking Water</div>
+                <h3 class="section-title_h3">Drinking Water</h3>
                 <ul>
                     <li>Potable water</li>
                     <li>Bottled water</li>
@@ -169,7 +199,7 @@
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 service_detailing_col">
                 <br>
-                <div class="section-title">Recreational Water</div>
+                <h3 class="section-title_h3">Recreational Water</h3>
                 <ul>
                     <li>Swimming pool water</li>
                     <li>SPA & Hot tub water</li>
@@ -177,7 +207,7 @@
                 </ul>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 service_detailing_col">
-                <div class="section-title">Industrial Water</div>
+                <h3 class="section-title_h3">Industrial Water</h3>
                 <ul>
                     <li>Boiler feed water</li>
                     <li>Cooling tower water</li>
@@ -185,14 +215,14 @@
                 </ul>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 service_detailing_col">
-                <div class="section-title">Agricultural & Irrigation Water</div>
+                <h3 class="section-title_h3">Agricultural & Irrigation Water</h3>
                 <ul>
                     <li>Irrigation water</li>
                     <li>Livestock water</li>
                 </ul>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 service_detailing_col">
-                <div class="section-title">Environmental Water</div>
+                <h3 class="section-title_h3">Environmental Water</h3>
                 <ul>
                     <li>Surface water</li>
                     <li>Ground water</li>
@@ -201,7 +231,7 @@
                 </ul>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 service_detailing_col">
-                <div class="section-title">Wastewater</div>
+                <h3 class="section-title_h3">Wastewater</h3>
                 <ul>
                     <li>Municipal wastewater</li>
                     <li>Industrial wastewater</li>
@@ -209,7 +239,7 @@
                 </ul>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 service_detailing_col">
-                <div class="section-title">Specialised Water</div>
+                <h3 class="section-title_h3">Specialised Water</h3>
                 <ul>
                     <li>Deionized water</li>
                     <li>Distilled water</li>
@@ -217,14 +247,14 @@
                 </ul>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 service_detailing_col">
-                <div class="section-title">Recreational or Tourism-specific Water</div>
+                <h3 class="section-title_h3">Recreational or Tourism-specific Water</h3>
                 <ul>
                     <li>Theme park water</li>
                     <li>Marine park water</li>
                 </ul>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 service_detailing_col">
-                <div class="section-title">Public Health & Emergency Water</div>
+                <h3 class="section-title_h3">Public Health & Emergency Water</h3>
                 <ul>
                     <li>Hospital and Healthcare water</li>
                 </ul>
@@ -233,8 +263,8 @@
 
 
         <div class="row serv_row">
-            <div class="main-title">Our Water Analysis Services:
-            </div>
+            <h2 class="section-title">Our Water Analysis Services:
+            </h2>
             <p>METS Laboratories provide water quality testing and analysis on global bases. Our comprehensive suite of
                 water analysis includes legionella management and toxic contaminants as well as the domestic testing
                 requirements like water quality-England & Wales, that will assist companies to meet regional specific
@@ -247,7 +277,7 @@
 
             </div>
             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 service_detailing_col">
-                <div class="section-title">Chemical Analysis:</div>
+                <h3 class="section-title_h3">Chemical Analysis:</h3>
                 <p>Water plays an important role as a chemical substance, its many important functions include being a
                     good solvent for dissolving many solids, serving as an excellent coolant both mechanically and
                     biologically, and acting as a reactant in many chemical reactions.</p>
@@ -283,8 +313,8 @@
                     vectors of disease</p>
 
             </div>
-            <div class="section-title">Chemicals from industrial sources and human dwellings:
-            </div>
+            <h3 class="section-title_h3">Chemicals from industrial sources and human dwellings:
+            </h3>
             <p>
                 Chemicals from industrial sources can reach drinking-water directly from discharges or indirectly from
                 diffuse sources arising from the use and disposal of materials and products containing the chemicals. In
@@ -300,7 +330,7 @@
                 international regulations for water.
 
             </p>
-            <p>WHO Guidelines values for naturally occurring chemicals that are of health significance in drinking-water
+            <p><b>WHO Guidelines values for naturally occurring chemicals that are of health significance in drinking-water:</b>
             </p>
 
             <div class="table_container">
@@ -310,7 +340,7 @@
                         <th>Guideline value (Maximum) (µg/l)</th>
                     </tr>
                     <tr>
-                        <td><strong>1. Inorganic</strong></td>
+                        <td class="td_subs">1. Inorganic</td>
                         <td></td>
                     </tr>
                     <tr>
@@ -346,7 +376,7 @@
                         <td>30</td>
                     </tr>
                     <tr>
-                        <td><strong>2. Organic</strong></td>
+                        <td class="td_subs">2. Organic</td>
                         <td></td>
                     </tr>
                     <tr>
@@ -362,6 +392,7 @@
                         <td>3</td>
                     </tr>
                 </table>
+                <br>
             </div>
 
             <p>The legal standards in the UK were based on those which were set in Europe in the drinking water
@@ -375,7 +406,7 @@
                 <li>Appearance, odor and taste</li>
             </ul>
 
-            <p><b>The chemical testing of drinking water as per UK regulations:</b></p>
+            <h3 class="main-title">The chemical testing of drinking water as per UK regulations:</h3>
             <div class="table_container">
                 <table>
                     <tr>
@@ -411,6 +442,7 @@
                         <td>10</td>
                     </tr>
                 </table>
+                <br>
             </div>
             <p></p>
 
@@ -465,10 +497,11 @@
                         <td>0.50</td>
                     </tr>
                 </table>
+                <br>
             </div>
             <p></p>
 
-            <p><strong>Pesticides:</strong></p>
+            <h3 class="main-title">Pesticides:</h3>
             <div class="table_container">
                 <table>
                     <tr>
@@ -520,6 +553,7 @@
                         <td>0.50</td>
                     </tr>
                 </table>
+                <br>
             </div>
         </div>
 
@@ -527,7 +561,7 @@
         <div class="row serv_row">
 
             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 service_detailing_col">
-                <div class="section-title">Microbiological Parameters:</div>
+                <h2 class="section-title">Microbiological Parameters:</h2>
                 <p>The greatest risk to public health from microbes in water is associated with consumption of
                     drinking-water that is contaminated with human and animal excreta, although other sources and routes
                     of exposure may also be significant.
@@ -561,7 +595,7 @@
 
 
         <div class="row serv_row">
-            <p><strong>Pathogens Transmitted Through Water</strong></p>
+            <h2 class="section-title">Pathogens Transmitted Through Water</h2>
             <div class="table_container">
                 <table>
                     <tr>
@@ -570,7 +604,7 @@
                         <th>Health Significance</th>
                     </tr>
                     <tr>
-                        <td colspan="3"><strong>Bacteria:</strong></td>
+                        <td colspan="3" class="td_subs">Bacteria:</td>
                     </tr>
                     <tr>
                         <td>Burkholderia</td>
@@ -623,7 +657,7 @@
                         <td>High</td>
                     </tr>
                     <tr>
-                        <td colspan="3"><strong>Viruses:</strong></td>
+                        <td colspan="3" class="td_subs">Viruses:</td>
                     </tr>
                     <tr>
                         <td>Adenoviridae</td>
@@ -656,7 +690,7 @@
                         <td>High</td>
                     </tr>
                     <tr>
-                        <td colspan="3"><strong>Protozoa:</strong></td>
+                        <td class="td_subs" colspan="3">Protozoa:</td>
                     </tr>
                     <tr>
                         <td>Acanthamoeba</td>
@@ -689,7 +723,7 @@
                         <td>High</td>
                     </tr>
                     <tr>
-                        <td colspan="3"><strong>Helminths:</strong></td>
+                        <td colspan="3" class="td_subs">Helminths:</td>
                     </tr>
                     <tr>
                         <td>Dracunculus</td>
@@ -697,10 +731,11 @@
                         <td>High</td>
                     </tr>
                 </table>
+                <br>
             </div>
 
+            <p><b>Pathogenic microbes in drinking water, Directive/National requirements-UK:</b></p>
             <div class="table_container">
-                <p><b>Pathogenic microbes in drinking water, Directive/National requirements-UK:</b></p>
                 <table>
                     <tr>
                         <th>Tests/Parameters</th>
@@ -723,7 +758,7 @@
                         <td>Number/100ml</td>
                     </tr>
                 </table>
-
+                <br>
             </div>
 
         </div>
@@ -739,8 +774,8 @@
 
             </div>
             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 service_detailing_col">
-                <div class="section-title">Why is testing in this category significant?
-                </div>
+                <h2 class="section-title">Why is testing in this category significant?
+                </h2>
                 <p>
                     Water quality fundamentally influences population health, manufacturing efficiency, natural resource
                     conservation, and agricultural yields. Systematic testing enables early risk identification, ensures
@@ -755,8 +790,8 @@
 
         <div class="row serv_row">
             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 service_detailing_col">
-                <div class="section-title">What are the European regulations/standards on different water matrices?
-                </div>
+                <h2 class="section-title">What are the European regulations/standards on different water matrices?
+                </h2>
                 <p>At the heart of our laboratory's mission lies an unwavering dedication to analytical precision in
                     water testing. We have carefully built our reputation on a foundation of scientific excellence,
                     backed by the most rigorous international accreditations in our field. As a UKAS accredited testing
@@ -812,8 +847,8 @@
 
             </div>
             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 service_detailing_col">
-                <div class="section-title">1. Drinking Water Regulations
-                </div>
+                <h3 class="section-title_h3">1. Drinking Water Regulations
+                </h3>
                 <ul class="ul_step1">
                     <li><b>The Water Supply (Water Quality) Regulations 2016 (England):</b></li>
                 </ul>
@@ -871,8 +906,8 @@
 
         <div class="row serv_row">
             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 service_detailing_col">
-                <div class="section-title">2. Wastewater Regulations
-                </div>
+                <h3 class="section-title_h3">2. Wastewater Regulations
+                </h3>
                 <ul class="ul_step1">
                     <li><b>Urban Wastewater Treatment Regulations 1994:</b></li>
                 </ul>
@@ -924,8 +959,8 @@
 
             </div>
             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 service_detailing_col">
-                <div class="section-title">3. Environmental Water Quality
-                </div>
+                <h3 class="section-title_h3">3. Environmental Water Quality
+                </h3>
                 <ul class="ul_step1">
                     <li><b>Water Framework Directive (2000/60/EC):</b></li>
                 </ul>
@@ -960,8 +995,8 @@
 
         <div class="row serv_row">
             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 service_detailing_col">
-                <div class="section-title">4. Private Water Supplies
-                </div>
+                <h3 class="section-title_h3">4. Private Water Supplies
+                </h3>
                 <ul class="ul_step1">
                     <li><b>Private Water Supplies Regulations 2016 (England):</b></li>
                 </ul>
@@ -1002,7 +1037,7 @@
 
             </div>
             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 service_detailing_col">
-                <div class="section-title">5. Bathing Water</div>
+                <h3 class="section-title_h3">5. Bathing Water</h3>
                 <ul class="ul_step1">
                     <li><b>Bathing Water Regulations 2013 (England):</b></li>
                 </ul>
@@ -1032,8 +1067,8 @@
         <div class="row serv_row">
 
             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 service_detailing_col">
-                <div class="section-title">6. Key Organizations Involved in Water Testing
-                </div>
+                <h3 class="section-title_h3">6. Key Organizations Involved in Water Testing
+                </h3>
                 <ul class="ul_step1">
                     <li><b>BSRIA (Building Services Research and Information Association):</b></li>
                 </ul>
@@ -1115,7 +1150,7 @@
 
             </div>
             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 service_detailing_col">
-                <div class="section-title">7. Testing Standards and Methods</div>
+                <h3 class="section-title_h3">7. Testing Standards and Methods</h3>
                 <ul class="ul_step1">
                     <li>Water testing must comply with UK and international standards, such as:</li>
                 </ul>
@@ -1146,8 +1181,8 @@
         <div class="row serv_row">
 
             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 service_detailing_col">
-                <div class="section-title">8. Post-Brexit Changes
-                </div>
+                <h3 class="section-title_h3">8. Post-Brexit Changes
+                </h3>
                 <ul class="ul_step1">
                     <li>After Brexit, the UK retained most EU water quality legislation but now has the authority to
                         amend or replace these regulations.</li>
@@ -1174,7 +1209,7 @@
 
             </div>
             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 service_detailing_col">
-                <div class="section-title">What sectors do we focus on?</div>
+                <h2 class="section-title">What sectors do we focus on?</h2>
                 <ul class="ul_step1">
                     <li><b>Municipal Water Services:</b> Delivering comprehensive drinking water analysis and wastewater
                         treatment monitoring.</li>
@@ -1195,8 +1230,8 @@
         <div class="row serv_row">
 
             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 service_detailing_col">
-                <div class="section-title">What are the key criteria for testing, and what are our strengths?
-                </div>
+                <h2 class="section-title">What are the key criteria for testing, and what are our strengths?
+                </h2>
                 <ul class="ul_step1">
                     <li><b>Comprehensive Parameter Analysis:</b> From biological contaminants to chemical compounds, we
                         conduct detailed water quality assessments.</li>
@@ -1268,7 +1303,7 @@
                 Need specialized chemical testing? Share your project details with us, and we'll provide a personalized
                 quote to meet your requirements.
             </p>
-            <button  onclick="window.location.href='contact.html'" class="scroll-scale button_2 animate fadeLeft">
+            <button onclick="window.location.href='contact.html'" class="scroll-scale button_2 animate fadeLeft">
                 Request a Quote
             </button>
         </div>
@@ -1279,7 +1314,7 @@
 
 
     <div class="floating_btn_call">
-        <a target="_blank" href="tel:+447789745245" style="text-decoration: none;">
+        <a target="_blank" href="tel:+447526505070" style="text-decoration: none;">
             <div class="contact_icon_call">
                 <i class="fa-solid fa-phone"></i>
             </div>
@@ -1287,7 +1322,7 @@
     </div>
 
     <div class="floating_btn_instagram">
-        <a target="_blank" href="" style="text-decoration: none;">
+        <a target="_blank" href="https://www.instagram.com/metslab_uk/" style="text-decoration: none;">
             <div class="contact_icon_instagram">
                 <i class="fa-brands fa-instagram"></i>
             </div>
@@ -1295,7 +1330,7 @@
     </div>
 
     <div class="floating_btn_whatsapp">
-        <a target="_blank" href="tel:+447789745245" style="text-decoration: none;">
+        <a target="_blank" href="https://wa.me/+447526505070" style="text-decoration: none;">
             <div class="contact_icon_whatsapp">
                 <i class="fa-brands fa-whatsapp"></i>
             </div>

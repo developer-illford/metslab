@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $message = clean_input($_POST['message'] ?? '', 1000);
 
     // Email Setup
-    $to = "ukoperations@metslab.com";
+    $to = "info.uk@metslab.com";
     $subject = "New Message from Contact Form - $name";
     $headers = "From: noreply@metslab.com\r\n";
     $headers .= "Reply-To: $email\r\n";

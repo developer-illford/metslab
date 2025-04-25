@@ -77,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fileBase64 = chunk_split(base64_encode($fileData));
 
     // Email Details
-    $recipient = "ukoperations@metslab.com";
+    $recipient = "info.uk@metslab.com";
     $subject = "New Job Application - $name";
 
     // Email Headers (MIME Format for Attachment)

@@ -63,6 +63,25 @@
             margin-bottom: 15px;
         }
 
+        .table_container {
+            width: 100%;
+            max-width: 100%;
+            height: max-content;
+            padding: 0;
+            border-radius: 10px;
+            overflow: auto;
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* IE 10+ */
+        }
+
+        .table-container::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari, Opera */
+        }
+
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -70,13 +89,16 @@
 
         th,
         td {
-            border: 1px solid black;
+            border: 2px solid #1ba249;
             padding: 8px;
             text-align: left;
+            text-align: left !important;
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: #1ba249;
+            color: #fff;
+            font-size: 130%;
         }
     </style>
 
@@ -369,377 +391,381 @@
 
 
         <div class="row serv_row">
-            <table>
-                <tr>
-                    <th>Product</th>
-                    <th>Test</th>
-                    <th>Method</th>
-                </tr>
-                <tr>
-                    <td rowspan="21">1. Cooking Ranges Hobs Ovens <br> 2. Electric Stove and Similar Appliances</td>
-                    <td>Classification</td>
-                    <td>IEC 60335-2-6: 2014</td>
-                </tr>
-                <tr>
-                    <td>Marking and Instructions</td>
-                    <td>IEC 60335-2-6: 2014</td>
-                </tr>
-                <tr>
-                    <td>Protection against access to live parts</td>
-                    <td>IEC 60335-2-6: 2014</td>
-                </tr>
-                <tr>
-                    <td>Power input and current</td>
-                    <td>IEC 60335-2-6: 2014</td>
-                </tr>
-                <tr>
-                    <td>Heating</td>
-                    <td>IEC 60335-2-6: 2014</td>
-                </tr>
-                <tr>
-                    <td>Leakage current and electric strength at operating temperature</td>
-                    <td>IEC 60335-2-6: 2014</td>
-                </tr>
-                <tr>
-                    <td>Moisture resistance</td>
-                    <td>IEC 60335-2-6: 2014</td>
-                </tr>
-                <tr>
-                    <td>Leakage current and electric strength</td>
-                    <td>IEC 60335-2-6: 2014</td>
-                </tr>
-                <tr>
-                    <td>Overload protection of transformers and associated circuits</td>
-                    <td>IEC 60335-2-6: 2014</td>
-                </tr>
-                <tr>
-                    <td>Abnormal operation</td>
-                    <td>IEC 60335-2-6: 2014</td>
-                </tr>
-                <tr>
-                    <td>Stability and mechanical hazards</td>
-                    <td>IEC 60335-2-6: 2014</td>
-                </tr>
-                <tr>
-                    <td>Mechanical strength</td>
-                    <td>IEC 60335-2-6: 2014</td>
-                </tr>
-                <tr>
-                    <td>Internal wiring</td>
-                    <td>IEC 60335-2-6: 2014</td>
-                </tr>
-                <tr>
-                    <td>Components</td>
-                    <td>IEC 60335-2-6: 2014</td>
-                </tr>
-                <tr>
-                    <td>Supply connection and external flexible cords</td>
-                    <td>IEC 60335-2-6: 2014</td>
-                </tr>
-                <tr>
-                    <td>Terminals for external conductors</td>
-                    <td>IEC 60335-2-6: 2014</td>
-                </tr>
-                <tr>
-                    <td>Provision for earthing</td>
-                    <td>IEC 60335-2-6: 2014</td>
-                </tr>
-                <tr>
-                    <td>Screws and connections</td>
-                    <td>IEC 60335-2-6: 2014</td>
-                </tr>
-                <tr>
-                    <td>Clearances, creepage distances, and solid insulation</td>
-                    <td>IEC 60335-2-6: 2014</td>
-                </tr>
-                <tr>
-                    <td>Resistance to heat and fire</td>
-                    <td>IEC 60335-2-6: 2014</td>
-                </tr>
-                <tr>
-                    <td>Resistance to rusting</td>
-                    <td>IEC 60335-2-6: 2014</td>
-                </tr>
+            <div class="table_container">
+                <table>
+                    <tr>
+                        <th>Product</th>
+                        <th>Test</th>
+                        <th>Method</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="21">1. Cooking Ranges Hobs Ovens <br> 2. Electric Stove and Similar Appliances</td>
+                        <td>Classification</td>
+                        <td>IEC 60335-2-6: 2014</td>
+                    </tr>
+                    <tr>
+                        <td>Marking and Instructions</td>
+                        <td>IEC 60335-2-6: 2014</td>
+                    </tr>
+                    <tr>
+                        <td>Protection against access to live parts</td>
+                        <td>IEC 60335-2-6: 2014</td>
+                    </tr>
+                    <tr>
+                        <td>Power input and current</td>
+                        <td>IEC 60335-2-6: 2014</td>
+                    </tr>
+                    <tr>
+                        <td>Heating</td>
+                        <td>IEC 60335-2-6: 2014</td>
+                    </tr>
+                    <tr>
+                        <td>Leakage current and electric strength at operating temperature</td>
+                        <td>IEC 60335-2-6: 2014</td>
+                    </tr>
+                    <tr>
+                        <td>Moisture resistance</td>
+                        <td>IEC 60335-2-6: 2014</td>
+                    </tr>
+                    <tr>
+                        <td>Leakage current and electric strength</td>
+                        <td>IEC 60335-2-6: 2014</td>
+                    </tr>
+                    <tr>
+                        <td>Overload protection of transformers and associated circuits</td>
+                        <td>IEC 60335-2-6: 2014</td>
+                    </tr>
+                    <tr>
+                        <td>Abnormal operation</td>
+                        <td>IEC 60335-2-6: 2014</td>
+                    </tr>
+                    <tr>
+                        <td>Stability and mechanical hazards</td>
+                        <td>IEC 60335-2-6: 2014</td>
+                    </tr>
+                    <tr>
+                        <td>Mechanical strength</td>
+                        <td>IEC 60335-2-6: 2014</td>
+                    </tr>
+                    <tr>
+                        <td>Internal wiring</td>
+                        <td>IEC 60335-2-6: 2014</td>
+                    </tr>
+                    <tr>
+                        <td>Components</td>
+                        <td>IEC 60335-2-6: 2014</td>
+                    </tr>
+                    <tr>
+                        <td>Supply connection and external flexible cords</td>
+                        <td>IEC 60335-2-6: 2014</td>
+                    </tr>
+                    <tr>
+                        <td>Terminals for external conductors</td>
+                        <td>IEC 60335-2-6: 2014</td>
+                    </tr>
+                    <tr>
+                        <td>Provision for earthing</td>
+                        <td>IEC 60335-2-6: 2014</td>
+                    </tr>
+                    <tr>
+                        <td>Screws and connections</td>
+                        <td>IEC 60335-2-6: 2014</td>
+                    </tr>
+                    <tr>
+                        <td>Clearances, creepage distances, and solid insulation</td>
+                        <td>IEC 60335-2-6: 2014</td>
+                    </tr>
+                    <tr>
+                        <td>Resistance to heat and fire</td>
+                        <td>IEC 60335-2-6: 2014</td>
+                    </tr>
+                    <tr>
+                        <td>Resistance to rusting</td>
+                        <td>IEC 60335-2-6: 2014</td>
+                    </tr>
 
 
-                <!-- Electrical Iron -->
-                <tr>
-                    <td rowspan="21">Electrical Iron</td>
-                    <td>Classification</td>
-                    <td>IEC 60335-2-3:2012</td>
-                </tr>
-                <tr>
-                    <td>Marking and Instructions</td>
-                    <td>IEC 60335-2-3:2012</td>
-                </tr>
-                <tr>
-                    <td>Protection against access to live parts</td>
-                    <td>IEC 60335-2-3:2012</td>
-                </tr>
-                <tr>
-                    <td>Power input and current</td>
-                    <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
-                </tr>
-                <tr>
-                    <td>Heating</td>
-                    <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
-                </tr>
-                <tr>
-                    <td>Leakage current and electric strength at operating temperature</td>
-                    <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
-                </tr>
-                <tr>
-                    <td>Moisture resistance</td>
-                    <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
-                </tr>
-                <tr>
-                    <td>Leakage current and electric strength</td>
-                    <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
-                </tr>
-                <tr>
-                    <td>Abnormal operation</td>
-                    <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
-                </tr>
-                <tr>
-                    <td>Stability and mechanical hazards</td>
-                    <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
-                </tr>
-                <tr>
-                    <td>Mechanical strength</td>
-                    <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
-                </tr>
-                <tr>
-                    <td>Construction</td>
-                    <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
-                </tr>
-                <tr>
-                    <td>Internal wiring</td>
-                    <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
-                </tr>
-                <tr>
-                    <td>Components</td>
-                    <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
-                </tr>
-                <tr>
-                    <td>Supply connection and external flexible cords</td>
-                    <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
-                </tr>
-                <tr>
-                    <td>Terminals for external conductors</td>
-                    <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
-                </tr>
-                <tr>
-                    <td>Provision for earthing</td>
-                    <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
-                </tr>
-                <tr>
-                    <td>Screws and connections</td>
-                    <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
-                </tr>
-                <tr>
-                    <td>Clearances, Creepage distances, and solid insulation</td>
-                    <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
-                </tr>
-                <tr>
-                    <td>Resistance to heat and fire</td>
-                    <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
-                </tr>
-                <tr>
-                    <td>Resistance to rusting</td>
-                    <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
-                </tr>
-
-
-
-
-                <tr>
-                    <td rowspan="21">1. Toasters & Grills <br> 2. Roasters & Similar Appliances</td>
-                    <td>Marking</td>
-                    <td>IEC 60335-2-9: 2019 RLV</td>
-                </tr>
-                <tr>
-                    <td>Protection against access to live parts</td>
-                    <td>IEC 60335-2-9: 2019 RLV</td>
-                </tr>
-                <tr>
-                    <td>Power input and current</td>
-                    <td>IEC 60335-2-9: 2019 RLV</td>
-                </tr>
-                <tr>
-                    <td>Heating</td>
-                    <td>IEC 60335-2-9: 2019 RLV</td>
-                </tr>
-                <tr>
-                    <td>Leakage current and electric strength at operating temperature</td>
-                    <td>IEC 60335-2-9: 2019 RLV</td>
-                </tr>
-                <tr>
-                    <td>Moisture resistance</td>
-                    <td>IEC 60335-2-9: 2019 RLV</td>
-                </tr>
-                <tr>
-                    <td>Leakage current and electric strength</td>
-                    <td>IEC 60335-2-9: 2019 RLV</td>
-                </tr>
-                <tr>
-                    <td>Overload protection of transformer-associated circuits</td>
-                    <td>IEC 60335-2-9: 2019 RLV</td>
-                </tr>
-                <tr>
-                    <td>Abnormal operation</td>
-                    <td>IEC 60335-2-9: 2019 RLV</td>
-                </tr>
-                <tr>
-                    <td>Stability and mechanical hazards</td>
-                    <td>IEC 60335-2-9: 2019 RLV</td>
-                </tr>
-                <tr>
-                    <td>Mechanical strength</td>
-                    <td>IEC 60335-2-9: 2019 RLV</td>
-                </tr>
-                <tr>
-                    <td>Construction</td>
-                    <td>IEC 60335-2-9: 2019 RLV</td>
-                </tr>
-                <tr>
-                    <td>Internal wiring</td>
-                    <td>IEC 60335-2-9: 2019 RLV</td>
-                </tr>
-                <tr>
-                    <td>Components</td>
-                    <td>IEC 60335-2-9: 2019 RLV</td>
-                </tr>
-                <tr>
-                    <td>Supply connection and external flexible cords</td>
-                    <td>IEC 60335-2-9: 2019 RLV</td>
-                </tr>
-                <tr>
-                    <td>Terminals for external conductors</td>
-                    <td>IEC 60335-2-9: 2019 RLV</td>
-                </tr>
-                <tr>
-                    <td>Provision for earthing</td>
-                    <td>IEC 60335-2-9: 2019 RLV</td>
-                </tr>
-                <tr>
-                    <td>Screws and connections</td>
-                    <td>IEC 60335-2-9: 2019 RLV</td>
-                </tr>
-                <tr>
-                    <td>Clearances, creepage distances, and solid insulation</td>
-                    <td>IEC 60335-2-9: 2019 RLV</td>
-                </tr>
-                <tr>
-                    <td>Resistance to heat and fire</td>
-                    <td>IEC 60335-2-9: 2019 RLV</td>
-                </tr>
-                <tr>
-                    <td>Resistance to rusting</td>
-                    <td>IEC 60335-2-9: 2019 RLV</td>
-                </tr>
+                    <!-- Electrical Iron -->
+                    <tr>
+                        <td rowspan="21">Electrical Iron</td>
+                        <td>Classification</td>
+                        <td>IEC 60335-2-3:2012</td>
+                    </tr>
+                    <tr>
+                        <td>Marking and Instructions</td>
+                        <td>IEC 60335-2-3:2012</td>
+                    </tr>
+                    <tr>
+                        <td>Protection against access to live parts</td>
+                        <td>IEC 60335-2-3:2012</td>
+                    </tr>
+                    <tr>
+                        <td>Power input and current</td>
+                        <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Heating</td>
+                        <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Leakage current and electric strength at operating temperature</td>
+                        <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Moisture resistance</td>
+                        <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Leakage current and electric strength</td>
+                        <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Abnormal operation</td>
+                        <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Stability and mechanical hazards</td>
+                        <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Mechanical strength</td>
+                        <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Construction</td>
+                        <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Internal wiring</td>
+                        <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Components</td>
+                        <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Supply connection and external flexible cords</td>
+                        <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Terminals for external conductors</td>
+                        <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Provision for earthing</td>
+                        <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Screws and connections</td>
+                        <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Clearances, Creepage distances, and solid insulation</td>
+                        <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Resistance to heat and fire</td>
+                        <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Resistance to rusting</td>
+                        <td>IEC 60335-2-3:2012, AMD 1: 2015</td>
+                    </tr>
 
 
 
 
+                    <tr>
+                        <td rowspan="21">1. Toasters & Grills <br> 2. Roasters & Similar Appliances</td>
+                        <td>Marking</td>
+                        <td>IEC 60335-2-9: 2019 RLV</td>
+                    </tr>
+                    <tr>
+                        <td>Protection against access to live parts</td>
+                        <td>IEC 60335-2-9: 2019 RLV</td>
+                    </tr>
+                    <tr>
+                        <td>Power input and current</td>
+                        <td>IEC 60335-2-9: 2019 RLV</td>
+                    </tr>
+                    <tr>
+                        <td>Heating</td>
+                        <td>IEC 60335-2-9: 2019 RLV</td>
+                    </tr>
+                    <tr>
+                        <td>Leakage current and electric strength at operating temperature</td>
+                        <td>IEC 60335-2-9: 2019 RLV</td>
+                    </tr>
+                    <tr>
+                        <td>Moisture resistance</td>
+                        <td>IEC 60335-2-9: 2019 RLV</td>
+                    </tr>
+                    <tr>
+                        <td>Leakage current and electric strength</td>
+                        <td>IEC 60335-2-9: 2019 RLV</td>
+                    </tr>
+                    <tr>
+                        <td>Overload protection of transformer-associated circuits</td>
+                        <td>IEC 60335-2-9: 2019 RLV</td>
+                    </tr>
+                    <tr>
+                        <td>Abnormal operation</td>
+                        <td>IEC 60335-2-9: 2019 RLV</td>
+                    </tr>
+                    <tr>
+                        <td>Stability and mechanical hazards</td>
+                        <td>IEC 60335-2-9: 2019 RLV</td>
+                    </tr>
+                    <tr>
+                        <td>Mechanical strength</td>
+                        <td>IEC 60335-2-9: 2019 RLV</td>
+                    </tr>
+                    <tr>
+                        <td>Construction</td>
+                        <td>IEC 60335-2-9: 2019 RLV</td>
+                    </tr>
+                    <tr>
+                        <td>Internal wiring</td>
+                        <td>IEC 60335-2-9: 2019 RLV</td>
+                    </tr>
+                    <tr>
+                        <td>Components</td>
+                        <td>IEC 60335-2-9: 2019 RLV</td>
+                    </tr>
+                    <tr>
+                        <td>Supply connection and external flexible cords</td>
+                        <td>IEC 60335-2-9: 2019 RLV</td>
+                    </tr>
+                    <tr>
+                        <td>Terminals for external conductors</td>
+                        <td>IEC 60335-2-9: 2019 RLV</td>
+                    </tr>
+                    <tr>
+                        <td>Provision for earthing</td>
+                        <td>IEC 60335-2-9: 2019 RLV</td>
+                    </tr>
+                    <tr>
+                        <td>Screws and connections</td>
+                        <td>IEC 60335-2-9: 2019 RLV</td>
+                    </tr>
+                    <tr>
+                        <td>Clearances, creepage distances, and solid insulation</td>
+                        <td>IEC 60335-2-9: 2019 RLV</td>
+                    </tr>
+                    <tr>
+                        <td>Resistance to heat and fire</td>
+                        <td>IEC 60335-2-9: 2019 RLV</td>
+                    </tr>
+                    <tr>
+                        <td>Resistance to rusting</td>
+                        <td>IEC 60335-2-9: 2019 RLV</td>
+                    </tr>
 
 
 
 
-                <tr>
-                    <td rowspan="23">Microwave Ovens</td>
-                    <td>Marking</td>
-                    <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
-                </tr>
-                <tr>
-                    <td>Protection against electric shock</td>
-                    <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
-                </tr>
-                <tr>
-                    <td>Starting of motor-operated appliances</td>
-                    <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
-                </tr>
-                <tr>
-                    <td>Input and Current</td>
-                    <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
-                </tr>
-                <tr>
-                    <td>Temperature-rise</td>
-                    <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
-                </tr>
-                <tr>
-                    <td>Electrical insulation and leakage current at operating temperature</td>
-                    <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
-                </tr>
-                <tr>
-                    <td>Moisture resistance</td>
-                    <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
-                </tr>
-                <tr>
-                    <td>Insulation resistance and electric strength (after humidity treatment)</td>
-                    <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
-                </tr>
-                <tr>
-                    <td>Overload protection</td>
-                    <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
-                </tr>
-                <tr>
-                    <td>Endurance test</td>
-                    <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
-                </tr>
-                <tr>
-                    <td>Abnormal operation</td>
-                    <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
-                </tr>
-                <tr>
-                    <td>Stability and mechanical hazards</td>
-                    <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
-                </tr>
-                <tr>
-                    <td>Mechanical strength</td>
-                    <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
-                </tr>
-                <tr>
-                    <td>Construction</td>
-                    <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
-                </tr>
-                <tr>
-                    <td>Internal wiring</td>
-                    <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
-                </tr>
-                <tr>
-                    <td>Components</td>
-                    <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
-                </tr>
-                <tr>
-                    <td>Supply connection and flexible cables and cords</td>
-                    <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
-                </tr>
-                <tr>
-                    <td>Terminals for external conductors</td>
-                    <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
-                </tr>
-                <tr>
-                    <td>Provision for earthing</td>
-                    <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
-                </tr>
-                <tr>
-                    <td>Screws and connections</td>
-                    <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
-                </tr>
-                <tr>
-                    <td>Creepage distances and clearances</td>
-                    <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
-                </tr>
-                <tr>
-                    <td>Resistance to heat, time, and tracking</td>
-                    <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
-                </tr>
-                <tr>
-                    <td>Resistance to rusting</td>
-                    <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
-                </tr>
 
-            </table>
+
+
+
+                    <tr>
+                        <td rowspan="23">Microwave Ovens</td>
+                        <td>Marking</td>
+                        <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Protection against electric shock</td>
+                        <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Starting of motor-operated appliances</td>
+                        <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Input and Current</td>
+                        <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Temperature-rise</td>
+                        <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Electrical insulation and leakage current at operating temperature</td>
+                        <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Moisture resistance</td>
+                        <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Insulation resistance and electric strength (after humidity treatment)</td>
+                        <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Overload protection</td>
+                        <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Endurance test</td>
+                        <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Abnormal operation</td>
+                        <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Stability and mechanical hazards</td>
+                        <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Mechanical strength</td>
+                        <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Construction</td>
+                        <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Internal wiring</td>
+                        <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Components</td>
+                        <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Supply connection and flexible cables and cords</td>
+                        <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Terminals for external conductors</td>
+                        <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Provision for earthing</td>
+                        <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Screws and connections</td>
+                        <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Creepage distances and clearances</td>
+                        <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Resistance to heat, time, and tracking</td>
+                        <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Resistance to rusting</td>
+                        <td>IEC 60335-2-25:2010 + AMD1: 2014 + AMD2: 2015</td>
+                    </tr>
+
+                </table>
+                <br>
+            </div>
+
 
         </div>
 
@@ -780,7 +806,7 @@
                 Need specialized chemical testing? Share your project details with us, and we'll provide a personalized
                 quote to meet your requirements.
             </p>
-            <button  onclick="window.location.href='contact.html'" class="scroll-scale button_2 animate fadeLeft">
+            <button onclick="window.location.href='contact.html'" class="scroll-scale button_2 animate fadeLeft">
                 Request a Quote
             </button>
         </div>
@@ -791,7 +817,7 @@
 
 
     <div class="floating_btn_call">
-        <a target="_blank" href="tel:+447789745245" style="text-decoration: none;">
+        <a target="_blank" href="tel:+447526505070" style="text-decoration: none;">
             <div class="contact_icon_call">
                 <i class="fa-solid fa-phone"></i>
             </div>
@@ -799,7 +825,7 @@
     </div>
 
     <div class="floating_btn_instagram">
-        <a target="_blank" href="" style="text-decoration: none;">
+        <a target="_blank" href="https://www.instagram.com/metslab_uk/" style="text-decoration: none;">
             <div class="contact_icon_instagram">
                 <i class="fa-brands fa-instagram"></i>
             </div>
@@ -807,7 +833,7 @@
     </div>
 
     <div class="floating_btn_whatsapp">
-        <a target="_blank" href="tel:+447789745245" style="text-decoration: none;">
+        <a target="_blank" href="https://wa.me/+447526505070" style="text-decoration: none;">
             <div class="contact_icon_whatsapp">
                 <i class="fa-brands fa-whatsapp"></i>
             </div>
