@@ -199,6 +199,11 @@ body {
     font-size: 300%;
 }
 
+.hero_02_content h1 {
+    color: #fff;
+    font-size: 300%;
+}
+
 
 @media (max-width: 992px) {
     .hero_02_content {
@@ -234,6 +239,10 @@ body {
     }
 
     .hero_02_content h2 {
+        font-size: 200%;
+    }
+
+    .hero_02_content h1 {
         font-size: 200%;
     }
 }
@@ -968,6 +977,13 @@ body {
     color: #ffffff;
 }
 
+.hero_content_container h1 {
+    font-weight: 700;
+    font-size: 300%;
+    width: 80%;
+    color: #ffffff;
+}
+
 .hero_content_container p {
     font-weight: 500;
     font-size: 100%;
@@ -978,6 +994,12 @@ body {
 
 @media (max-width: 992px) {
     .hero_content_container h2 {
+        font-weight: 700;
+        font-size: 300%;
+        width: 100%;
+    }
+
+    .hero_content_container h1 {
         font-weight: 700;
         font-size: 300%;
         width: 100%;
@@ -1010,6 +1032,12 @@ body {
         width: 100%;
     }
 
+    .hero_content_container h1 {
+        font-weight: 700;
+        font-size: 200%;
+        width: 100%;
+    }
+
     .hero_content_container p {
         font-weight: 500;
         font-size: 100%;
@@ -1020,6 +1048,10 @@ body {
 
 @media (max-width: 340px) {
     .hero_content_container h2 {
+        font-size: 120%;
+    }
+
+    .hero_content_container h1 {
         font-size: 120%;
     }
 }
@@ -2428,6 +2460,12 @@ body {
     text-align: left;
 }
 
+.about_sec1 h2 {
+    font-weight: 600;
+    font-size: 300%;
+    text-align: left;
+}
+
 .about_sec1 p {
     text-align: justify;
 }
@@ -2465,10 +2503,18 @@ body {
     .about_sec1 h3 {
         font-size: 200%;
     }
+
+    .about_sec1 h2 {
+        font-size: 200%;
+    }
 }
 
 @media (max-width: 576px) {
     .about_sec1 h3 {
+        font-size: 150%;
+    }
+
+    .about_sec1 h2 {
         font-size: 150%;
     }
 }
@@ -3826,12 +3872,14 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden !important;
+
 }
 
 .service_detailing_img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    margin-bottom: 20px !important;
 }
 
 @media (max-width: 768px) {
@@ -4748,18 +4796,28 @@ related to custom cursors above
     padding: 5%;
 }
 
-.privacy-policy h2 {
+.privacy-policy h1 {
     color: #1BA249;
     font-weight: bold;
-    font-size: 300%;
+    font-size: 3em;
 }
 
 .terms-and-conditions {
     padding: 5%;
 }
 
-.terms-and-conditions h2 {
+.terms-and-conditions h1 {
     color: #1BA249;
     font-weight: bold;
-    font-size: 300%;
+    font-size: 3em;
 }
+
+
+
+
+
+
+
+
+
+

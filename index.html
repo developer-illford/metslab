@@ -46,9 +46,9 @@
         <div class="hero_content_container">
             <h2>&nbsp;</h2>
             <h2>&nbsp;</h2>
-            <h2 class="">
+            <h1 class="">
                 Leaders in Scientific Testing and Analytical Solutions
-            </h2>
+            </h1>
             <!-- <p class=" ">
                 METS Lab, established in 2018, offers innovative, reliable testing solutions for various industries.
                 Founded by experienced professionals, they focus on precision and customer satisfaction, delivering
@@ -330,7 +330,6 @@
 
 
         <div class="Marquees">
-
             <div class="Marquee SecondRow">
                 <div class="marquee Item shadow_marquee"> <img src="img/marquee_logo_1.1.png" alt=""></div>
                 <div class="marquee Item"><i class="gg-hello icon"></i></div>
@@ -341,7 +340,17 @@
                 <div class="marquee Item shadow_marquee"> <img src="img/marquee_logo_3.3.png" alt=""></div>
                 <div class="marquee Item"><i class="gg-monday icon"></i></div>
                 <div class="marquee Item"><i class="gg-monday icon"></i></div>
-
+        
+                <div class="marquee Item shadow_marquee"> <img src="img/marquee_logo_4.4.png" alt=""></div>
+                <div class="marquee Item"><i class="gg-hello icon"></i></div>
+                <div class="marquee Item"><i class="gg-google-tasks icon"></i></div>
+                <div class="marquee Item shadow_marquee"> <img src="img/marquee_logo_5.5.png" alt=""></div>
+                <div class="marquee Item"><i class="gg-linear icon"></i></div>
+                <div class="marquee Item"><i class="gg-paypal icon"></i></div>
+                <div class="marquee Item shadow_marquee"> <img src="img/marquee_logo_6.6.png" alt=""></div>
+                <div class="marquee Item"><i class="gg-monday icon"></i></div>
+                <div class="marquee Item"><i class="gg-monday icon"></i></div>
+        
                 <div class="marquee Item shadow_marquee"> <img src="img/marquee_logo_1.1.png" alt=""></div>
                 <div class="marquee Item"><i class="gg-hello icon"></i></div>
                 <div class="marquee Item"><i class="gg-google-tasks icon"></i></div>
@@ -351,24 +360,14 @@
                 <div class="marquee Item shadow_marquee"> <img src="img/marquee_logo_3.3.png" alt=""></div>
                 <div class="marquee Item"><i class="gg-monday icon"></i></div>
                 <div class="marquee Item"><i class="gg-monday icon"></i></div>
-
-                <div class="marquee Item shadow_marquee"> <img src="img/marquee_logo_1.1.png" alt=""></div>
+        
+                <div class="marquee Item shadow_marquee"> <img src="img/marquee_logo_4.4.png" alt=""></div>
                 <div class="marquee Item"><i class="gg-hello icon"></i></div>
                 <div class="marquee Item"><i class="gg-google-tasks icon"></i></div>
-                <div class="marquee Item shadow_marquee"> <img src="img/marquee_logo_2.2.png" alt=""></div>
+                <div class="marquee Item shadow_marquee"> <img src="img/marquee_logo_5.5.png" alt=""></div>
                 <div class="marquee Item"><i class="gg-linear icon"></i></div>
                 <div class="marquee Item"><i class="gg-paypal icon"></i></div>
-                <div class="marquee Item shadow_marquee"> <img src="img/marquee_logo_3.3.png" alt=""></div>
-                <div class="marquee Item"><i class="gg-monday icon"></i></div>
-                <div class="marquee Item"><i class="gg-monday icon"></i></div>
-
-                <div class="marquee Item shadow_marquee"> <img src="img/marquee_logo_1.1.png" alt=""></div>
-                <div class="marquee Item"><i class="gg-hello icon"></i></div>
-                <div class="marquee Item"><i class="gg-google-tasks icon"></i></div>
-                <div class="marquee Item shadow_marquee"> <img src="img/marquee_logo_2.2.png" alt=""></div>
-                <div class="marquee Item"><i class="gg-linear icon"></i></div>
-                <div class="marquee Item"><i class="gg-paypal icon"></i></div>
-                <div class="marquee Item shadow_marquee"> <img src="img/marquee_logo_3.3.png" alt=""></div>
+                <div class="marquee Item shadow_marquee"> <img src="img/marquee_logo_6.6.png" alt=""></div>
                 <div class="marquee Item"><i class="gg-monday icon"></i></div>
                 <div class="marquee Item"><i class="gg-monday icon"></i></div>
             </div>
@@ -378,45 +377,47 @@
                 overflow: hidden;
                 width: 100%;
                 background: #fff;
-                /* Optional: background color */
             }
-
+        
             .Marquee {
                 display: flex;
                 animation: scroll-left 30s linear infinite;
                 width: max-content;
             }
-
+        
             .marquee {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 height: 150px;
-                width: 150px;
+                width: 150px; /* Default width for marquee items */
                 margin: 10px;
                 border-radius: 15px;
                 flex-shrink: 0;
                 padding: 30px;
-                /* box-shadow: 0px 0px 10px 10px #000; */
-
             }
+        
             .shadow_marquee {
                 box-shadow: 0px 0px 20px 0px #0000006e;
             }
-
+        
             .marquee img {
                 width: 100%;
             }
-
+        
+            /* Target items without images and reduce their width */
+            .marquee:not(:has(img)) {
+                width: 40px; /* Reduced width for items without images */
+            }
+        
             .SecondRow {
                 animation: scroll-left 10s linear infinite;
             }
-
+        
             @keyframes scroll-left {
                 0% {
                     transform: translateX(0);
                 }
-
                 100% {
                     transform: translateX(-50%);
                 }
