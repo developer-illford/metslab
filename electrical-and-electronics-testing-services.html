@@ -35,7 +35,6 @@
 </head>
 
 <body>
-
     <style>
         strong {
             display: block;
@@ -50,18 +49,18 @@
             background-color: #1ba249;
             color: #fff;
             padding: 10px;
-            border-radius: 10px;
+            border-radius: 0px;
         }
 
         .section-title_h3 {
-            font-size: 1.2em;
+            font-size: 18px;
             font-weight: bold;
             margin-top: 0px;
             margin-bottom: 10px;
             background-color: #1ba249;
             color: #fff;
             padding: 10px;
-            border-radius: 10px;
+            border-radius: 0px;
         }
 
         .main-title {
@@ -70,7 +69,8 @@
         }
 
         p {
-            margin-bottom: 15px;
+            margin-bottom: 16px;
+            text-align: justify;
         }
 
         .table_container {
@@ -78,7 +78,7 @@
             max-width: 100%;
             height: max-content;
             padding: 0;
-            border-radius: 10px;
+            /* border-radius: 10px; */
             overflow: auto;
             scrollbar-width: none;
             /* Firefox */
@@ -108,7 +108,53 @@
         th {
             background-color: #1ba249;
             color: #fff;
-            font-size: 130%;
+            /* font-size: 1.2em; */
+        }
+
+        th:first-child {
+            border-right: 2px solid white;
+            /* separation between headers */
+            text-align: left;
+        }
+
+        .threerow th:nth-child(2) {
+            border-right: 2px solid white !important;
+            /* separation between headers */
+            text-align: left;
+        }
+
+        table th:nth-child(2) {
+            border-right: 2px solid white !important;
+            /* separation between headers */
+            text-align: left;
+        }
+
+        table td:nth-child(1),
+        table th:nth-child(1),
+        table td:nth-child(2),
+        table th:nth-child(2),
+        table td:nth-child(3),
+        table th:nth-child(3) {
+            text-align: center !important;
+        }
+
+
+        .td_subs {
+            font-size: 1em;
+            font-weight: 700;
+        }
+
+        .ul_step1 {
+            padding-left: 20px;
+        }
+
+        .ul_step2 {
+            padding-left: 50px;
+        }
+
+        li {
+            text-align: justify !important;
+            font-size: 14px;
         }
     </style>
 
@@ -117,9 +163,9 @@
 
     <section class="hero_03 water_testing_hero">
         <div class="hero_03_content">
-            <h2>
-                Electrical & Electronics Testing
-            </h2>
+            <h1>
+                Electrical & Electronics Testing in the UK
+            </h1>
         </div>
     </section>
 
@@ -289,7 +335,7 @@
         </div>
 
 
-        <h2 class="section-title">Electrical & Electronics Testing In the UK:</h2>
+        <h2 class="section-title">Electrical & Electronics Testing In the UK</h2>
         <p>A team of experts backed by modern technology and standard industry requirements delivers correct and precise
             testing services to different product groups. Our testing capabilities span throughout these multiple
             sectors which can be observed below.
@@ -812,7 +858,7 @@
 
     <section class="special_testing">
         <div class="special_testing_container">
-            <p>
+            <p style="text-align: left;">
                 Need specialized chemical testing? Share your project details with us, and we'll provide a personalized
                 quote to meet your requirements.
             </p>

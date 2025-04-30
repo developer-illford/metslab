@@ -51,20 +51,19 @@
             background-color: #1ba249;
             color: #fff;
             padding: 10px;
-            border-radius: 10px;
+            border-radius: 0px;
         }
 
         .section-title_h3 {
-            font-size: 1.2em;
+            font-size: 18px;
             font-weight: bold;
             margin-top: 0px;
             margin-bottom: 10px;
             background-color: #1ba249;
             color: #fff;
             padding: 10px;
-            border-radius: 10px;
+            border-radius: 0px;
         }
-
         .main-title {
             font-weight: bold;
             font-size: 100%;
@@ -73,14 +72,16 @@
 
         p {
             margin-bottom: 15px;
+            text-align: justify;
+            font-size: 16px;
         }
 
         .table_container {
             width: 100%;
             max-width: 100%;
             height: max-content;
-            border-radius: 10px;
             padding: 0;
+            /* border-radius: 10px; */
             overflow: auto;
             scrollbar-width: none;
             /* Firefox */
@@ -95,7 +96,6 @@
 
 
         table {
-
             width: 100%;
             border-collapse: collapse;
         }
@@ -111,7 +111,48 @@
         th {
             background-color: #1ba249;
             color: #fff;
-            font-size: 130%;
+            /* font-size: 1.2em; */
+        }
+
+        th:first-child {
+            border-right: 2px solid white;
+            /* separation between headers */
+            text-align: left;
+        }
+
+        .threerow th:nth-child(2) {
+            border-right: 2px solid white !important;
+            /* separation between headers */
+            text-align: left;
+        }
+
+        table th:nth-child(2) {
+            border-right: 2px solid white !important;
+            /* separation between headers */
+            text-align: left;
+        }
+
+        table th:nth-child(3) {
+            border-right: 2px solid white !important;
+            /* separation between headers */
+            text-align: left;
+        }
+
+        table td:nth-child(1),
+        table th:nth-child(1),
+        table td:nth-child(2),
+        table th:nth-child(2),
+        table td:nth-child(3),
+        table th:nth-child(3),
+        table td:nth-child(4),
+        table th:nth-child(4) {
+            text-align: center !important;
+        }
+
+
+        .td_subs {
+            font-size: 1em;
+            font-weight: 700;
         }
 
         .ul_step1 {
@@ -120,6 +161,11 @@
 
         .ul_step2 {
             padding-left: 50px;
+        }
+
+        li {
+            text-align: justify !important;
+            font-size: 14px;
         }
     </style>
 
@@ -270,7 +316,7 @@
         <div class="row serv_row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 service_detailing_col">
                 <h2 class="section-title">National (UK-wide) air quality objectives and European Directive limit and
-                    target values for the protection of human health:</h2>
+                    target values for the protection of human health</h2>
                 <div class="table_container">
                     <table>
                         <tr>
@@ -334,7 +380,7 @@
                             <td>3.25 µg/m³</td>
                             <td>Running annual mean</td>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <td rowspan="2">NO<sub>2</sub></td>
                             <td>UK</td>
                             <td>Not to exceed 200 µg/m³ more than 18 times annually</td>
@@ -361,6 +407,24 @@
                             <td>UK</td>
                             <td>350 µg/m³ not to be exceeded further than 24 times a time</td>
                             <td>1 Hour mean</td>
+                        </tr> -->
+                        <tr>
+                            <td>1,3-butadiene</td>
+                            <td>UK</td>
+                            <td>2.25 µg/m³</td>
+                            <td>Running annual mean</td>
+                        </tr>
+                        <tr>
+                            <td>Carbon monoxide (CO)</td>
+                            <td>UK</td>
+                            <td>10 mg/m³</td>
+                            <td>Maximum daily running 8 hours mean / in Scotland as running 8 hours mean</td>
+                        </tr>
+                        <tr>
+                            <td>Lead</td>
+                            <td>UK</td>
+                            <td>0.5 µg/m³</td>
+                            <td>Annual mean</td>
                         </tr>
                     </table>
                     <br>
@@ -368,7 +432,7 @@
 
                 <p></p>
                 <h2 class="section-title">National (UK-wide) air quality objectives and European Directive limit and
-                    target values for the protection of vegetation and ecosystems:</h2>
+                    target values for the protection of vegetation and ecosystems</h2>
                 <div class="table_container">
                     <table>
                         <tr>
@@ -377,7 +441,7 @@
                             <th>Objective</th>
                             <th>Concentration measured as</th>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <td rowspan="2">NO<sub>2</sub></td>
                             <td>UK</td>
                             <td>Not to exceed 200 µg/m³ more than 18 times annually</td>
@@ -449,7 +513,7 @@
                             <td>UK</td>
                             <td>0.5 µg/m³</td>
                             <td>Annual mean</td>
-                        </tr>
+                        </tr> -->
                         <tr>
                             <td>Nitrogen oxides</td>
                             <td>UK</td>
@@ -680,7 +744,8 @@
                     <li>This equipment performs comprehensive accountability tests on sounds to detect individual noise
                         makers and their environmental effects.</li>
                 </ul>
-
+                <img src="img/noise-level-monitoring.jpg" alt="">
+                <p></p>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 service_detailing_col">
                 <h3 class="section-title_h3">
@@ -786,6 +851,9 @@
                 </ul>
 
             </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 service_detailing_col">
+                <img src="img/air-pollution.jpg" alt="">
+            </div>
 
         </div>
 
@@ -827,7 +895,7 @@
 
     <section class="special_testing">
         <div class="special_testing_container">
-            <p>
+            <p style="text-align: left;">
                 Need specialized chemical testing? Share your project details with us, and we'll provide a personalized
                 quote to meet your requirements.
             </p>
