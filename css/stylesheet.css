@@ -1535,6 +1535,7 @@ body {
     }
 }
 
+
 /* 
 @media (max-width: 576px) {
     .lab_capabilities_lg {
@@ -1564,7 +1565,81 @@ body {
 }
 
 
+.home_services_banner {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
 
+.home_services_banner img {
+    width: 50%;
+}
+
+
+
+.home_services_banner h3 {
+    font-weight: 700;
+    font-size: 60px;
+    text-align: center;
+    /* padding-bottom: 2rem; */
+    color: #1BA249;
+    /* text-decoration: underline #1BA249 7px; */
+}
+
+.home_services_banner p {
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    color: #1BA249;
+
+}
+
+@media (max-width: 992px) {
+    .home_services_banner h3 {
+        font-size: 40px;
+    }
+
+    .home_services_banner p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home_services_banner h3 {
+        font-size: 30px;
+    }
+
+    .home_services_banner p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .home_services_banner img {
+        display: none;
+    }
+
+    .home_services_banner {
+        padding: 30px 10px;
+        background-image: url(../img/lab-mets-lab-bw.png);
+        background-size: cover;
+        /* Ensures the image covers the entire div */
+        background-position: center;
+        /* Centers the image */
+        background-repeat: no-repeat;
+        /* Prevents the image from repeating */
+        overflow: hidden;
+    }
+    .home_services_banner h3 {
+        color: #fff;
+    }
+    .home_services_banner p {
+        color: #fff;
+    }
+}
 
 
 
