@@ -1633,12 +1633,26 @@ body {
         /* Prevents the image from repeating */
         overflow: hidden;
     }
+
     .home_services_banner h3 {
         color: #fff;
     }
+
     .home_services_banner p {
         color: #fff;
     }
+}
+
+.hero_seperator{
+    width: 100%;
+    height: 15px;
+}
+.hero_seperator_fill {
+    width: 80%;
+    height: 100%;
+    background: #1BA249;
+    border: 1px solid #1BA249;
+    clip-path: polygon(0% 0%, 100% 0%, 99% 100%, 0% 100%);
 }
 
 
